@@ -98,7 +98,7 @@ public class Thruster : MonoBehaviour
     }
 
     // 侵入判定
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         // スラスターレンジに入ったら
         if (other.gameObject.CompareTag("Thruster Range"))
