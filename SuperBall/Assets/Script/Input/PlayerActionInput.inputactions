@@ -36,6 +36,14 @@
                     "expectedControlType": "Button",
                     "processors": "StickDeadzone(min=0.8,max=1)",
                     "interactions": ""
+                },
+                {
+                    "name": "ThrusterButton",
+                    "type": "Button",
+                    "id": "3f60512c-516f-4e98-a948-758a0f44ec8b",
+                    "expectedControlType": "Button",
+                    "processors": "StickDeadzone(min=0.8,max=1)",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -234,6 +242,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "JustJump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba411dc0-1b2e-4cd8-ab20-d51778befa20",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThrusterButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "423393ec-b559-4673-9791-c6e45f738744",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThrusterButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

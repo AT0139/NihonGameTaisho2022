@@ -49,6 +49,14 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": ""StickDeadzone(min=0.8,max=1)"",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ThrusterButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""3f60512c-516f-4e98-a948-758a0f44ec8b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": ""StickDeadzone(min=0.8,max=1)"",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -249,6 +257,28 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
                     ""action"": ""JustJump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba411dc0-1b2e-4cd8-ab20-d51778befa20"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrusterButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""423393ec-b559-4673-9791-c6e45f738744"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrusterButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -322,6 +352,7 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
         m_Player_JustAction = m_Player.FindAction("JustAction", throwIfNotFound: true);
         m_Player_Thruster = m_Player.FindAction("Thruster", throwIfNotFound: true);
         m_Player_JustJump = m_Player.FindAction("JustJump", throwIfNotFound: true);
+        m_Player_ThrusterButton = m_Player.FindAction("ThrusterButton", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -375,6 +406,7 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_JustAction;
     private readonly InputAction m_Player_Thruster;
     private readonly InputAction m_Player_JustJump;
+    private readonly InputAction m_Player_ThrusterButton;
     public struct PlayerActions
     {
         private @PlayerActionInput m_Wrapper;
@@ -383,6 +415,7 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
         public InputAction @JustAction => m_Wrapper.m_Player_JustAction;
         public InputAction @Thruster => m_Wrapper.m_Player_Thruster;
         public InputAction @JustJump => m_Wrapper.m_Player_JustJump;
+        public InputAction @ThrusterButton => m_Wrapper.m_Player_ThrusterButton;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -404,6 +437,9 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
                 @JustJump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJustJump;
                 @JustJump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJustJump;
                 @JustJump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJustJump;
+                @ThrusterButton.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrusterButton;
+                @ThrusterButton.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrusterButton;
+                @ThrusterButton.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrusterButton;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -420,6 +456,9 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
                 @JustJump.started += instance.OnJustJump;
                 @JustJump.performed += instance.OnJustJump;
                 @JustJump.canceled += instance.OnJustJump;
+                @ThrusterButton.started += instance.OnThrusterButton;
+                @ThrusterButton.performed += instance.OnThrusterButton;
+                @ThrusterButton.canceled += instance.OnThrusterButton;
             }
         }
     }
@@ -475,5 +514,6 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
         void OnJustAction(InputAction.CallbackContext context);
         void OnThruster(InputAction.CallbackContext context);
         void OnJustJump(InputAction.CallbackContext context);
+        void OnThrusterButton(InputAction.CallbackContext context);
     }
 }
