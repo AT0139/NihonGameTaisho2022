@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9192253598897149673}
   - component: {fileID: 9192253598897149678}
   - component: {fileID: 9192253598897149679}
+  - component: {fileID: 2783308602925532116}
   m_Layer: 0
   m_Name: Ground Hard
   m_TagString: Ground Hard
@@ -91,7 +92,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 9192253598897149676}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 3647dba14e594d5429101fff220a5014, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -108,3 +109,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &2783308602925532116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9192253598897149676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490779d488e0d314aa9bfd5a0eb6ac4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundPower: 10

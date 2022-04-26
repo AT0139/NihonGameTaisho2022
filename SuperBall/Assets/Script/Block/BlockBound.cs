@@ -14,14 +14,14 @@ public class BlockBound : MonoBehaviour
             }
             else
             {
-                if (transform.position.x >= collision.transform.position.x)
-                {
-                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-boundPower * 100, 1000));
-                }
-                else
-                {
-                    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(boundPower * 100, 1000));
-                }
+                //if (transform.position.x >= collision.transform.position.x)
+                //{
+                //    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-boundPower * 100, 1000));
+                //}
+                //else
+                //{
+                //    collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(boundPower * 100, 1000));
+                //}
             }
         }
     }
