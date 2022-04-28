@@ -12,6 +12,9 @@ public partial class EnemyManager
         public override void OnEnter(EnemyManager owner)
         {
             owner.SetAnimation(owner.idolAnimationName);
+
+            owner.GetComponentInChildren<ParticleSystem>().Play();
+            owner.GetComponentInChildren<ParticleSystem>().GetComponent<Renderer>().material.SetFloat("_Green", 3.0f);
         }
 
         public override void OnUpdate(EnemyManager owner)
