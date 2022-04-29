@@ -1922,6 +1922,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8779477807094442212}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &639430630
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1024125538}
+    m_Modifications:
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708745, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465485729171708746, guid: 2916099fab35e8f42b6a4f3dc850dbb6,
+        type: 3}
+      propertyPath: m_Name
+      value: SlimeTrail
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2916099fab35e8f42b6a4f3dc850dbb6, type: 3}
 --- !u!1001 &725478931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2984,6 +3053,7 @@ MonoBehaviour:
   BubbleEffect: {fileID: 2862919338145659126, guid: 140809f7bbb4ef5489ab7efc44d73190,
     type: 3}
   NomalizeValue: 2.5
+  NomalizeValue_Trail: 20
 --- !u!1 &1035039470
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,6 +6099,12 @@ PrefabInstance:
       propertyPath: isButton
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8976905268917859556, guid: 939fd8675d0c50c4081983587771f93f,
+        type: 3}
+      propertyPath: thrusterEffect
+      value: 
+      objectReference: {fileID: 1398846324898158025, guid: 0de92330cba27b74bbd9fafe4935784f,
+        type: 3}
     - target: {fileID: 8976905268917859557, guid: 939fd8675d0c50c4081983587771f93f,
         type: 3}
       propertyPath: m_Enabled
