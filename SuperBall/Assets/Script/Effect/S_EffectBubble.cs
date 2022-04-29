@@ -43,7 +43,7 @@ public class S_EffectBubble : MonoBehaviour
         }
 
         particle.transform.position = this.transform.position;
-
+        
         
     }
 }

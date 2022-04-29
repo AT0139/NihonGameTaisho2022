@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Coin
-  m_Shader: {fileID: -6465566751694194690, guid: 8243fcb7bbbe5954db7bfd00cb5ab02c,
+  m_Name: M_Dust01
+  m_Shader: {fileID: -6465566751694194690, guid: 81b0965229ea617498b9a0d5daa5ce71,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,11 +20,15 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTexture:
+    - _MainTex:
         m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Emission: 1
+    - Vector1_5A0CAA5B: 1
+    - Vector1_BAD60B37: 1
+    - Vector1_C4D88EA6: 150
+    - Vector1_CF662B98: 10
+    - Vector1_D5C0AB87: 0.5
     m_Colors:
-    - _MainColor: {r: 1.8117647, g: 1.5686275, b: 0.47058824, a: 1}
+    - Vector2_88ECBA57: {r: 0.2, g: -0.1, b: 0, a: 0}
