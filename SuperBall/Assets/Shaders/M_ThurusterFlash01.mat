@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Coin
-  m_Shader: {fileID: -6465566751694194690, guid: 8243fcb7bbbe5954db7bfd00cb5ab02c,
+  m_Name: M_ThurusterFlash01
+  m_Shader: {fileID: -6465566751694194690, guid: b4ec548c5d2ce3b4f80c9aaacb9f102b,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,11 +20,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTexture:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 86fe7013679572c449e160ebf5b6b608, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Emission: 1
-    m_Colors:
-    - _MainColor: {r: 1.8117647, g: 1.5686275, b: 0.47058824, a: 1}
+    - Vector1_98F9620F: 1
+    - Vector1_EED823C5: 1
+    m_Colors: []
