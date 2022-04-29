@@ -29,7 +29,7 @@ public class Thruster : MonoBehaviour
     public float Y_SpeedAirDush;
 
     // スラスターを使える状態かのチェック
-    public static bool SwitchThrusterCheck;
+    private bool SwitchThrusterCheck;
 
     // レンジに入ってどれぐらいの時間で使えるようになるか 0.5秒の場合は0.5と入力
     public float ThrusterCooltime;
@@ -47,6 +47,10 @@ public class Thruster : MonoBehaviour
 
     PlayerActionInput input;
 
+    [SerializeField] ParticleSystem thrusterEffect;
+
+    private ParticleSystem particle;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -60,6 +64,9 @@ public class Thruster : MonoBehaviour
 
         input.Enable();
         input.Player.ThrusterButton.performed += context => ButtonThruster();
+
+        particle = Instantiate(thrusterEffect, transform.position, Quaternion.identity);
+        particle.Stop();
     }
 
     void Update()
@@ -68,7 +75,7 @@ public class Thruster : MonoBehaviour
             UseThruster();
 
         move = input.Player.Thruster.ReadValue<Vector2>();
-        
+        particle.transform.position = transform.position;
     }
 
     //スラスターを使って移動を行う関数
@@ -79,6 +86,8 @@ public class Thruster : MonoBehaviour
             // コントローラーの傾け具合で方向が変えられる
             if (move.x != 0 || move.y != 0)
             {
+                particle.Play();
+
                 // AirDushMode無効
                 if (!AirDushMode)
                 {
