@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_ThurusterFlash01
-  m_Shader: {fileID: -6465566751694194690, guid: b4ec548c5d2ce3b4f80c9aaacb9f102b,
+  m_Name: M_sunanotubu
+  m_Shader: {fileID: -6465566751694194690, guid: 6058a30014efc824ab7ffbd94079ed66,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,12 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 86fe7013679572c449e160ebf5b6b608, type: 3}
+    - Texture2D_47B594A:
+        m_Texture: {fileID: 2800000, guid: 5214d4c9c86ba874480dd80d9fc0a259, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - Vector1_7991F2AF: 1.62
-    - Vector1_98F9620F: 1
-    - Vector1_EED823C5: 2.22
-    m_Colors: []
+    m_Floats: []
+    m_Colors:
+    - Color_5CD8CE6C: {r: 1, g: 0.7467409, b: 0, a: 1}
