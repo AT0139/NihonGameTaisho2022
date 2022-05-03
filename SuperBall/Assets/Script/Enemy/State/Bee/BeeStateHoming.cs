@@ -31,13 +31,18 @@ public partial class EnemyManager
         //プレイヤーを追いかける
         private void Homing(EnemyManager owner)
         {
-            owner.transform.position = Vector2.MoveTowards(owner.transform.position,
-                new Vector2(owner.player.transform.position.x, owner.player.transform.position.y), HOMING_SPEED * Time.deltaTime);
 
-            //プレイヤーとの距離が近くなったら攻撃に遷移
+
+            //プレイヤーとの距離が近くなったら1秒後攻撃に遷移
             if (Vector2.Distance(owner.player.transform.position, owner.transform.position) < ATTACK_DISTANCE)
             {
-                owner.StateTransition(owner.stateAttack);
+                owner.StateTransition(owner.stateAttack, 1);
+            }
+            else
+            {
+                //プレイヤーに向かう
+                owner.transform.position = Vector2.MoveTowards(owner.transform.position,
+                    new Vector2(owner.player.transform.position.x, owner.player.transform.position.y), HOMING_SPEED * Time.deltaTime);
             }
         }
         public override void OnCollision(EnemyManager owner)
