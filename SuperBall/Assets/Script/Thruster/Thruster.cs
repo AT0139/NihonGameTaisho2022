@@ -128,7 +128,9 @@ public class Thruster : MonoBehaviour
     {
         string layerName = LayerMask.LayerToName(collision.gameObject.layer);
 
-        if (layerName == "Ground")
+        float groundTopYpos = collision.transform.position.y + collision.transform.localScale.y / 2;
+
+        if (layerName == "Ground" && this.transform.position.y >= groundTopYpos)
         {
             if (!SwitchThrusterCheck)
                 Invoke("SwitchThruster", ThrusterCooltime);
