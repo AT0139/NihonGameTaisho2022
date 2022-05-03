@@ -72,7 +72,7 @@ public partial class EnemyManager : MonoBehaviour
         currentState.OnExit(this);
         nextState.OnEnter(this);
         currentState = nextState;
-        Debug.Log("遷移" + nextState);
+        //Debug.Log("遷移" + nextState);
     }
 
     private void StateTransition(EnemyStateBase nextState,float delayTime)

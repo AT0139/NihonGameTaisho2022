@@ -51,6 +51,7 @@ public class Thruster : MonoBehaviour
 
     private ParticleSystem particle;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -112,14 +113,25 @@ public class Thruster : MonoBehaviour
         }
     }
 
-    // 侵入判定
-    void OnTriggerStay2D(Collider2D other)
+    //// 侵入判定
+    //void OnTriggerStay2D(Collider2D other)
+    //{
+    //    // スラスターレンジに入ったら
+    //    if (other.gameObject.CompareTag("Thruster Range"))
+    //    {
+    //        if(!SwitchThrusterCheck)
+    //        Invoke("SwitchThruster", ThrusterCooltime);
+    //    }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // スラスターレンジに入ったら
-        if (other.gameObject.CompareTag("Thruster Range"))
+        string layerName = LayerMask.LayerToName(collision.gameObject.layer);
+
+        if (layerName == "Ground")
         {
-            if(!SwitchThrusterCheck)
-            Invoke("SwitchThruster", ThrusterCooltime);
+            if (!SwitchThrusterCheck)
+                Invoke("SwitchThruster", ThrusterCooltime);
         }
     }
 
