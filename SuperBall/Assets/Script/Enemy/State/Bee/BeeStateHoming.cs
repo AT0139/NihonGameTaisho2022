@@ -22,7 +22,7 @@ public partial class EnemyManager
             Homing(owner);
 
             //敵が画面外にいったら待機に遷移
-            if(!owner.isEnterScreen)
+            if (!owner.isEnterScreen)
             {
                 owner.StateTransition(owner.stateIdol);
             }
@@ -43,6 +43,19 @@ public partial class EnemyManager
                 //プレイヤーに向かう
                 owner.transform.position = Vector2.MoveTowards(owner.transform.position,
                     new Vector2(owner.player.transform.position.x, owner.player.transform.position.y), HOMING_SPEED * Time.deltaTime);
+
+                //向き補正
+                Vector2 vec = owner.player.transform.position - owner.transform.position;
+                if (vec.x >= 0)
+                {
+                    //ベクトルが正(右方向移動)
+                    owner.transform.localScale = new Vector2(-0.6f, 0.6f);
+                }
+                else if (vec.x <= 0)
+                {
+                    //ベクトルが負(左方向移動)
+                    owner.transform.localScale = new Vector2(0.6f, 0.6f);
+                }
             }
         }
         public override void OnCollision(EnemyManager owner)

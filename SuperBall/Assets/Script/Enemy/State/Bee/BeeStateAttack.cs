@@ -17,6 +17,17 @@ public partial class EnemyManager
             trackEntry.Complete += TrackEntryComplete;
 
             Vector2 vec = owner.player.transform.position - owner.transform.position;
+
+            //向き補正
+            if(vec.x >= 0)
+            {
+                owner.transform.localScale = new Vector2(-0.6f, 0.6f);
+            }
+            else if(vec.x <= 0)
+            {
+                owner.transform.localScale = new Vector2(0.6f, 0.6f);
+            }
+
             vec.Normalize();
             owner.rigidbody2D.velocity = vec * ATTACK_SPEED;
         }
