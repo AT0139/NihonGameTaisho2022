@@ -27,7 +27,34 @@ public class BlockBound : MonoBehaviour
         {
             if (isBound)
             {
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, boundPower * 100));
+                foreach (ContactPoint2D contactPoint in collision.contacts)
+                {
+                    //ローカル座標に変換
+                    Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+
+                    Debug.Log(localPoint);
+
+                    //上面
+                    if (localPoint.y >= 0.45f)
+                    {
+                        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, boundPower * 100));
+                    }
+                    //下面
+                    else if (localPoint.y <= -0.45f)
+                    {
+                        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -boundPower * 100));
+                    }
+                    //右面
+                    else if (localPoint.x >= 0.45f)
+                    {
+                        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(boundPower * 100, 0));
+                    }
+                    //左面
+                    else if(localPoint.x <= -0.45f)
+                    {
+                        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-boundPower * 100,0));
+                    }
+                }
                 isBound = false;
             }
         }
