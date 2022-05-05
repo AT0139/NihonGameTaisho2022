@@ -52,7 +52,7 @@ public class S_EffectLanding : MonoBehaviour
         {
             if (IsFire == true)
             {
-                Debug.Log(movementSpeed);
+                //Debug.Log(movementSpeed);
                 strongLanding.transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
                 strongLanding.Play();
             }
