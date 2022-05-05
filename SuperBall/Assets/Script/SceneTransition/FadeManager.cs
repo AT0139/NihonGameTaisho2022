@@ -79,7 +79,7 @@ public class FadeManager : MonoBehaviour
         
 
         //image.rectTransform.sizeDelta = new Vector2(xsize*alpha, ysize*alpha);        
-        Debug.Log(alpha);
+        //Debug.Log(alpha);
     }
 
     public void fadeIn()
