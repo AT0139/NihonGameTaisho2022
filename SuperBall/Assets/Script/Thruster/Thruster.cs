@@ -47,6 +47,11 @@ public class Thruster : MonoBehaviour
 
     PlayerActionInput input;
 
+    [SerializeField] ParticleSystem thrusterEffect;
+
+    private ParticleSystem particle;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -60,6 +65,9 @@ public class Thruster : MonoBehaviour
 
         input.Enable();
         input.Player.ThrusterButton.performed += context => ButtonThruster();
+
+        particle = Instantiate(thrusterEffect, transform.position, Quaternion.identity);
+        particle.Stop();
     }
 
     void Update()
@@ -68,7 +76,7 @@ public class Thruster : MonoBehaviour
             UseThruster();
 
         move = input.Player.Thruster.ReadValue<Vector2>();
-        
+        particle.transform.position = transform.position;
     }
 
     //スラスターを使って移動を行う関数
@@ -79,6 +87,8 @@ public class Thruster : MonoBehaviour
             // コントローラーの傾け具合で方向が変えられる
             if (move.x != 0 || move.y != 0)
             {
+                particle.Play();
+
                 // AirDushMode無効
                 if (!AirDushMode)
                 {
@@ -103,14 +113,27 @@ public class Thruster : MonoBehaviour
         }
     }
 
-    // 侵入判定
-    void OnTriggerStay2D(Collider2D other)
+    //// 侵入判定
+    //void OnTriggerStay2D(Collider2D other)
+    //{
+    //    // スラスターレンジに入ったら
+    //    if (other.gameObject.CompareTag("Thruster Range"))
+    //    {
+    //        if(!SwitchThrusterCheck)
+    //        Invoke("SwitchThruster", ThrusterCooltime);
+    //    }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // スラスターレンジに入ったら
-        if (other.gameObject.CompareTag("Thruster Range"))
+        string layerName = LayerMask.LayerToName(collision.gameObject.layer);
+
+        float groundTopYpos = collision.transform.position.y + collision.transform.localScale.y / 2;
+
+        if (layerName == "Ground" && this.transform.position.y >= groundTopYpos)
         {
-            if(!SwitchThrusterCheck)
-            Invoke("SwitchThruster", ThrusterCooltime);
+            if (!SwitchThrusterCheck)
+                Invoke("SwitchThruster", ThrusterCooltime);
         }
     }
 

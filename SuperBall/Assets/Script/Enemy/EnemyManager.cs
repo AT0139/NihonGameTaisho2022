@@ -27,8 +27,10 @@ public partial class EnemyManager : MonoBehaviour
     private EnemyStateBase stateAttack;
     private EnemyStateBase stateWaiting;
 
-    private string idolAnimationName = "taikiL";
-    private string attackAnimationName = "kougekiL";
+    //ハチアニメーション名
+    private string idolAnimationName = "taiki";
+    private string moveAnimationName = "idou";
+    private string attackAnimationName = "kougeki";
 
     EnemyStateBase currentState;
 
@@ -51,6 +53,8 @@ public partial class EnemyManager : MonoBehaviour
             case ENEMY_TYPE.Worm:
                 stateIdol = new WormStateIdol();
                 stateAttack = new WormStateAttack();
+
+                rigidbody2D.gravityScale = 0;
                 break;
         }
         currentState = stateIdol;
@@ -73,6 +77,7 @@ public partial class EnemyManager : MonoBehaviour
 
     private void StateTransition(EnemyStateBase nextState,float delayTime)
     {
+        currentState = new EnemyStateNull();
         StartCoroutine(DelayMethod(delayTime, nextState));
     }
 
@@ -119,6 +124,11 @@ public partial class EnemyManager : MonoBehaviour
     {
         isEnterScreen = false;
     }
+    void OncompleteHandler()
+    {
+        WormStateIdol.isRotate = false;
+        //Debug.Log("isRotate  " + WormStateIdol.isRotate);
 
-
+        iTween.Stop(gameObject);
+    }
 }

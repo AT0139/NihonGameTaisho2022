@@ -15,6 +15,9 @@ TagManager:
   - Cannon
   - Undefined
   - Thruster Range
+  - Background_Parallax_Generated
+  - Background_Parallax
+  - FX_jet
   layers:
   - Default
   - TransparentFX
