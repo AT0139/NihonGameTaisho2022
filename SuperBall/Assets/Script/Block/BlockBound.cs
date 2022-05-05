@@ -32,7 +32,7 @@ public class BlockBound : MonoBehaviour
                     //ローカル座標に変換
                     Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-                    Debug.Log(localPoint);
+                    //Debug.Log(localPoint);
 
                     //上面
                     if (localPoint.y >= 0.45f)
