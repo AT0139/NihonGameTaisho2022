@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Dust01
-  m_Shader: {fileID: -6465566751694194690, guid: 81b0965229ea617498b9a0d5daa5ce71,
+  m_Name: M_foam
+  m_Shader: {fileID: -6465566751694194690, guid: a49cbb99eb3d34b46a4be5fdd12c0311,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,15 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 34e1648d429373948b7cd6ec81a166ba, type: 3}
+    - _Texture2D_88AAA885:
+        m_Texture: {fileID: 2800000, guid: 10752667db5ae204c89f94da21d0ad48, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - Vector1_5A0CAA5B: 1
-    - Vector1_BAD60B37: 1
-    - Vector1_C4D88EA6: 150
-    - Vector1_CF662B98: 10
-    - Vector1_D5C0AB87: 0.5
+    m_Floats: []
     m_Colors:
-    - Vector2_88ECBA57: {r: 0.2, g: -0.1, b: 0, a: 0}
+    - Color_8A3B6C23: {r: 0, g: 77.87429, b: 77.05885, a: 1}

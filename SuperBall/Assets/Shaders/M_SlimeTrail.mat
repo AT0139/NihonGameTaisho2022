@@ -26,4 +26,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Alpha: 0
+    - _ScrollSpeed: 1
     m_Colors: []
