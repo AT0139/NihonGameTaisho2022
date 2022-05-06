@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8779477806925918017}
   - component: {fileID: 8779477806925918016}
   - component: {fileID: 8779477806925918023}
+  - component: {fileID: 610366493345629431}
   m_Layer: 0
   m_Name: Ground Middle
   m_TagString: Ground Middle
@@ -91,7 +92,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8779477806925918022}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 96a4b4c55df34ea4f87d4c1ff21d9633, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -108,3 +109,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &610366493345629431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779477806925918022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490779d488e0d314aa9bfd5a0eb6ac4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundPower: 7

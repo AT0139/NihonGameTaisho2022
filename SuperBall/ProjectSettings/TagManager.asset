@@ -15,8 +15,9 @@ TagManager:
   - Cannon
   - Undefined
   - Thruster Range
-  - Stage
-  - DestructibleBlock
+  - Background_Parallax_Generated
+  - Background_Parallax
+  - FX_jet
   layers:
   - Default
   - TransparentFX

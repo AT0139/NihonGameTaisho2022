@@ -55,8 +55,8 @@ public class FadeManager : MonoBehaviour
             
 
             this.GetComponentInChildren<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);
-            image.transform.localScale = new Vector3(xsize * alpha, ysize * alpha, 1.0f);
-            image.transform.Rotate(new Vector3(0.0f, 0.0f, alpha * rotation));
+            //image.transform.localScale = new Vector3(xsize * alpha, ysize * alpha, 1.0f);
+            //image.transform.Rotate(new Vector3(0.0f, 0.0f, alpha * rotation));
         }
         else if (isFadeOut)
         {
@@ -70,8 +70,8 @@ public class FadeManager : MonoBehaviour
             
 
             this.GetComponentInChildren<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);
-            image.transform.localScale = new Vector3(xsize * alpha, ysize * alpha, 1.0f);
-            image.transform.Rotate(new Vector3(0.0f, 0.0f, alpha * rotation));
+            //image.transform.localScale = new Vector3(xsize * alpha, ysize * alpha, 1.0f);
+            //image.transform.Rotate(new Vector3(0.0f, 0.0f, alpha * rotation));
         }
 
         
@@ -79,7 +79,7 @@ public class FadeManager : MonoBehaviour
         
 
         //image.rectTransform.sizeDelta = new Vector2(xsize*alpha, ysize*alpha);        
-        Debug.Log(alpha);
+        //Debug.Log(alpha);
     }
 
     public void fadeIn()
