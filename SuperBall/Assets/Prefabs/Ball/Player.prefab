@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 5368094049308756853}
   - component: {fileID: 5368094049308756808}
   - component: {fileID: 5368094049308756815}
+  - component: {fileID: 4625271989549752995}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -324,6 +325,23 @@ MonoBehaviour:
     type: 3}
   NomalizeValue: 2.5
   NomalizeValue_Trail: 20
+  MinValue_Trail: 20
+--- !u!114 &4625271989549752995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368094049308756857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e5e290437a2f34685e051eee9ba6b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StrongLanding: {fileID: 0}
+  WeekLanding: {fileID: 8549504675983452811, guid: 0e9b9b32bc6c2cd4f83f2dec49bbda49,
+    type: 3}
+  minSpeed: 30
 --- !u!1 &5368094049973306261
 GameObject:
   m_ObjectHideFlags: 0

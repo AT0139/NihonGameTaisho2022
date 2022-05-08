@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "ball 1")
+        if (collision.gameObject.name == "Player")
         {
             Debug.Log("Itemに衝突");
             Destroy(gameObject);

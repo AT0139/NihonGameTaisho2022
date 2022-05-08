@@ -45,12 +45,7 @@ public class S_EffectLanding : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.transform.tag == "Ground Middle" ||
-            collision.transform.tag == "Ground" ||
-            collision.transform.tag == "Ground Soft" ||
-            collision.transform.tag == "Ground Hard" ||
-            collision.transform.tag == "Wall"
-            )
+        if (collision.transform.tag == "Tilemap")
         {
             if (IsFire == true)
             {
