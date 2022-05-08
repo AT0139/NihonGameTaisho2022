@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 
         speed = 0.0f;
 
-        mTouch = GrandTouch.NONE;
+        //mTouch = GrandTouch.NONE;
     }
 
     void Update()
@@ -87,18 +87,18 @@ public class Player : MonoBehaviour
             //一定以上の速度にならない
             if (SpeedLimit_X <= rb.velocity.x)
             {
-                rb.GetComponent<Rigidbody2D>().velocity = new Vector3(SpeedLimit_X, vec1.y, vec1.z);
+                rb.velocity = new Vector3(SpeedLimit_X, vec1.y, vec1.z);
             }
             else if (-SpeedLimit_X >= rb.velocity.x)
             {
-                rb.GetComponent<Rigidbody2D>().velocity = new Vector3(-SpeedLimit_X, vec1.y, vec1.z);
+                rb.velocity = new Vector3(-SpeedLimit_X, vec1.y, vec1.z);
             }
         }
         //操作していないときは減速する (X方向)
         else
         {
             if (vec1.x <= SpeedDeadZone && vec1.x >= -SpeedDeadZone)
-                rb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, vec1.y, vec1.z);
+                rb.velocity = new Vector3(0, vec1.y, vec1.z);
             else if (vec1.x >= SpeedDeadZone)
                 rb.AddForce(transform.right * -SpeedDece);
             else if (vec1.x <= -SpeedDeadZone)
@@ -113,23 +113,23 @@ public class Player : MonoBehaviour
     // オブジェクトと接地しているとき
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // 地面に触れている間 HARD
-        if (other.gameObject.CompareTag("Ground Hard") || other.gameObject.CompareTag("Wall"))
-        {
-            mTouch = GrandTouch.HARD;
-        }
+        //// 地面に触れている間 HARD
+        //if (other.gameObject.CompareTag("Ground Hard") || other.gameObject.CompareTag("Wall"))
+        //{
+        //    mTouch = GrandTouch.HARD;
+        //}
 
-        // 地面に触れている間 MIDDLE
-        if (other.gameObject.CompareTag("Ground Middle"))
-        {
-            mTouch = GrandTouch.MIDDLE;
-        }
+        //// 地面に触れている間 MIDDLE
+        //if (other.gameObject.CompareTag("Ground Middle"))
+        //{
+        //    mTouch = GrandTouch.MIDDLE;
+        //}
 
-        // 地面に触れている間 SOFT
-        if (other.gameObject.CompareTag("Ground Soft"))
-        {
-            mTouch = GrandTouch.SOFT;
-        }
+        //// 地面に触れている間 SOFT
+        //if (other.gameObject.CompareTag("Ground Soft"))
+        //{
+        //    mTouch = GrandTouch.SOFT;
+        //}
 
         //Debug.Log("OnCollisionEnter2D: " + other.gameObject.name);
 
