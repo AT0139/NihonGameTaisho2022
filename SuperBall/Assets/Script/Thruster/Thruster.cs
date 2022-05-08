@@ -49,7 +49,7 @@ public class Thruster : MonoBehaviour
 
     [SerializeField] ParticleSystem thrusterEffect;
 
-    private ParticleSystem particle;
+    public static ParticleSystem particle;
 
 
     void Start()
@@ -66,6 +66,11 @@ public class Thruster : MonoBehaviour
         input.Enable();
         input.Player.ThrusterButton.performed += context => ButtonThruster();
 
+
+    }
+
+    private void Awake()
+    {
         particle = Instantiate(thrusterEffect, transform.position, Quaternion.identity);
         particle.Stop();
     }
