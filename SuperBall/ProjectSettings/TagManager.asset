@@ -17,7 +17,6 @@ TagManager:
   - Thruster Range
   - Background_Parallax_Generated
   - Background_Parallax
-  - Enemy
   layers:
   - Default
   - TransparentFX
