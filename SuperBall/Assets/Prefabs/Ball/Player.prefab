@@ -338,8 +338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e5e290437a2f34685e051eee9ba6b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StrongLanding: {fileID: 0}
-  WeekLanding: {fileID: 8549504675983452811, guid: 0e9b9b32bc6c2cd4f83f2dec49bbda49,
+  StrongLanding: {fileID: 8549504675983452811, guid: 0e9b9b32bc6c2cd4f83f2dec49bbda49,
+    type: 3}
+  WeekLanding: {fileID: 8549504675983452811, guid: 6df1d1740138d004a9eac94fc4f59383,
     type: 3}
   minSpeed: 30
 --- !u!1 &5368094049973306261
