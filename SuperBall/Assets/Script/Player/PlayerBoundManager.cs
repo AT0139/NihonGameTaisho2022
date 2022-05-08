@@ -43,7 +43,7 @@ public class PlayerBoundManager : MonoBehaviour
                 //下方向
                 else if (localPoint.y >= 0.15f)
                 {
-                    rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower);
+                    rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
                 }
                 else if (localPoint.x >= 0.15f)
                 {
@@ -61,4 +61,5 @@ public class PlayerBoundManager : MonoBehaviour
             }
         }
     }
+
 }
