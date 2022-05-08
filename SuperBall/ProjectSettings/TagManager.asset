@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Wall
   - Ground
-  - Ground Hard
-  - Ground Middle
   - Ground Soft
   - CheckPoint
   - Fade
@@ -18,6 +16,7 @@ TagManager:
   - Background_Parallax_Generated
   - Background_Parallax
   - FX_jet
+  - Tilemap
   layers:
   - Default
   - TransparentFX
