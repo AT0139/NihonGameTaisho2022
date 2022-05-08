@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class S_EffectJet : MonoBehaviour
 {
-    public ParticleSystem thuruster;
+    //public ParticleSystem thuruster;
 
     private Vector2 curPos, lastPos;
     private float direction;
@@ -14,28 +14,33 @@ public class S_EffectJet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastPos = transform.position;
-        curPos = transform.position;
+/*        lastPos = transform.position;
+        curPos = transform.position;*/
 
         
-        particles = thuruster.GetComponentsInChildren<ParticleSystem>();        
+        particles = Thruster.particle.GetComponentsInChildren<ParticleSystem>();        
     }
 
     // Update is called once per frame
     void Update()
     {
-        curPos = transform.position;
+        /*curPos = transform.position;*/
 
         direction = GetAngle(curPos, lastPos);
 
-        Quaternion rotZ = Quaternion.AngleAxis(direction, Vector3.forward);
+        float angleDir = transform.eulerAngles.z * (Mathf.PI / 180.0f);
 
-        foreach(var particle in particles)
+        /*Quaternion rotZ = Quaternion.AngleAxis(direction, Vector3.forward);*/
+
+        foreach (var particle in particles)
         {
-            particle.transform.rotation = rotZ;
+            /*particle.transform.rotation = rotZ;*/
+            //particle.transform.Rotate(new Vector3(0,0,30));
+            
+            
         }
 
-        lastPos = transform.position;
+        /*lastPos = transform.position;*/
     }
 
     float GetAngle(Vector2 start ,Vector2 end)

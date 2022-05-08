@@ -12,6 +12,7 @@ public class S_EffectBubble : MonoBehaviour
     public ParticleSystem BubbleEffect;
     public float NomalizeValue = 2.5f;
     public float NomalizeValue_Trail = 20.0f;
+    public float MinValue_Trail = 20.0f;
     private TrailRenderer trail;
 
     private ParticleSystem[] childrenBubble;
@@ -21,6 +22,8 @@ public class S_EffectBubble : MonoBehaviour
     Rigidbody2D rigidbody2D;
     float movementSpeed;
     float movementSpeed_Trail;
+
+   
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +50,21 @@ public class S_EffectBubble : MonoBehaviour
             em.rateOverTime = movementSpeed / NomalizeValue - 1.0f;
         }
 
-        movementSpeed_Trail = movementSpeed / NomalizeValue_Trail;
+        if (movementSpeed < MinValue_Trail)
+        {
+            movementSpeed_Trail *= 0.9f;
+        }
+        else
+        {
+            movementSpeed_Trail = movementSpeed / NomalizeValue_Trail;
+        }
+
+        
+
+        
 
         trail.material.SetFloat("_Alpha", movementSpeed_Trail);
+        trail.material.SetFloat("_ScrollSpeed", movementSpeed_Trail);
 
         particle.transform.position = this.transform.position;
 
