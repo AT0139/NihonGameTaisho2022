@@ -8542,22 +8542,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomalizeValue: 100
   minValue: 0.8
---- !u!114 &1024125540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024125522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c907948dc5b30564796af52e1388fc50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BubbleEffect: {fileID: 2862919338145659126, guid: 140809f7bbb4ef5489ab7efc44d73190,
-    type: 3}
-  NomalizeValue: 2.5
-  NomalizeValue_Trail: 20
 --- !u!1 &1035039470
 GameObject:
   m_ObjectHideFlags: 0
@@ -12961,6 +12945,17 @@ PrefabInstance:
         type: 3}
       propertyPath: MiddleSpeedLimit_Y
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 337584820877822063, guid: 939fd8675d0c50c4081983587771f93f,
+        type: 3}
+      propertyPath: WeekLanding
+      value: 
+      objectReference: {fileID: 8549504675983452811, guid: 6df1d1740138d004a9eac94fc4f59383,
+        type: 3}
+    - target: {fileID: 337584820877822063, guid: 939fd8675d0c50c4081983587771f93f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1170782159496376720, guid: 939fd8675d0c50c4081983587771f93f,
         type: 3}

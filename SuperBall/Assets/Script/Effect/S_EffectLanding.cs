@@ -9,7 +9,7 @@ public class S_EffectLanding : MonoBehaviour
 
     public float minSpeed = 10.0f;
     private ParticleSystem strongLanding;
-    private ParticleSystem weekLanding;    
+    //private ParticleSystem weekLanding;    
     public bool IsFire { get; set; }
 
     float movementSpeed;
@@ -24,8 +24,8 @@ public class S_EffectLanding : MonoBehaviour
         strongLanding = Instantiate(StrongLanding, transform.position, Quaternion.identity);
         strongLanding.Stop();
 
-        weekLanding = Instantiate(WeekLanding, transform.position, Quaternion.identity);
-        weekLanding.Stop();
+        //weekLanding = Instantiate(WeekLanding, transform.position, Quaternion.identity);
+        //weekLanding.Stop();
     }
 
     // Update is called once per frame
@@ -61,8 +61,9 @@ public class S_EffectLanding : MonoBehaviour
             }
             else
             {
-                weekLanding.transform.position = transform.position;
-                weekLanding.Play();
+                /*weekLanding.transform.position = transform.position;
+                weekLanding.Play();*/
+                Instantiate(WeekLanding, transform.position, Quaternion.identity);
             }
         }
     }

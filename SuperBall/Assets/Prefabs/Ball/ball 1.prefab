@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8976905268917859557}
   - component: {fileID: 8976905268917859554}
   - component: {fileID: 337584820877822063}
+  - component: {fileID: 5568776208015047909}
   m_Layer: 0
   m_Name: ball 1
   m_TagString: Player
@@ -278,6 +279,23 @@ MonoBehaviour:
   WeekLanding: {fileID: 161171011000649674, guid: 69c7f0e5eeed36742a90c6c1750992f8,
     type: 3}
   minSpeed: 30
+--- !u!114 &5568776208015047909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8976905268917859564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c907948dc5b30564796af52e1388fc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BubbleEffect: {fileID: 2862919338145659126, guid: 140809f7bbb4ef5489ab7efc44d73190,
+    type: 3}
+  NomalizeValue: 2.5
+  NomalizeValue_Trail: 50
+  MinValue_Trail: 30
 --- !u!1001 &9208181841439344320
 PrefabInstance:
   m_ObjectHideFlags: 0
