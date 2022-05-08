@@ -126,14 +126,25 @@ public class Thruster : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //レイヤーネーム一覧取得
         string layerName = LayerMask.LayerToName(collision.gameObject.layer);
 
-        float groundTopYpos = collision.transform.position.y + collision.transform.localScale.y / 2;
 
-        if (layerName == "Ground" && this.transform.position.y >= groundTopYpos)
+        if (layerName == "Ground")
         {
-            if (!SwitchThrusterCheck)
-                Invoke("SwitchThruster", ThrusterCooltime);
+            //衝突位置取得
+            foreach (ContactPoint2D contactPoint in collision.contacts)
+            {
+                //プレイヤーのローカル座標に変換
+                Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+                Debug.Log(localPoint);
+                //プレイヤーの下面に当たっていたら
+                if (localPoint.y <= -0.15)
+                {
+                    if (!SwitchThrusterCheck)
+                        Invoke("SwitchThruster", ThrusterCooltime);
+                }
+            }
         }
     }
 

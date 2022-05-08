@@ -62,7 +62,7 @@ public class PlayerBoundManager : MonoBehaviour
         blockVariable = Resources.Load<BlockVariable>(ground.name);
         boundPower = blockVariable.boundPower;
 
-        //ローカル座標に変換
+        //プレイヤーのローカル座標に変換
         Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
         //Debug.Log(localPoint);
