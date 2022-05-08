@@ -29,12 +29,14 @@ public class PlayerTouchCheckPoint : MonoBehaviour
             if(CheckPoint != null)
             {
                 rb.transform.position = CheckPoint.transform.position;
+                rb.velocity = new Vector3(0.0f,0.0f, 0.0f);
             }
             // チェックポイントに触れてないとき
             else
             {
                 // 現在のスタート地点に過ぎないので後々チェックポイントのように指定することも可
                 rb.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
+                rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             }
             
             // 判定初期化
@@ -51,9 +53,10 @@ public class PlayerTouchCheckPoint : MonoBehaviour
             this.CheckPoint = other.gameObject;
         }
 
-        if (other.gameObject.CompareTag("Respawn"))
-        {
-            PlayerDeath = true;
-        }
+    }
+
+    public void SetCheckPoint()
+    {
+        PlayerDeath = true;
     }
 }

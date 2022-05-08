@@ -7,6 +7,8 @@ public partial class EnemyManager
 {
     public class WormStateAttack : EnemyStateBase
     {
+        
+
         int ATTACK_TIME = 60;
         int atkCnt = 0;
 
@@ -28,7 +30,10 @@ public partial class EnemyManager
 
         public override void OnCollision(EnemyManager owner)
         {
-            SceneManager.LoadScene("GameOverScene");
+            // ダメージ処理 1で体力を１減らす
+            //PlayerLife.instance.GetDamege(1);
+
+            //SceneManager.LoadScene("GameOverScene");
         }
     }
 }
