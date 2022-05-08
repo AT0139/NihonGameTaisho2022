@@ -2,7 +2,7 @@
 
 public class BlockBound : MonoBehaviour
 {
-    [SerializeField] float boundPower;
+    public float boundPower;
 
     int cnt = 0;
     int BOUND_POSSIBLE_TIME = 10;
