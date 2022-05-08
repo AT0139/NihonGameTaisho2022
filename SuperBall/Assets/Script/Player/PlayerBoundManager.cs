@@ -69,7 +69,7 @@ public class PlayerBoundManager : MonoBehaviour
         //プレイヤーのローカル座標に変換
         Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-        Debug.Log(ground.name);
+        //Debug.Log(ground.name);
 
         //上方向
         if (localPoint.y <= -0.15)
