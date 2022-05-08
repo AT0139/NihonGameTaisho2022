@@ -38,26 +38,26 @@ public class PlayerBoundManager : MonoBehaviour
                 //上方向
                 if (localPoint.y <= -0.15)
                 {
-                    rigidbody2D.AddForce(Vector2.up * boundPower,ForceMode2D.Impulse);
+                    rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower);
                 }
                 //下方向
                 else if (localPoint.y >= 0.15f)
                 {
                     rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower);
                 }
-                //else if (localPoint.x >= 0.15f)
-                //{
-                //    if (this.gameObject.transform.localScale.x >= 0)
-                //    {
-                //        //右方向
-                //        rigidbody2D.velocity = new Vector2(-boundPower, rigidbody2D.velocity.y + sideBoundCor);
-                //    }
-                //    else if (this.gameObject.transform.localScale.x <= 0)
-                //    {
-                //        //左方向
-                //        rigidbody2D.velocity = new Vector2(boundPower, rigidbody2D.velocity.y + sideBoundCor);
-                //    }
-                //}
+                else if (localPoint.x >= 0.15f)
+                {
+                    if (this.gameObject.transform.localScale.x >= 0)
+                    {
+                        //右方向
+                        rigidbody2D.velocity = new Vector2(-boundPower, rigidbody2D.velocity.y + sideBoundCor);
+                    }
+                    else if (this.gameObject.transform.localScale.x <= 0)
+                    {
+                        //左方向
+                        rigidbody2D.velocity = new Vector2(boundPower, rigidbody2D.velocity.y + sideBoundCor);
+                    }
+                }
             }
         }
     }
