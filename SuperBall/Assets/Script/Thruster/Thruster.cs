@@ -137,7 +137,7 @@ public class Thruster : MonoBehaviour
             {
                 //プレイヤーのローカル座標に変換
                 Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
-                Debug.Log(localPoint);
+                
                 //プレイヤーの下面に当たっていたら
                 if (localPoint.y <= -0.15)
                 {

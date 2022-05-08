@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Wall
   - Ground
-  - Ground Hard
-  - Ground Middle
   - Ground Soft
   - CheckPoint
   - Fade

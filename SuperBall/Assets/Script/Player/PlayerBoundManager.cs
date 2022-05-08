@@ -60,12 +60,16 @@ public class PlayerBoundManager : MonoBehaviour
     {
         //反発力取得
         blockVariable = Resources.Load<BlockVariable>(ground.name);
+        if(blockVariable == null)
+        {
+            Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+        }
         boundPower = blockVariable.boundPower;
 
         //プレイヤーのローカル座標に変換
         Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-        //Debug.Log(localPoint);
+        Debug.Log(ground.name);
 
         //上方向
         if (localPoint.y <= -0.15)
