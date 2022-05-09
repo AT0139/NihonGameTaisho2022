@@ -2365,6 +2365,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe60b811930e9a54297866e1c3bfc165, type: 3}
+--- !u!1 &144294761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5990104901065998298, guid: 02d238712460e7c42a6c643018350515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1323977115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &144294766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144294761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03edad05e8798854aaab083612f26bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  landingEffect: {fileID: 8549504675983452811, guid: 73f116d6d3341284087ea45aa0cf5310,
+    type: 3}
+  posY: 0
 --- !u!1001 &148473505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3635,6 +3656,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8549504675983452811, guid: 6df1d1740138d004a9eac94fc4f59383,
         type: 3}
+    - target: {fileID: 5368094049308756815, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: MinValue_Trail
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5368094049308756849, guid: 2ab86f7175a351343994909ee1cb1677,
         type: 3}
       propertyPath: m_Enabled
@@ -21132,6 +21158,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5859082954008809606, guid: 02d238712460e7c42a6c643018350515,
+        type: 3}
+      propertyPath: landingEffect
+      value: 
+      objectReference: {fileID: 8549504675983452811, guid: a5e4f6b3e32594e40b132d1a1348b49d,
+        type: 3}
+    - target: {fileID: 5859082954008809606, guid: 02d238712460e7c42a6c643018350515,
+        type: 3}
+      propertyPath: posY
+      value: -400
+      objectReference: {fileID: 0}
     - target: {fileID: 5990104900405114403, guid: 02d238712460e7c42a6c643018350515,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -21269,7 +21306,8 @@ PrefabInstance:
 
         ]---->GameOver'
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8932956711907754572, guid: 02d238712460e7c42a6c643018350515, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 02d238712460e7c42a6c643018350515, type: 3}
 --- !u!4 &1324041663 stripped
 Transform:

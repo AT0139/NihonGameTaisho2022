@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_shockLanding
-  m_Shader: {fileID: -6465566751694194690, guid: 0214ab784c483ef4fab01f2d18ab0317,
+  m_Name: M_Dust05
+  m_Shader: {fileID: -6465566751694194690, guid: 3b4a35fb3796c584c91b6000c85ad7bb,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,10 +20,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture2D_FC5CE38E:
-        m_Texture: {fileID: 2800000, guid: 95fdc332ca8713e49868decc5947d464, type: 3}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 6d3428aefc377bb4bb1e49d9b2b31127, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - Vector1_AB7FE797: 1
+    - Vector1_BAD60B37: 0.1
+    - Vector1_C4D88EA6: 43.22
+    - Vector1_CF662B98: 5
+    - Vector1_D5C0AB87: 1.4
     m_Colors:
-    - _Color_D3916CF6: {r: 0.8603976, g: 0.8603976, b: 0.8603976, a: 1}
+    - Color_BDEDFC45: {r: 2, g: 0, b: 0, a: 1}
+    - Vector2_88ECBA57: {r: 0.2, g: -0.1, b: 0, a: 0}
