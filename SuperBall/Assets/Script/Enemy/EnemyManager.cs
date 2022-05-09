@@ -131,4 +131,24 @@ public partial class EnemyManager : MonoBehaviour
 
         iTween.Stop(gameObject);
     }
+
+    public int GetEnemyState()
+    {
+        if (currentState == stateIdol)
+        {
+            return 0;
+        }
+        else if (currentState == stateAttack)
+        {
+            return 1;
+        }
+        else if (currentState == stateWaiting)
+        {
+            return 2;
+        }
+        else
+        {
+            return -1;
+        }
+    }
 }

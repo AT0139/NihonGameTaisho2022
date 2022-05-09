@@ -17,6 +17,7 @@ TagManager:
   - Background_Parallax
   - FX_jet
   - Tilemap
+  - Enemy
   layers:
   - Default
   - TransparentFX
