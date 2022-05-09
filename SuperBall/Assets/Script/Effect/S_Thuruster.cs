@@ -8,6 +8,7 @@ public class S_Thuruster : MonoBehaviour
     [SerializeField] float minSpeed = 30.0f;
     private MeshRenderer mesh;
     private float moveNoiseSpeed;
+    [SerializeField] float maxSpeed = 30.0f;
 
     //  Rotation    
     private Vector2 last, curr;
@@ -73,7 +74,9 @@ public class S_Thuruster : MonoBehaviour
         }
         else
         {
+            
             moveNoiseSpeed = S_EffectBubble.movementSpeed;
+               
         }
 
         mesh.material.SetFloat("_Emission", moveNoiseSpeed);

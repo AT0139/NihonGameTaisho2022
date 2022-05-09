@@ -3329,6 +3329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpeed: 30
+  maxSpeed: 62.42
   defaultScale: {x: 0, y: 0, z: 0}
   thurusterEffect: {fileID: 8990118534506538246, guid: 6237e27a4923c4c4a8ad7b9a2efb7a60,
     type: 3}
@@ -3665,6 +3666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756849, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: isButton
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368094049308756857, guid: 2ab86f7175a351343994909ee1cb1677,
         type: 3}
