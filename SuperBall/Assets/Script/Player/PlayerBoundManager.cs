@@ -7,12 +7,17 @@ public class PlayerBoundManager : MonoBehaviour
     [SerializeField] float sideBoundCor; //横バウンド時Y+方向補正値
     BlockVariable blockVariable;
     float boundPower;
-    //List<GameObject> colList = new List<GameObject>();
     new Rigidbody2D rigidbody2D;
+    int stayGroundCount = 0;
+    const int STAY_GROUND_MAX = 10;
+
+    GameObject[] groundObj = null;
 
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+
+        groundObj = GameObject.FindGameObjectsWithTag("Ground");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -32,11 +37,10 @@ public class PlayerBoundManager : MonoBehaviour
     {
         float tmpDis = 0;           //距離用一時変数
         float nearDis = 0;          //最も近いオブジェクトの距離
-        //string nearObjName = "";    //オブジェクト名称
         GameObject targetObj = null; //オブジェクト
 
         //タグ指定されたオブジェクトを配列で取得する
-        foreach (GameObject obs in GameObject.FindGameObjectsWithTag("Ground"))
+        foreach (GameObject obs in groundObj)
         {
             //自身と取得したオブジェクトの距離を取得
             tmpDis = Vector3.Distance(obs.transform.position, pos);
@@ -94,5 +98,22 @@ public class PlayerBoundManager : MonoBehaviour
                 rigidbody2D.velocity = new Vector2(boundPower, rigidbody2D.velocity.y + sideBoundCor);
             }
         }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        //地面にずっと接している場合(バグ)
+        stayGroundCount++;
+
+        if(stayGroundCount >= STAY_GROUND_MAX)
+        {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 10);
+            stayGroundCount = 0;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        stayGroundCount = 0;
     }
 }
