@@ -17,8 +17,12 @@ TagManager:
   - Background_Parallax
   - FX_jet
   - Tilemap
+<<<<<<< HEAD
   - Ground Hard
   - SpidarNet
+=======
+  - Enemy
+>>>>>>> eaa0f75048a018c6c25ccdfd5765e7370ffdb20f
   layers:
   - Default
   - TransparentFX

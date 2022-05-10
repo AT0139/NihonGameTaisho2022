@@ -47,18 +47,26 @@ public class S_EffectLanding : MonoBehaviour
 
         if (collision.transform.tag == "Tilemap")
         {
-            if (IsFire == true)
+            foreach (ContactPoint2D contactPoint in collision.contacts)
             {
-                //Debug.Log(movementSpeed);
-                strongLanding.transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-                strongLanding.Play();
-                S_EffectLandingUI.instance.PlayUIEffects();
-            }
-            else
-            {
-                /*weekLanding.transform.position = transform.position;
-                weekLanding.Play();*/
-                Instantiate(WeekLanding, transform.position, Quaternion.identity);
+                Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+
+                if (localPoint.y <= -0.15)
+                {
+                    if (IsFire == true)
+                    {
+                        //Debug.Log(movementSpeed);
+                        strongLanding.transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+                        strongLanding.Play();
+                        S_EffectLandingUI.instance.PlayUIEffects();
+                    }
+                    else
+                    {
+                        /*weekLanding.transform.position = transform.position;
+                        weekLanding.Play();*/
+                        Instantiate(WeekLanding, transform.position, Quaternion.identity);
+                    }
+                }
             }
         }
     }

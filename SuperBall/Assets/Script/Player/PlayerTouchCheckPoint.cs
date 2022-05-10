@@ -36,7 +36,10 @@ public class PlayerTouchCheckPoint : MonoBehaviour
                 // 現在のスタート地点に過ぎないので後々チェックポイントのように指定することも可
                 rb.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
             }
-            
+
+            // 速度リセット
+            rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+
             // 判定初期化
             PlayerDeath = false;
         }
@@ -51,9 +54,10 @@ public class PlayerTouchCheckPoint : MonoBehaviour
             this.CheckPoint = other.gameObject;
         }
 
-        if (other.gameObject.CompareTag("Respawn"))
-        {
-            PlayerDeath = true;
-        }
+    }
+
+    public void SetCheckPoint()
+    {
+        PlayerDeath = true;
     }
 }

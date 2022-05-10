@@ -20,18 +20,9 @@ public class JumpSound : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground Middle")
+        if(collision.gameObject.tag == "Tilemap")
         {
             audioSource.PlayOneShot(jumpSound);
-        }
-        if (collision.gameObject.tag == "Ground Hard")
-        {
-            audioSource.PlayOneShot(jumpSound);
-        }
-        if (collision.gameObject.tag == "Wall")
-        {
-            audioSource.PlayOneShot(jumpSound);
-        }
+        }  
     }
-
 }
