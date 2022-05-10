@@ -17,6 +17,8 @@ TagManager:
   - Background_Parallax
   - FX_jet
   - Tilemap
+  - Ground Hard
+  - SpidarNet
   layers:
   - Default
   - TransparentFX

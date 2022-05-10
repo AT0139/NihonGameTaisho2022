@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    private Vector2 move;
+    public Vector2 move { get; private set; }
 
     PlayerActionInput input;
 
