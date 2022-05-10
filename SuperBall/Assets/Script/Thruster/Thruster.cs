@@ -29,7 +29,7 @@ public class Thruster : MonoBehaviour
     public float Y_SpeedAirDush;
 
     // スラスターを使える状態かのチェック
-    private bool SwitchThrusterCheck;
+    public bool SwitchThrusterCheck;
 
     // レンジに入ってどれぐらいの時間で使えるようになるか 0.5秒の場合は0.5と入力
     public float ThrusterCooltime;
@@ -49,7 +49,7 @@ public class Thruster : MonoBehaviour
 
     [SerializeField] ParticleSystem thrusterEffect;
 
-    private ParticleSystem particle;
+    public static ParticleSystem particle;
 
 
     void Start()
@@ -66,6 +66,11 @@ public class Thruster : MonoBehaviour
         input.Enable();
         input.Player.ThrusterButton.performed += context => ButtonThruster();
 
+
+    }
+
+    private void Awake()
+    {
         particle = Instantiate(thrusterEffect, transform.position, Quaternion.identity);
         particle.Stop();
     }
@@ -126,14 +131,25 @@ public class Thruster : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //レイヤーネーム一覧取得
         string layerName = LayerMask.LayerToName(collision.gameObject.layer);
 
-        float groundTopYpos = collision.transform.position.y + collision.transform.localScale.y / 2;
 
-        if (layerName == "Ground" && this.transform.position.y >= groundTopYpos)
+        if (layerName == "Ground")
         {
-            if (!SwitchThrusterCheck)
-                Invoke("SwitchThruster", ThrusterCooltime);
+            //衝突位置取得
+            foreach (ContactPoint2D contactPoint in collision.contacts)
+            {
+                //プレイヤーのローカル座標に変換
+                Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+                
+                //プレイヤーの下面に当たっていたら
+                if (localPoint.y <= -0.15)
+                {
+                    if (!SwitchThrusterCheck)
+                        Invoke("SwitchThruster", ThrusterCooltime);
+                }
+            }
         }
     }
 
