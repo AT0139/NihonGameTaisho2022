@@ -18,6 +18,7 @@ TagManager:
   - FX_jet
   - Tilemap
   - Enemy
+  - SpiderNet
   layers:
   - Default
   - TransparentFX
