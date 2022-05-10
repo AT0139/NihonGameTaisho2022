@@ -16,8 +16,8 @@ TagManager:
   - Background_Parallax_Generated
   - Background_Parallax
   - FX_jet
-  - Tilemap
   - Enemy
+  - Bound
   layers:
   - Default
   - TransparentFX
