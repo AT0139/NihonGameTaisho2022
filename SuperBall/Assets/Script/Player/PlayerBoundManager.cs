@@ -6,10 +6,14 @@ public class PlayerBoundManager : MonoBehaviour
 {
     [SerializeField] float sideBoundCor; //横バウンド時Y+方向補正値
     BlockVariable blockVariable;
-    float boundPower;
     new Rigidbody2D rigidbody2D;
+
+    float boundPower;
     int stayGroundCount = 0;
     const int STAY_GROUND_MAX = 10;
+    bool isBound = true;
+    int boundCnt = 0;
+    const int BOUND_COUNT_MAX = 10;
 
     GameObject[] groundObj = null;
 
@@ -20,13 +24,30 @@ public class PlayerBoundManager : MonoBehaviour
         groundObj = GameObject.FindGameObjectsWithTag("Ground");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
+    {
+       // Debug.Log(isBound);
+        if(!isBound)
+        {
+            boundCnt++;
+            if(boundCnt >= BOUND_COUNT_MAX)
+            {
+                isBound = true;
+                boundCnt = 0;
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bound")
         {
-            //バウンド
-            GroundBound(collision);
-
+            if (isBound)
+            {
+                //バウンド
+                GroundBound(collision);
+                isBound = false;
+            }
         }
     }
 
@@ -73,59 +94,65 @@ public class PlayerBoundManager : MonoBehaviour
             //プレイヤーのローカル座標に変換
             Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-            //Debug.Log(ground.name);
+            Debug.Log(localPoint);
 
            
-            float boundAddition = Mathf.Abs(rigidbody2D.velocity.y) * 1f;
+            float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
 
             //上方向
-            if (localPoint.y <= -0.15)
+            if (localPoint.y <= -0.25)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower + boundAddition);
             }
             //下方向
-            else if (localPoint.y >= 0.15f)
+            else if (localPoint.y >= 0.25f)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
             }
-            else if (localPoint.x >= 0.15f)
+            else if (localPoint.x >= 0.25f && ground.name != "GroundNotBound")
             {
                 if (this.gameObject.transform.localScale.x >= 0)
                 {
                     //右方向
-                    //rigidbody2D.velocity = new Vector2(-boundPower, rigidbody2D.velocity.y + sideBoundCor);
                     rigidbody2D.velocity = new Vector2(-boundPower,  sideBoundCor);
                 }
                 else if (this.gameObject.transform.localScale.x <= 0)
                 {
                     //左方向
-                    //rigidbody2D.velocity = new Vector2(boundPower, rigidbody2D.velocity.y + sideBoundCor);
                     rigidbody2D.velocity = new Vector2(boundPower,  sideBoundCor);
                 }
             }
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bound")
         {
-            foreach (ContactPoint2D contactPoint in collision.contacts)
+            if (isBound)
             {
-                Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
-                //地面にずっと接している場合(バグ)
-                //上方向
-                if (localPoint.y <= -0.15)
-                {
-                    stayGroundCount++;
-                }
+                //バウンド
+                GroundBound(collision);
+                isBound = false;
             }
-        }
 
-        if(stayGroundCount >= STAY_GROUND_MAX)
-        {
-            //rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 10);
-            stayGroundCount = 0;
+            //    foreach (ContactPoint2D contactPoint in collision.contacts)
+            //    {
+            //        Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+            //        地面にずっと接している場合(バグ)
+            //        上方向
+            //        if (localPoint.y <= -0.15)
+            //        {
+            //            stayGroundCount++;
+            //        }
+            //    }
+            //}
+
+            //if (stayGroundCount >= STAY_GROUND_MAX)
+            //{
+            //    rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 10);
+            //    stayGroundCount = 0;
+            //}
         }
     }
 

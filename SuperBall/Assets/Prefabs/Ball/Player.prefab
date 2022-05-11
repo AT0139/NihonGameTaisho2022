@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8211691650920891416}
   - component: {fileID: 1487389566277438690}
-  - component: {fileID: 7698328042495074882}
   - component: {fileID: 2797974469881417221}
   - component: {fileID: 6623072473996247947}
   - component: {fileID: 5368094049308756850}
@@ -24,6 +23,7 @@ GameObject:
   - component: {fileID: 5368094049308756808}
   - component: {fileID: 5368094049308756815}
   - component: {fileID: 4625271989549752995}
+  - component: {fileID: 2362718574397916741}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -98,22 +98,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7698328042495074882
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5368094049308756857}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!50 &2797974469881417221
 Rigidbody2D:
   serializedVersion: 4
@@ -206,6 +190,7 @@ MonoBehaviour:
   AirDushMode: 0
   X_SpeedAirDush: 30
   Y_SpeedAirDush: 30
+  SwitchThrusterCheck: 0
   ThrusterCooltime: 0.3
   ThrusterAgain: 0.1
   thrusterEffect: {fileID: 1398846324898158025, guid: 0de92330cba27b74bbd9fafe4935784f,
@@ -343,6 +328,32 @@ MonoBehaviour:
   WeekLanding: {fileID: 8549504675983452811, guid: 6df1d1740138d004a9eac94fc4f59383,
     type: 3}
   minSpeed: 30
+--- !u!61 &2362718574397916741
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368094049308756857}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.375, y: 9.375}
+    newSize: {x: 0.6122939, y: 0.61228675}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 1
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &5368094049973306261
 GameObject:
   m_ObjectHideFlags: 0
