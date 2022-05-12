@@ -19,7 +19,7 @@ public class DestructibleBlock : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "ball 1")
+        if(collision.gameObject.name == "Player")
         {
             Debug.Log("DestructibleBlockに衝突");
 

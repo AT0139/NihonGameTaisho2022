@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:SuperBall/Assets/Sound/SE.meta
+guid: a122e7de9750a0a4f82c159cf86c43ce
+========
 guid: e7118f81c2d7b4a45ba2979a795b8ef7
+>>>>>>>> 4a47aeecd87d3d5306c7d137f6dd7dad83a31e68:SuperBall/Assets/Resources.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

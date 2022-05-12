@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:SuperBall/Assets/Script/DesignPattern.meta
+guid: 35e0d40ca71a14d4aaf05b4a864374c5
+=======
 guid: 36e6d533500747f46a230d550ab06f9a
+>>>>>>> eaa0f75048a018c6c25ccdfd5765e7370ffdb20f:SuperBall/Assets/Prefabs/UI.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

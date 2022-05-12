@@ -29,7 +29,7 @@ public class Thruster : MonoBehaviour
     public float Y_SpeedAirDush;
 
     // スラスターを使える状態かのチェック
-    private bool SwitchThrusterCheck;
+    public bool SwitchThrusterCheck;
 
     // レンジに入ってどれぐらいの時間で使えるようになるか 0.5秒の場合は0.5と入力
     public float ThrusterCooltime;
