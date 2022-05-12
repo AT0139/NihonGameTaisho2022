@@ -92,11 +92,13 @@ public class Thruster : MonoBehaviour
             // コントローラーの傾け具合で方向が変えられる
             if (move.x != 0 || move.y != 0)
             {
-                particle.Play();
+                
 
                 // AirDushMode無効
                 if (!AirDushMode)
                 {
+                    particle.Play();
+
                     //左右の移動
                     rb.AddForce(transform.right * X_Speed * move.x, ForceMode2D.Impulse);
                     //上下の移動
@@ -189,6 +191,9 @@ public class Thruster : MonoBehaviour
             // AirDushMode無効
             if (!AirDushMode)
             {
+
+                particle.Play();
+
                 //左右の移動
                 rb.AddForce(transform.right * X_Speed * Lstick.x, ForceMode2D.Impulse);
                 //上下の移動

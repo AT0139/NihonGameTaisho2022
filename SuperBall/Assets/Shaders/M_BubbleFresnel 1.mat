@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_BubbleFresnel
+  m_Name: M_BubbleFresnel 1
   m_Shader: {fileID: -6465566751694194690, guid: e51ee354b83d9c24289ffd0c9a93f267,
     type: 3}
   m_ShaderKeywords: 
@@ -32,7 +32,6 @@ Material:
     - Vector1_6441DBED: 0.1
     - Vector1_CC925AED: 2
     - Vector1_D0AA9AA8: 1.1
-    - Vector1_D2040933: 2.64
-    - _BubbleSpeed: 0.001
-    - _Emission: 2.67
+    - Vector1_D2040933: 1.17
+    - _Emission: 1.84
     m_Colors: []

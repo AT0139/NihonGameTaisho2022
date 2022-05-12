@@ -20,7 +20,7 @@ public class S_EffectBubble : MonoBehaviour
     
 
     Rigidbody2D rigidbody2D;
-    float movementSpeed;
+    public static float movementSpeed { get; set; }
     float movementSpeed_Trail;
 
    
