@@ -6,10 +6,14 @@ public class PlayerBoundManager : MonoBehaviour
 {
     [SerializeField] float sideBoundCor; //横バウンド時Y+方向補正値
     BlockVariable blockVariable;
-    float boundPower;
     new Rigidbody2D rigidbody2D;
+
+    float boundPower;
     int stayGroundCount = 0;
     const int STAY_GROUND_MAX = 10;
+    bool isBound = true;
+    int boundCnt = 0;
+    const int BOUND_COUNT_MAX = 10;
 
     GameObject[] groundObj = null;
 
@@ -20,15 +24,29 @@ public class PlayerBoundManager : MonoBehaviour
         groundObj = GameObject.FindGameObjectsWithTag("Ground");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == "Tilemap")
+       // Debug.Log(isBound);
+        if(!isBound)
         {
-            //衝突位置取得
-            foreach (ContactPoint2D contactPoint in collision.contacts)
+            boundCnt++;
+            if(boundCnt >= BOUND_COUNT_MAX)
+            {
+                isBound = true;
+                boundCnt = 0;
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bound")
+        {
+            if (isBound)
             {
                 //バウンド
-                GroundBound(GetNearObject(contactPoint.point),contactPoint);
+                GroundBound(collision);
+                isBound = false;
             }
         }
     }
@@ -53,62 +71,88 @@ public class PlayerBoundManager : MonoBehaviour
                 //nearObjName = obs.name;
                 targetObj = obs;
             }
-
         }
         //最も近かったオブジェクトを返す
         //return GameObject.Find(nearObjName);
         return targetObj;
     }
 
-    void GroundBound(GameObject ground, ContactPoint2D contactPoint)
+    void GroundBound(Collision2D collision)
     {
-        //反発力取得
-        blockVariable = Resources.Load<BlockVariable>(ground.name);
-        if(blockVariable == null)
+        //衝突位置取得
+        foreach (ContactPoint2D contactPoint in collision.contacts)
         {
-            Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
-        }
-        boundPower = blockVariable.boundPower;
-
-        //プレイヤーのローカル座標に変換
-        Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
-
-        //Debug.Log(ground.name);
-
-        //上方向
-        if (localPoint.y <= -0.15)
-        {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower);
-        }
-        //下方向
-        else if (localPoint.y >= 0.15f)
-        {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
-        }
-        else if (localPoint.x >= 0.15f)
-        {
-            if (this.gameObject.transform.localScale.x >= 0)
+            GameObject ground = GetNearObject(contactPoint.point);
+            //反発力取得
+            blockVariable = Resources.Load<BlockVariable>(ground.name);
+            if (blockVariable == null)
             {
-                //右方向
-                rigidbody2D.velocity = new Vector2(-boundPower, rigidbody2D.velocity.y + sideBoundCor);
+                Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
             }
-            else if (this.gameObject.transform.localScale.x <= 0)
+            boundPower = blockVariable.boundPower;
+
+            //プレイヤーのローカル座標に変換
+            Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+
+            Debug.Log(localPoint);
+
+           
+            float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
+
+            //上方向
+            if (localPoint.y <= -0.25)
             {
-                //左方向
-                rigidbody2D.velocity = new Vector2(boundPower, rigidbody2D.velocity.y + sideBoundCor);
+                rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower + boundAddition);
+            }
+            //下方向
+            else if (localPoint.y >= 0.25f)
+            {
+                rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
+            }
+            else if (localPoint.x >= 0.25f && ground.name != "GroundNotBound")
+            {
+                if (this.gameObject.transform.localScale.x >= 0)
+                {
+                    //右方向
+                    rigidbody2D.velocity = new Vector2(-boundPower,  sideBoundCor);
+                }
+                else if (this.gameObject.transform.localScale.x <= 0)
+                {
+                    //左方向
+                    rigidbody2D.velocity = new Vector2(boundPower,  sideBoundCor);
+                }
             }
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //地面にずっと接している場合(バグ)
-        stayGroundCount++;
-
-        if(stayGroundCount >= STAY_GROUND_MAX)
+        if (collision.gameObject.tag == "Bound")
         {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 10);
-            stayGroundCount = 0;
+            if (isBound)
+            {
+                //バウンド
+                GroundBound(collision);
+                isBound = false;
+            }
+
+            //    foreach (ContactPoint2D contactPoint in collision.contacts)
+            //    {
+            //        Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+            //        地面にずっと接している場合(バグ)
+            //        上方向
+            //        if (localPoint.y <= -0.15)
+            //        {
+            //            stayGroundCount++;
+            //        }
+            //    }
+            //}
+
+            //if (stayGroundCount >= STAY_GROUND_MAX)
+            //{
+            //    rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 10);
+            //    stayGroundCount = 0;
+            //}
         }
     }
 

@@ -32,6 +32,7 @@ Material:
     - Vector1_6441DBED: 0.1
     - Vector1_CC925AED: 2
     - Vector1_D0AA9AA8: 1.1
-    - Vector1_D2040933: 1.17
-    - _Emission: 1.84
+    - Vector1_D2040933: 2.64
+    - _BubbleSpeed: 0.001
+    - _Emission: 2.67
     m_Colors: []
