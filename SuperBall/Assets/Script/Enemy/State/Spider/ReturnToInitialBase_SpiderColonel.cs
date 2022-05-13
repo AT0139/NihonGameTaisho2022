@@ -14,8 +14,8 @@ public class ReturnToInitialBase_SpiderColonel : IState<Spider>
        // if(owner.transform.position != initialPosition)
             owner.transform.position = Vector3.MoveTowards(
                                                 owner.transform.position,
-                                                owner.GetComponent<Spider>().initialPosition,
-                                                owner.GetComponent<Spider>().getSpeed);
+                                                owner.initialPosition,
+                                                owner.getSpeed);
     }
 
     public void Terminate(Spider owner)
