@@ -38,7 +38,8 @@ public partial class EnemyManager
 
         public override void OnCollision(EnemyManager owner)
         {
-            SceneManager.LoadScene("GameOverScene");
+            //SceneManager.LoadScene("GameOverScene");
+
         }
 
         private void TrackEntryComplete(Spine.TrackEntry trackEntry)

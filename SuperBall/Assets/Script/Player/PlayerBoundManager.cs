@@ -94,7 +94,7 @@ public class PlayerBoundManager : MonoBehaviour
             //プレイヤーのローカル座標に変換
             Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-            Debug.Log(localPoint);
+            //Debug.Log(localPoint);
 
            
             float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
