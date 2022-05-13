@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5368094049308756850}
   - component: {fileID: 5368094049308756849}
   - component: {fileID: 5368094049308756848}
-  - component: {fileID: 5368094049308756855}
   - component: {fileID: 5368094049308756863}
   - component: {fileID: 5368094049308756856}
   - component: {fileID: 5368094049308756862}
@@ -132,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   XSpeed: 10
-  SpeedLimit_X: 100
+  SpeedLimit_X: 20
   Brake: 1
   BrakeForce: 0.8
   SpeedDece: 6
@@ -187,8 +186,8 @@ MonoBehaviour:
   isButton: 1
   X_Speed: 30
   Y_Speed: 30
-  AirDushMode: 0
-  X_SpeedAirDush: 30
+  AirDushMode: 1
+  X_SpeedAirDush: 20
   Y_SpeedAirDush: 30
   SwitchThrusterCheck: 0
   ThrusterCooltime: 0.3
@@ -207,23 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9d06a073a48f64ea23e3e40016c9c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5368094049308756855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5368094049308756857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4fcca80b2562340a68ba30a01cb24e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite_00: {fileID: 21300000, guid: 1873b85bccefc254894020d047e3a081, type: 3}
-  sprite_01: {fileID: 21300000, guid: 72e2d537af9e5cc4499c4ad51106b0dd, type: 3}
-  sprite_02: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  sprite_03: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  playerState: 0
 --- !u!95 &5368094049308756863
 Animator:
   serializedVersion: 3

@@ -203,6 +203,9 @@ public class Thruster : MonoBehaviour
             // AirDushMode有効
             else
             {
+
+                particle.Play();
+
                 rb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
 
                 //左右の移動
