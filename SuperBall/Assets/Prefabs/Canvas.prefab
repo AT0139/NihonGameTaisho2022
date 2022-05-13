@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5990104901065998300}
   - component: {fileID: 5990104901065998301}
   - component: {fileID: 5859082954008809606}
+  - component: {fileID: 8932956711907754572}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -112,5 +113,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   landingEffect: {fileID: 8549504675983452811, guid: a5e4f6b3e32594e40b132d1a1348b49d,
+    type: 3}
+  posY: -400
+--- !u!114 &8932956711907754572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5990104901065998298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03edad05e8798854aaab083612f26bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  landingEffect: {fileID: 8549504675983452811, guid: 73f116d6d3341284087ea45aa0cf5310,
     type: 3}
   posY: -400
