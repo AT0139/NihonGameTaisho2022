@@ -12,8 +12,8 @@ public class SpiderNet : MonoBehaviour
     [SerializeField]
     private GameObject  explosion;
     private GameObject  player;
-    private Vector2       previousInput;
-    private Vector2[]     inputs;
+    private Vector2     previousInput;
+    private Vector2[]   inputs;
     private int         inputsCount                 = 0;
     public  bool        onNet { get; private set; } = false;
     private Vector3     initialLocalPosition;
@@ -61,7 +61,7 @@ public class SpiderNet : MonoBehaviour
         else if(collision.gameObject.CompareTag("Player"))
         {
             onNet = true;
-            collision.gameObject.GetComponent<Rigidbody2D>().drag = 100;
+            collision.gameObject.GetComponent<Rigidbody2D>().drag = 30;
         }
     }
 
