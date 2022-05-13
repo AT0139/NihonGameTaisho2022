@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:SuperBall/Assets/Script/SE.meta
 guid: 69130e9ae1e81844694ef98ea84ec311
-========
-guid: ddf51b564f0e8fe4186426ae006453ec
->>>>>>>> parent of 072b65a (Revert "UI,体力実装"):SuperBall/Assets/Script/UI.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

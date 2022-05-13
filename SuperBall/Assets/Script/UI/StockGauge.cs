@@ -8,15 +8,15 @@ public class StockGauge : MonoBehaviour
     [SerializeField]
     private GameObject stockObj;
 
-    //　残機全削除＆残機分作成
+    // 残機全削除＆残機分作成
     public void SetStockGauge(int life)
     {
-        //　体力を一旦全削除
+        // 残機を一旦全削除
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(i).gameObject);
         }
-        //　現在の体力数分のライフゲージを作成
+        // 現在の残機数分のライフゲージを作成
         for (int i = 0; i < life; i++)
         {
             Instantiate(stockObj, transform);
@@ -27,7 +27,7 @@ public class StockGauge : MonoBehaviour
     {
         for (int i = 0; i < damage; i++)
         {
-            //　ライフゲージを削除
+            // 残機を削除
             Destroy(transform.GetChild(i).gameObject);
         }
     }
