@@ -6,7 +6,9 @@ public class ToExit : MonoBehaviour
 {
     GameObject sceneControllerCam;
 
-    GameObject player;        
+    GameObject player;
+
+    
 
     public float TransitionTime = 4.0f;
     public float xPos = -7.5f;
@@ -14,6 +16,8 @@ public class ToExit : MonoBehaviour
 
     private Animator animator;
     private MeshRenderer renderer;
+    private SpriteRenderer childRenderer;
+    private float FirstEmission;
     
 
     // Start is called before the first frame update
@@ -23,6 +27,8 @@ public class ToExit : MonoBehaviour
         player = GameObject.Find("Player");           
         animator = GetComponent<Animator>();
         renderer = GetComponent<MeshRenderer>();
+        childRenderer = GetComponentInChildren<SpriteRenderer>();
+        FirstEmission = renderer.material.GetFloat("_Emission");
     }
 
     // Update is called once per frame
@@ -37,15 +43,24 @@ public class ToExit : MonoBehaviour
         
 
         if (player.transform.position.x > xPos)
-        {
-            renderer.material.SetColor("_MainColor", new Color(1-diff, 1-diff, 1, diff));
+        {            
             
             renderer.material.SetFloat("_Emission", diff);
-            
+            renderer.material.SetFloat("_BlinkMinAlphaValue", 0.75f);
+            childRenderer.material.SetFloat("_Emission", diff);
+            childRenderer.material.SetFloat("_BlinkMinAlphaValue", 0.75f);
+
+            animator.SetBool("blScale", true);
         }
         else
         {
-            renderer.material.SetColor("_MainColor", new Color(1, 1, 1, 1));
+            //renderer.material.SetColor("_MainColor", new Color(1, 1, 1, 1));
+            renderer.material.SetFloat("_Emission", FirstEmission);
+            renderer.material.SetFloat("_BlinkMinAlphaValue", 0.25f);
+            childRenderer.material.SetFloat("_Emission", FirstEmission);
+            childRenderer.material.SetFloat("_BlinkMinAlphaValue", 0.25f);
+
+            animator.SetBool("blScale", false);
         }
     }
 
