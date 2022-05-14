@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_UG_GameStart
+  m_Name: M_UG_ExitAcce
   m_Shader: {fileID: -6465566751694194690, guid: 52c00654aa15cda408ed69f7369a8341,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -27,7 +27,7 @@ Material:
     m_Floats:
     - Boolean_E5881C7B: 0
     - _BlinkSpeed: 1
-    - _Emission: 6.82
+    - _Emission: 0.5
     - _IsBlackTexture: 0
     - _IsBlinking: 0
     - _IsEmission: 1

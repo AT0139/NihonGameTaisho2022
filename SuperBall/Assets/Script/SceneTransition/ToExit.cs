@@ -6,11 +6,15 @@ public class ToExit : MonoBehaviour
 {
     GameObject sceneControllerCam;
 
-    GameObject player;          
+    GameObject player;        
 
     public float TransitionTime = 4.0f;
+    public float xPos = -7.5f;
+    public float EmissionNormalize = 3.0f;
 
     private Animator animator;
+    private MeshRenderer renderer;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +22,33 @@ public class ToExit : MonoBehaviour
         sceneControllerCam = Camera.main.gameObject;
         player = GameObject.Find("Player");           
         animator = GetComponent<Animator>();
+        renderer = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-           
+        ExitRange();
     }
+
+    private void ExitRange()
+    {
+        float diff = Mathf.Abs(player.transform.position.x - xPos) / EmissionNormalize;
+        
+
+        if (player.transform.position.x > xPos)
+        {
+            renderer.material.SetColor("_MainColor", new Color(1-diff, 1-diff, 1, diff));
+            
+            renderer.material.SetFloat("_Emission", diff);
+            
+        }
+        else
+        {
+            renderer.material.SetColor("_MainColor", new Color(1, 1, 1, 1));
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "Player")
