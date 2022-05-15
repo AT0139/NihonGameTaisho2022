@@ -8,11 +8,11 @@ public class ToExit : MonoBehaviour
 
     GameObject player;
 
-    
 
-    public float TransitionTime = 4.0f;
-    public float xPos = -7.5f;
-    public float EmissionNormalize = 3.0f;
+
+    [SerializeField] float TransitionTime = 4.0f;
+    [SerializeField] float xPos = -7.5f;
+    [SerializeField] float EmissionNormalize = 3.0f;
 
     private Animator animator;
     private MeshRenderer renderer;
@@ -68,6 +68,7 @@ public class ToExit : MonoBehaviour
     {
         if(collision.transform.tag == "Player")
         {
+            GetComponent<BoxCollider2D>().isTrigger = true;
             animator.SetBool("blMove", true);
             Invoke("Quit", TransitionTime);
         }
