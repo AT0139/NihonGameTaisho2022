@@ -82,16 +82,29 @@ public class PlayerBoundManager : MonoBehaviour
         //衝突位置取得
         foreach (ContactPoint2D contactPoint in collision.contacts)
         {
-            GameObject ground = GetNearObject(contactPoint.point);
-            if(ground.name == "GroundNotBound")
+            if (collision.gameObject.name != "Tilemap")
             {
-                return;
+                blockVariable = Resources.Load<BlockVariable>(collision.gameObject.name);
+                if (blockVariable == null)
+                {
+                    Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                }
             }
-            //反発力取得
-            blockVariable = Resources.Load<BlockVariable>(ground.name);
-            if (blockVariable == null)
+            else
             {
-                Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                GameObject ground = GetNearObject(contactPoint.point);
+
+                if (ground.name == "GroundNotBound")
+                {
+                    return;
+                }
+
+                //反発力取得
+                blockVariable = Resources.Load<BlockVariable>(ground.name);
+                if (blockVariable == null)
+                {
+                    Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                }
             }
             boundPower = blockVariable.boundPower;
 
