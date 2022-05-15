@@ -17,10 +17,15 @@ public class ButtonManager : MonoBehaviour
 
     private bool IsCollision = false;
 
+    //サウンド処理
+    public AudioClip ButtonSound;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,7 +50,7 @@ public class ButtonManager : MonoBehaviour
             //  オブジェクト破壊
             Destroy(DestroyObject);
 
-
+            AudioSource.PlayClipAtPoint(ButtonSound, transform.position);//効果音をならす
             IsCollision = true;
         }
     }
