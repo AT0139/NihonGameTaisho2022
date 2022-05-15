@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_sunanotubu
+  m_Name: M_Grain01
   m_Shader: {fileID: -6465566751694194690, guid: 6058a30014efc824ab7ffbd94079ed66,
     type: 3}
   m_ShaderKeywords: 
@@ -24,6 +24,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: 5214d4c9c86ba874480dd80d9fc0a259, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _Emission: 2
     m_Colors:
-    - Color_5CD8CE6C: {r: 1, g: 0.7467409, b: 0, a: 1}
+    - Color_5CD8CE6C: {r: 1, g: 1, b: 1, a: 1}
