@@ -24,6 +24,16 @@ public class ToGameSelectStage : MonoBehaviour
         sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene03");
     }
 
+    public void ToGameScene_04()
+    {
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene04");
+    }
+
+    public void ToGameScene_05()
+    {
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene05");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
