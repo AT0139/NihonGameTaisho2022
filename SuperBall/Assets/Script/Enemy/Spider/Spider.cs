@@ -54,8 +54,6 @@ public class Spider : MonoBehaviour
         }
         else
         {
-            Debug.Log(colcount);
-
             rb.gravityScale = 0;
         }
     }
