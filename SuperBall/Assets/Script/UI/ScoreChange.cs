@@ -6,27 +6,21 @@ using UnityEngine.UI;
 public class ScoreChange : MonoBehaviour
 {
     [SerializeField]
-    //private Rawimage ScoreDigit_2; // ２桁目
+    private RawImage ScoreDigit_2; // ２桁目
 
-    //[SerializeField]
-    private GameObject ScoreDigit_1; // １桁目
+    [SerializeField]
+    private RawImage ScoreDigit_1; // １桁目
 
-    private int m_Score;
 
-    void Start()
+    public void ShowScore(int score)
     {
-        m_Score = 0;
+        int dig_1 = score % 10; // 1桁目
+        int dig_2 = score / 10; // 2桁目
 
-        ShowScore();
-    }
+        ScoreDigit_1.uvRect = new Rect(dig_1 * 0.1f,
+            ScoreDigit_1.uvRect.y, ScoreDigit_1.uvRect.width, ScoreDigit_1.uvRect.height);
 
-    private void ShowScore()
-    {
-        
-    }
-
-    public void SetScore(int score)
-    {
-        m_Score += score;
+        ScoreDigit_2.uvRect = new Rect(dig_2 * 0.1f,
+            ScoreDigit_2.uvRect.y, ScoreDigit_2.uvRect.width, ScoreDigit_2.uvRect.height);
     }
 }
