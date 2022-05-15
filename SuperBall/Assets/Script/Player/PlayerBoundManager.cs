@@ -83,6 +83,10 @@ public class PlayerBoundManager : MonoBehaviour
         foreach (ContactPoint2D contactPoint in collision.contacts)
         {
             GameObject ground = GetNearObject(contactPoint.point);
+            if(ground.name == "GroundNotBound")
+            {
+                return;
+            }
             //反発力取得
             blockVariable = Resources.Load<BlockVariable>(ground.name);
             if (blockVariable == null)
@@ -109,7 +113,7 @@ public class PlayerBoundManager : MonoBehaviour
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
             }
-            else if (localPoint.x >= 0.25f && ground.name != "GroundNotBound")
+            else if (localPoint.x >= 0.25f)
             {
                 if (this.gameObject.transform.localScale.x >= 0)
                 {

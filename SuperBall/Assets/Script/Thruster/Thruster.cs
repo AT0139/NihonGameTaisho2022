@@ -56,7 +56,7 @@ public class Thruster : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        SwitchThrusterCheck = false;
+        SwitchThrusterCheck = true;
 
         AgainCheck = false; 
 
@@ -131,7 +131,7 @@ public class Thruster : MonoBehaviour
     //    }
     //}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         //レイヤーネーム一覧取得
         string layerName = LayerMask.LayerToName(collision.gameObject.layer);
