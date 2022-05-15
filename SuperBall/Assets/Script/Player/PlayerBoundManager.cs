@@ -82,19 +82,36 @@ public class PlayerBoundManager : MonoBehaviour
         //衝突位置取得
         foreach (ContactPoint2D contactPoint in collision.contacts)
         {
-            GameObject ground = GetNearObject(contactPoint.point);
-            //反発力取得
-            blockVariable = Resources.Load<BlockVariable>(ground.name);
-            if (blockVariable == null)
+            if (collision.gameObject.name != "Tilemap")
             {
-                Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                blockVariable = Resources.Load<BlockVariable>(collision.gameObject.name);
+                if (blockVariable == null)
+                {
+                    Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                }
+            }
+            else
+            {
+                GameObject ground = GetNearObject(contactPoint.point);
+
+                if (ground.name == "GroundNotBound")
+                {
+                    return;
+                }
+
+                //反発力取得
+                blockVariable = Resources.Load<BlockVariable>(ground.name);
+                if (blockVariable == null)
+                {
+                    Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                }
             }
             boundPower = blockVariable.boundPower;
 
             //プレイヤーのローカル座標に変換
             Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-            Debug.Log(localPoint);
+            //Debug.Log(localPoint);
 
            
             float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
@@ -109,7 +126,7 @@ public class PlayerBoundManager : MonoBehaviour
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
             }
-            else if (localPoint.x >= 0.25f && ground.name != "GroundNotBound")
+            else if (localPoint.x >= 0.25f)
             {
                 if (this.gameObject.transform.localScale.x >= 0)
                 {

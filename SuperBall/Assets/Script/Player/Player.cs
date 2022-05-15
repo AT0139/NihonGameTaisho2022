@@ -10,20 +10,12 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    enum GrandTouch
-    {
-        HARD,
-        MIDDLE,
-        SOFT,
-        NONE
-    }
-    private GrandTouch mTouch;
 
     private float speed;
     //Addforceでかける力
-    public float XSpeed = 5;
+    public float XSpeed;
     //左右の速度の限界
-    public float SpeedLimit_X = 65;
+    public float SpeedLimit_X;
 
     public bool Brake;
     public float BrakeForce;

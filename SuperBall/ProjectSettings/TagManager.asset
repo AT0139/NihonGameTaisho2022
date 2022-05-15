@@ -19,6 +19,8 @@ TagManager:
   - Tilemap
   - Enemy
   - SpiderNet
+  - SpidarNet
+  - Bound
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Tilemap
   - 
   - 
   - 

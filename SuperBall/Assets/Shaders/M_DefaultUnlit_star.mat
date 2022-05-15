@@ -10,7 +10,7 @@ Material:
   m_Name: M_DefaultUnlit_star
   m_Shader: {fileID: -6465566751694194690, guid: ae023a310724f754b9e7e1b0c48ef07d,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
