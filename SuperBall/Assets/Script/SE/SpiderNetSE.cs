@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpSound : MonoBehaviour
+public class SpiderNetSE : MonoBehaviour
 {
-    public AudioClip jumpSound;
+    public AudioClip SpiderNetSound;
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -15,14 +15,14 @@ public class JumpSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Tilemap")
+        if (collision.gameObject.tag == "Player")
         {
-            audioSource.PlayOneShot(jumpSound);
-        }  
+            audioSource.PlayOneShot(SpiderNetSound);
+        }
     }
 }
