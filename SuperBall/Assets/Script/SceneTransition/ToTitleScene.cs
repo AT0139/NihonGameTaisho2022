@@ -8,7 +8,7 @@ public class ToTitleScene : MonoBehaviour
     GameObject sceneControllerCam;
     private void LoadTitleScene()
     {        
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("TitleScene");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("TitleScene_new");
     }
 
     // Start is called before the first frame update
