@@ -194,7 +194,6 @@ MonoBehaviour:
   Y_SpeedAirDush: 30
   SwitchThrusterCheck: 0
   ThrusterCooltime: 0.3
-  ThrusterAgain: 0.1
   thrusterEffect: {fileID: 1398846324898158025, guid: 0de92330cba27b74bbd9fafe4935784f,
     type: 3}
 --- !u!114 &5368094049308756848
