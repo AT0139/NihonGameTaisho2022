@@ -98,6 +98,8 @@ public class ParallaxBackground : MonoBehaviour
     float       DistBetweenPlayerAndGround;
     float       UPPERLIMIT;
     float       LOWERLIMIT;
+    [SerializeField]
+    float OFFSET;
 
     //一時的に使用。
     Canvas parallaxBackgroundCanvas;
@@ -137,7 +139,7 @@ public class ParallaxBackground : MonoBehaviour
         for (int i = 0; i < backgroundMax; i++)
         {
             float hosei;
-            var currentPlayerPosY = playerPosition.y;
+            var currentPlayerPosY = player.transform.position.y;
             var StageLowestPosY = groundLevelLowerLimit.transform.position.y;
             var StageHighestPosY = groundLevelUpperLimit.transform.position.y;
 
@@ -146,43 +148,52 @@ public class ParallaxBackground : MonoBehaviour
                 0;                                                                                                                      // いいえ
 
             var stageSizeY = Mathf.Abs(StageLowestPosY - StageHighestPosY);
-            var stageCenterY = Mathf.Abs(StageLowestPosY - StageHighestPosY) / 2f + hosei;
+            var stageCenterY = Mathf.Abs(StageLowestPosY - StageHighestPosY) / 2f /*+ hosei*/;
             // 地表から
             var distFromsurface = Mathf.Abs(StageLowestPosY - currentPlayerPosY);
             var proportion = distFromsurface / stageSizeY;
             // 地表と天井間の中心
-            var distFromCenter = stageCenterY - currentPlayerPosY + hosei;
+            var distFromCenter = StageLowestPosY + stageCenterY - currentPlayerPosY /*+ hosei*/;
             var proportionC = distFromCenter / stageCenterY;
-            var moveAmountsC = (backgroundSpriteSizes[i].y - 1080f) / 2f + hosei;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
-            var moveAmounts = (backgroundSpriteSizes[i].y - 1080f) / 2f;             //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
+            var moveAmountsC = (backgroundSpriteSizes[i].y - 1080f) / 2f /*+ hosei*/;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
+            var moveAmounts = (backgroundSpriteSizes[i].y - 1080f) / 2f;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
 
-            Debug.Log(proportion);
-            Debug.Log(proportionC);
+            //Debug.Log(proportion);
+            //Debug.Log(proportionC);
             backgroundScrollValues[i].x -= (playerPosition.x - previousPlayerPosition.x) * scrollRatesX[i];
             //backgroundScrollValues[i].y -= (playerPosition.y - previousPlayerPosition.y) * scrollRatesY[i];
             if(i == 0) {
-                backgroundScrollValues[i].y = moveAmountsC * proportionC;
+                backgroundScrollValues[i].y = moveAmountsC * proportionC - OFFSET;
+                backgroundsRt[i].anchoredPosition = backgroundScrollValues[i];
             }
             else {
-                backgroundScrollValues[i].y = moveAmounts + -moveAmounts * proportion * scrollRatesY[i];
+                backgroundScrollValues[i].y = moveAmounts + -moveAmounts * proportion * scrollRatesY[i] - OFFSET;
+                backgroundsRt[i].anchoredPosition = backgroundScrollValues[i];
             }
 
             if (backgroundSpriteSizes[i].x < backgroundsRt[i].anchoredPosition.x)
             {
                 backgroundScrollValues[i].x -= backgroundSpriteSizes[i].x;
-                tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, backgroundScrollValues[i].y);
+                tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, tempBackgroundsPosition.y);
                 backgroundsRt[i].anchoredPosition -= tempBackgroundsPosition;
-                backgroundsRt[i].anchoredPosition = new Vector2(backgroundsRt[i].anchoredPosition.x, backgroundScrollValues[i].y);
+                //backgroundsRt[i].anchoredPosition = new Vector2(backgroundsRt[i].anchoredPosition.x, backgroundScrollValues[i].y);
             }
             else if (backgroundsRt[i].anchoredPosition.x < -backgroundSpriteSizes[i].x)
             {
                 backgroundScrollValues[i].x += backgroundSpriteSizes[i].x;
-                tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, backgroundScrollValues[i].y);
+                tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, tempBackgroundsPosition.y);
                 backgroundsRt[i].anchoredPosition += tempBackgroundsPosition;
-                backgroundsRt[i].anchoredPosition = new Vector2(backgroundsRt[i].anchoredPosition.x, backgroundScrollValues[i].y);
+                //backgroundsRt[i].anchoredPosition = new Vector2(backgroundsRt[i].anchoredPosition.x, backgroundScrollValues[i].y);
             }
+            //backgroundsRt[i].anchoredPosition = new Vector2(backgroundsRt[i].anchoredPosition.x, backgroundScrollValues[i].y);
         }
 
+
+        Debug.Log("StartScroll");
+        Debug.Log(tempBackgroundsPosition);
+        Debug.Log(backgroundsRt[0].anchoredPosition);
+        Debug.Log(backgroundsRt[1].anchoredPosition);
+        Debug.Log(playerPosition.y);
 
         //多重実行防止。
         if (scroll != null)
@@ -192,7 +203,7 @@ public class ParallaxBackground : MonoBehaviour
 
         scroll = StartCoroutine(Scroll());
 
-
+        
         previousPlayerPosition = playerPosition;
     }
 
@@ -214,9 +225,14 @@ public class ParallaxBackground : MonoBehaviour
                         scrollDuration,                    // smoothTime
                         scrollSpeedMax                     // maxSpeed = Mathf>Infinity
                     ).x, backgroundScrollValues[i].y);
+                backgroundsRt[i].anchoredPosition = new Vector2(backgroundsRt[i].anchoredPosition.x, backgroundScrollValues[i].y - OFFSET);
             }
 
-
+            //Debug.Log("Scroll");
+            //Debug.Log(tempBackgroundPosition);
+            //Debug.Log(tempBackgroundsPosition);
+            //Debug.Log(backgroundsRt[0].anchoredPosition);
+            //Debug.Log(backgroundsRt[1].anchoredPosition);
             if (scrollDuration <= scrollElapsedTime)
             {
                 //SmoothDampはVelocityの値を参考にして現在の速度を出す為、初期化しておかないと次回実行時に動きが残る。
@@ -334,16 +350,16 @@ public class ParallaxBackground : MonoBehaviour
                 hosei                   = currentPlayerPosY <= 0 && StageLowestPosY <= 0 ?                                                  // プレイヤーの位置が0以下 && ステージの下限が0以下？
                     StageLowestPosY - (Mathf.Abs(StageLowestPosY) - Mathf.Abs(StageLowestPosY) * (currentPlayerPosY / StageLowestPosY)) :   // はい
                     0;                                                                                                                      // いいえ
-                
+
                 var stageSizeY          = Mathf.Abs(StageLowestPosY - StageHighestPosY);
-                var stageCenterY        = Mathf.Abs(StageLowestPosY - StageHighestPosY) / 2f + hosei;
+                var stageCenterY        = Mathf.Abs(StageLowestPosY - StageHighestPosY) / 2f /*+ hosei*/;
                 // 地表から
                 var distFromsurface     = Mathf.Abs(StageLowestPosY - currentPlayerPosY);
                 var proportion          = distFromsurface / stageSizeY;
                 // 地表と天井間の中心
-                var distFromCenter      = stageCenterY  - currentPlayerPosY + hosei;
+                var distFromCenter      = StageLowestPosY + stageCenterY - currentPlayerPosY /*+ hosei*/;
                 var proportionC         = distFromCenter / stageCenterY;
-                var moveAmountsC         = (backgroundSpriteSizes[i].y - 1080f) / 2f + hosei;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
+                var moveAmountsC         = (backgroundSpriteSizes[i].y - 1080f) / 2f /*+ hosei*/;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
                 var moveAmounts         = (backgroundSpriteSizes[i].y - 1080f) / 2f;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
                 if (i == 0) {
                     tempBackgroundPosition.Set(
@@ -387,4 +403,26 @@ public class ParallaxBackground : MonoBehaviour
 
         isInitialized = true;
     }
+    /*
+     * 
+     * float hosei;
+                var currentPlayerPosY   = player.transform.position.y;
+                var StageLowestPosY     = groundLevelLowerLimit.transform.position.y;
+                var StageHighestPosY    = groundLevelUpperLimit.transform.position.y;
+                    
+                hosei                   = currentPlayerPosY <= 0 && StageLowestPosY <= 0 ?                                                  // プレイヤーの位置が0以下 && ステージの下限が0以下？
+                    StageLowestPosY - (Mathf.Abs(StageLowestPosY) - Mathf.Abs(StageLowestPosY) * (currentPlayerPosY / StageLowestPosY)) :   // はい
+                    0;                                                                                                                      // いいえ
+                
+                var stageSizeY          = Mathf.Abs(StageLowestPosY - StageHighestPosY);
+                var stageCenterY        = Mathf.Abs(StageLowestPosY - StageHighestPosY) / 2f + hosei;
+                // 地表から
+                var distFromsurface     = Mathf.Abs(StageLowestPosY - currentPlayerPosY);
+                var proportion          = distFromsurface / stageSizeY;
+                // 地表と天井間の中心
+                var distFromCenter      = stageCenterY  - currentPlayerPosY + hosei;
+                var proportionC         = distFromCenter / stageCenterY;
+                var moveAmountsC         = (backgroundSpriteSizes[i].y - 1080f) / 2f + hosei;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
+                var moveAmounts         = (backgroundSpriteSizes[i].y - 1080f) / 2f;    //  制作中の現在、Screen.height の値が想定した1080ではないため直接1080を渡している。
+     */
 }

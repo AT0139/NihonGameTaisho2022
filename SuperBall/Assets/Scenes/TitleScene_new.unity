@@ -6133,6 +6133,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756849, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5368094049308756862, guid: 2ab86f7175a351343994909ee1cb1677,
         type: 3}
       propertyPath: sideBoundCor
