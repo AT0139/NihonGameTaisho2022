@@ -56,7 +56,8 @@ public class Thruster : MonoBehaviour
         input = new PlayerActionInput();
 
         input.Enable();
-        input.Player.ThrusterButton.performed += context => ButtonThruster();
+
+        Invoke("ThrusterSet", 1);
     }
 
     private void Awake()
@@ -69,7 +70,11 @@ public class Thruster : MonoBehaviour
     {
         particle.transform.position = transform.position;
     }
-  
+  //Invoke用関数
+    void ThrusterSet()
+    {
+        input.Player.ThrusterButton.performed += context => ButtonThruster();
+    }
 
     //// 侵入判定
     //void OnTriggerStay2D(Collider2D other)
@@ -95,14 +100,20 @@ public class Thruster : MonoBehaviour
                 //プレイヤーのローカル座標に変換
                 Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
+                Debug.Log(localPoint);
+
                 //プレイヤーの下面に当たっていたら
-                if (localPoint.y <= -0.15)
+                if (localPoint.y <= -0.2)
                 {
-                    stayCount++;
-                    if (stayCount >= 20)
+                    if (localPoint.x < 0.25)
                     {
-                        SwitchThruster();
-                        stayCount = 0;
+                        stayCount++;
+                        if (stayCount >= 20)
+                        {
+                            SwitchThruster();
+                            stayCount = 0;
+
+                        }
                     }
                 }
             }
@@ -123,11 +134,12 @@ public class Thruster : MonoBehaviour
                 Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
                 //プレイヤーの下面に当たっていたら
-                if (localPoint.y <= -0.15)
+                if (localPoint.y <= -0.2)
                 {
-
-                    SwitchThruster();
-
+                    if (localPoint.x < 0.25)
+                    {
+                        SwitchThruster();
+                    }
                 }
             }
         }
@@ -135,9 +147,11 @@ public class Thruster : MonoBehaviour
 
     void SwitchThruster()
     {
-        //Debug.Log(ThrusterCooltime + "秒後にスラスター使用可能になった");
-
-        SwitchThrusterCheck = true;
+        if (!SwitchThrusterCheck)
+        {
+        Debug.Log(ThrusterCooltime + "秒後にスラスター使用可能になった");
+            SwitchThrusterCheck = true;
+        }
     }
 
     public void ButtonThruster()
