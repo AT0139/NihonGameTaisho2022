@@ -27,7 +27,7 @@ Material:
     m_Floats:
     - Boolean_E5881C7B: 0
     - _BlinkSpeed: 1
-    - _Emission: 1.25
+    - _Emission: 1.04
     - _FluctuationSpeed: 8.36
     - _IsBlackTexture: 0
     - _IsBlinking: 0
@@ -35,4 +35,4 @@ Material:
     - _IsFluctuation: 1
     - _IsVertexColor: 1
     m_Colors:
-    - _MainColor: {r: 2.1411638, g: 2.1411638, b: 2.1411638, a: 1}
+    - _MainColor: {r: 0, g: 0, b: 0, a: 1}
