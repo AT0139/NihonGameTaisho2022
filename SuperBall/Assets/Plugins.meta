@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:SuperBall/Assets/SE.meta
+guid: 349e618ad10d6434ca9b7dfe060b2f34
+========
 guid: 64d121ec2e6855c4c8bccfb17d593b04
+>>>>>>>> 1f85e19ffef42327889984b72406ef020db60bf8:SuperBall/Assets/Plugins.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

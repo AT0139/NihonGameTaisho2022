@@ -29,88 +29,51 @@ public class Thruster : MonoBehaviour
     public float Y_SpeedAirDush;
 
     // スラスターを使える状態かのチェック
-    private bool SwitchThrusterCheck;
+    public bool SwitchThrusterCheck;
 
     // レンジに入ってどれぐらいの時間で使えるようになるか 0.5秒の場合は0.5と入力
     public float ThrusterCooltime;
 
-    // 入力状態のときにどれぐらいの時間で再判定するか 0.5秒の場合は0.5と入力
-    public float ThrusterAgain;
-
-    // ログ出力に使用　必要なければ消してよし
-    private bool AgainCheck;
-
     private Rigidbody2D rb;
 
-    private Vector2 move;
     private Vector2 Lstick;
 
     PlayerActionInput input;
 
     [SerializeField] ParticleSystem thrusterEffect;
 
-    private ParticleSystem particle;
+    public static ParticleSystem particle;
 
+    int stayCount;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        SwitchThrusterCheck = false;
-
-        AgainCheck = false; 
+        SwitchThrusterCheck = true;
 
         //InputSystemを有効化
         input = new PlayerActionInput();
 
         input.Enable();
-        input.Player.ThrusterButton.performed += context => ButtonThruster();
 
+        Invoke("ThrusterSet", 1);
+    }
+
+    private void Awake()
+    {
         particle = Instantiate(thrusterEffect, transform.position, Quaternion.identity);
         particle.Stop();
     }
 
     void Update()
     {
-        if (SwitchThrusterCheck)
-            UseThruster();
-
-        move = input.Player.Thruster.ReadValue<Vector2>();
         particle.transform.position = transform.position;
     }
-
-    //スラスターを使って移動を行う関数
-    void UseThruster()
+  //Invoke用関数
+    void ThrusterSet()
     {
-        if (!isButton)
-        {
-            // コントローラーの傾け具合で方向が変えられる
-            if (move.x != 0 || move.y != 0)
-            {
-                particle.Play();
-
-                // AirDushMode無効
-                if (!AirDushMode)
-                {
-                    //左右の移動
-                    rb.AddForce(transform.right * X_Speed * move.x, ForceMode2D.Impulse);
-                    //上下の移動
-                    rb.AddForce(transform.up * Y_Speed * move.y, ForceMode2D.Impulse);
-                    SwitchThrusterCheck = false;
-                }
-                // AirDushMode有効
-                else
-                {
-                    rb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
-
-                    //左右の移動
-                    rb.AddForce(transform.right * X_SpeedAirDush * move.x, ForceMode2D.Impulse);
-                    //上下の移動
-                    rb.AddForce(transform.up * Y_SpeedAirDush * move.y, ForceMode2D.Impulse);
-                    SwitchThrusterCheck = false;
-                }
-            }
-        }
+        input.Player.ThrusterButton.performed += context => ButtonThruster();
     }
 
     //// 侵入判定
@@ -124,45 +87,71 @@ public class Thruster : MonoBehaviour
     //    }
     //}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
+        //レイヤーネーム取得
         string layerName = LayerMask.LayerToName(collision.gameObject.layer);
 
-        float groundTopYpos = collision.transform.position.y + collision.transform.localScale.y / 2;
-
-        if (layerName == "Ground" && this.transform.position.y >= groundTopYpos)
+        if (layerName == "Ground")
         {
-            if (!SwitchThrusterCheck)
-                Invoke("SwitchThruster", ThrusterCooltime);
+            //衝突位置取得
+            foreach (ContactPoint2D contactPoint in collision.contacts)
+            {
+                //プレイヤーのローカル座標に変換
+                Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+
+                Debug.Log(localPoint);
+
+                //プレイヤーの下面に当たっていたら
+                if (localPoint.y <= -0.2)
+                {
+                    if (localPoint.x < 0.25)
+                    {
+                        stayCount++;
+                        if (stayCount >= 20)
+                        {
+                            SwitchThruster();
+                            stayCount = 0;
+
+                        }
+                    }
+                }
+            }
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //レイヤーネーム取得
+        string layerName = LayerMask.LayerToName(collision.gameObject.layer);
+
+        if (layerName == "Ground")
+        {
+            //衝突位置取得
+            foreach (ContactPoint2D contactPoint in collision.contacts)
+            {
+                //プレイヤーのローカル座標に変換
+                Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
+
+                //プレイヤーの下面に当たっていたら
+                if (localPoint.y <= -0.2)
+                {
+                    if (localPoint.x < 0.25)
+                    {
+                        SwitchThruster();
+                    }
+                }
+            }
+        }
+    }
 
     void SwitchThruster()
     {
-        if(move.x == 0 && move.y == 0)
+        if (!SwitchThrusterCheck)
         {
-            // ログ出力が変わるだけなので後で消してもよい
-            if(AgainCheck)
-            {
-                Debug.Log("再判定成功、スラスター使用可能");
-                AgainCheck = false;
-            }
-            else
-            {
-                Debug.Log(ThrusterCooltime + "秒後にスラスター使用可能になった");
-            }
-
+        Debug.Log(ThrusterCooltime + "秒後にスラスター使用可能になった");
             SwitchThrusterCheck = true;
         }
-        else
-        {
-            // 実質再帰関数？
-            Invoke("SwitchThruster", ThrusterAgain);
-            Debug.Log(ThrusterAgain + "秒後にスラスター再判定");
-            AgainCheck = true;
-        }
-        
     }
 
     public void ButtonThruster()
@@ -173,6 +162,9 @@ public class Thruster : MonoBehaviour
             // AirDushMode無効
             if (!AirDushMode)
             {
+
+                particle.Play();
+
                 //左右の移動
                 rb.AddForce(transform.right * X_Speed * Lstick.x, ForceMode2D.Impulse);
                 //上下の移動
@@ -182,7 +174,10 @@ public class Thruster : MonoBehaviour
             // AirDushMode有効
             else
             {
-                rb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+
+                particle.Play();
+
+                rb.velocity = new Vector3(0, 0, 0);
 
                 //左右の移動
                 rb.AddForce(transform.right * X_SpeedAirDush * Lstick.x, ForceMode2D.Impulse);

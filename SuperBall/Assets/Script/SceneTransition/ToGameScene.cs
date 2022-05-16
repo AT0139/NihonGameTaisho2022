@@ -5,24 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class ToGameScene : MonoBehaviour
 {
-    private void LoadGameScene()
-    {
-        SceneManager.LoadScene("SampleScene");
-    }
+    //private void LoadGameScene()
+    //{
+    //    SceneManager.LoadScene("SampleScene");
+    //}
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    //// Start is called before the first frame update
+    //void Start()
+    //{
         
-    }
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        // スペースキー
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LoadGameScene();
-        }
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    // スペースキー
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        LoadGameScene();
+    //    }
+    //}
 }

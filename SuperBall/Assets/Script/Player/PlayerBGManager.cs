@@ -5,19 +5,20 @@ using UnityEngine;
 public class PlayerBGManager : MonoBehaviour
 {
     GameObject parallaxBG;
+    ParallaxBackground pb;
     // Start is called before the first frame update
     void Start()
     {
-        if (parallaxBG = GameObject.FindGameObjectWithTag("Background_Parallax"))
-            ; 
-        else
-            Debug.LogError("視差背景がインスペクタ上に見つからないよ");
+        parallaxBG = GameObject.FindGameObjectWithTag("Background_Parallax");
+        if (!parallaxBG)
+            Debug.Log("ヒエラルキーに背景がありません。");
+        if(parallaxBG)
+            pb = parallaxBG.GetComponent<ParallaxBackground>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(parallaxBG)
-            parallaxBG.GetComponent<ParallaxBackground>().StartScroll(transform.position);
+            pb.StartScroll(transform.position);
     }
 }

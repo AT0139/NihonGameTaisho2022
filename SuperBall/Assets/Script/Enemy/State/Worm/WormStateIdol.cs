@@ -223,7 +223,7 @@ public partial class EnemyManager
                 rotate = -90;
             else
                 rotate = 90;
-
+            
             switch (dir)
             {
                 //右壁にくっつく

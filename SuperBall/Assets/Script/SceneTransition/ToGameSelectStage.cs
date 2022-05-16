@@ -11,17 +11,27 @@ public class ToGameSelectStage : MonoBehaviour
 
     public void ToGameScene_01()
     {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene_01");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene01");
     }
 
     public void ToGameScene_02()
     {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene_02");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene02");
     }
 
     public void ToGameScene_03()
     {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene_03");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene03");
+    }
+
+    public void ToGameScene_04()
+    {
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene04");
+    }
+
+    public void ToGameScene_05()
+    {
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene05");
     }
 
     // Start is called before the first frame update
@@ -29,6 +39,8 @@ public class ToGameSelectStage : MonoBehaviour
     {
         sceneControllerCam = Camera.main.gameObject;
     }
+
+
 
     // Update is called once per frame
     void Update()
