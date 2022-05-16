@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 101edea711247fd4d97d1e8cd8e85e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemSound: {fileID: 0}
+  ItemSound: {fileID: 8300000, guid: aae5f11aef85ce74ea56bc11cb4be7ec, type: 3}
   getParticle: {fileID: 6514670435201359470, guid: 36a91c69c7020ca4c8f4547deae875ac,
     type: 3}
 --- !u!82 &1326831001414106974
