@@ -135,7 +135,7 @@ public class Thruster : MonoBehaviour
 
     void SwitchThruster()
     {
-        Debug.Log(ThrusterCooltime + "秒後にスラスター使用可能になった");
+        //Debug.Log(ThrusterCooltime + "秒後にスラスター使用可能になった");
 
         SwitchThrusterCheck = true;
     }
