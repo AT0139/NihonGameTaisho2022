@@ -27,4 +27,4 @@ Material:
     m_Floats:
     - _Emission: 2
     m_Colors:
-    - Color_5CD8CE6C: {r: 1, g: 1, b: 1, a: 1}
+    - Color_5CD8CE6C: {r: 1, g: 0, b: 0, a: 1}

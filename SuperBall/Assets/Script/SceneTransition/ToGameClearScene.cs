@@ -7,7 +7,7 @@ public class ToGameClearScene : MonoBehaviour
 {
     GameObject sceneControllerCam;
 
-    private void LoadGameClearScene()
+    public void LoadGameClearScene()
     {        
         sceneControllerCam.GetComponent<SceneController>().sceneChange("GameClearScene");
     }

@@ -46,10 +46,10 @@ public class ToGameSelectStage : MonoBehaviour
     void Update()
     {
         // Enterキー
-        if (Input.GetKeyDown(KeyCode.Return))
+       /* if (Input.GetKeyDown(KeyCode.Return))
         {
             //SceneManager.LoadScene("StageSelectScene");
             sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
-        }
+        }*/
     }
 }
