@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StockGauge : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class StockGauge : MonoBehaviour
         {
             Instantiate(stockObj, transform);
         }
+
+        transform.GetChild(0).gameObject.GetComponent<RawImage>().color = new Color(255.0f, 255.0f, 255.0f, 190.0f);
+        transform.GetChild(0).gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(50.0f, 50.0f);
     }
     //　ダメージ分だけ削除
     public void StockDamege(int damage)
