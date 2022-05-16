@@ -23,7 +23,9 @@ public class Goal : MonoBehaviour
     {
         if(collision.transform.name == "Player")
         {
-
+            //collision.GetComponent<PlayerActionInput>().Disable();
+            Player.input.Disable();
+            
         }
     }
 }

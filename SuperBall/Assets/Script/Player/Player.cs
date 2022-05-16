@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 
     public Vector2 move { get; private set; }
 
-    PlayerActionInput input;
+    static public PlayerActionInput input;
 
     void Start()
     {

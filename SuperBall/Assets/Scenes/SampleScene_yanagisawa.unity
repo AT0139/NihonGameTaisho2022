@@ -3837,6 +3837,11 @@ PrefabInstance:
       propertyPath: isButton
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5368094049308756857, guid: 2ab86f7175a351343994909ee1cb1677,
         type: 3}
       propertyPath: m_Name
@@ -24838,6 +24843,7 @@ GameObject:
   - component: {fileID: 1174683811}
   - component: {fileID: 1174683810}
   - component: {fileID: 1174683812}
+  - component: {fileID: 1174683813}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -24922,7 +24928,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3651767, y: 0}
+  m_Offset: {x: 0.8339536, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24933,8 +24939,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.269647, y: 10.98}
+  m_Size: {x: 12.332092, y: 10.98}
   m_EdgeRadius: 0
+--- !u!114 &1174683813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174683809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1685575c93a34554e94596387b2f2294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1177353685
 PrefabInstance:
   m_ObjectHideFlags: 0
