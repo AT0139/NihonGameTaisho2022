@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
     private ScoreChange ScoreChange;
 
     // 現在のスコア
-    private int m_Score;
+    public static int m_Score;
 
     void Start()
     {

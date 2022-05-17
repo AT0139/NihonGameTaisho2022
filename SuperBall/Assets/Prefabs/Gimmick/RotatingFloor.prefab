@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4143893874367738039}
   - component: {fileID: 4143893874367738036}
   m_Layer: 8
-  m_Name: New Sprite
-  m_TagString: Ground
+  m_Name: RotatingFloorChild
+  m_TagString: Bound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,8 +143,8 @@ GameObject:
   - component: {fileID: 4143893874371307665}
   - component: {fileID: 4143893874371307670}
   m_Layer: 8
-  m_Name: New Sprite (1)
-  m_TagString: Ground
+  m_Name: RotatingFloorChild
+  m_TagString: Bound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,8 +273,8 @@ GameObject:
   - component: {fileID: 4143893874709269487}
   - component: {fileID: 4143893874709269484}
   m_Layer: 8
-  m_Name: New Sprite (3)
-  m_TagString: Ground
+  m_Name: RotatingFloorChild
+  m_TagString: Bound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,9 +401,9 @@ GameObject:
   - component: {fileID: 4143893874883771456}
   - component: {fileID: 4143893874883771462}
   - component: {fileID: 4143893874883771457}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotatingFloor
-  m_TagString: Untagged
+  m_TagString: Bound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,8 +502,8 @@ GameObject:
   - component: {fileID: 4143893876084712135}
   - component: {fileID: 4143893876084712132}
   m_Layer: 8
-  m_Name: New Sprite (2)
-  m_TagString: Ground
+  m_Name: RotatingFloorChild
+  m_TagString: Bound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
