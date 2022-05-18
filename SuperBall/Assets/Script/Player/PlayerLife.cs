@@ -119,4 +119,9 @@ public class PlayerLife : MonoBehaviour
             GetRecovery(m_PlayerLifeMax);
         }
     }
+
+    public int GetLife()
+    {
+        return m_PlayerLife;
+    }
 }

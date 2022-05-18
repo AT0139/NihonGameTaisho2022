@@ -2,37 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SandSE : MonoBehaviour
+public class BarrelSE : MonoBehaviour
 {
-    //サウンド
-    public AudioClip SandSound;
+    public AudioClip BarrelSound;
     AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        //AudioSourceの取得
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //プレイヤーに触れたら音を鳴らす
-        if (other.gameObject.tag == "Player")
+        //Playerと当たった時
+        if (collision.gameObject.tag == "Player")
         {
-            sandSound();
+            //1秒後に音を鳴らす
+            Invoke("barrelSound", 1);
         }
     }
 
     //音を鳴らす処理
-     public void sandSound()
+    void barrelSound()
     {
-        audioSource.PlayOneShot(SandSound);
+        audioSource.PlayOneShot(BarrelSound);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //  GameStartオブジェクトのスクリプト操作
 //  Author :柳澤優太
@@ -86,6 +87,7 @@ public class ToGameStart : MonoBehaviour
 
     void ChangeStageSelectScene()
     {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
+        //sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
+        SceneManager.LoadScene("StageSelectScene");
     }
 }
