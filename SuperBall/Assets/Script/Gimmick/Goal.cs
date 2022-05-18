@@ -5,8 +5,11 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     GameObject sceneControllerCam;
+    [SerializeField] GameObject playerGoal;
+    [SerializeField] float animationTime = 1.0f;
 
     bool IsEnter2D = false;
+    private GameObject playerGoalInstance;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +23,13 @@ public class Goal : MonoBehaviour
     {
         if (IsEnter2D)
         {
-            float playerXVelocity = (Player.rb.velocity.x) * (0.9f);
+            float playerXVelocity = (Player.rb.velocity.x) * (0.2f);
             Player.rb.velocity = new Vector3(playerXVelocity, 0, 0);
-            if (playerXVelocity < 1.0f)
+            if (playerXVelocity < 5.0f)
             {
                 IsEnter2D = false;
-                
 
+                
             }
         }
     }
@@ -36,13 +39,22 @@ public class Goal : MonoBehaviour
         if(collision.transform.name == "Player")
         {
             //collision.GetComponent<PlayerActionInput>().Disable();
-            Player.input.Disable();
-            Thruster.input.Disable();
+            /*Player.input.Disable();
+            Thruster.input.Disable();*/
+            collision.gameObject.SetActive(false);
 
             IsEnter2D = true;
+            playerGoalInstance = Instantiate(playerGoal, collision.transform.position, Quaternion.identity);
 
-            sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
+            playerGoalInstance.GetComponent<Animator>().SetBool("IsLeave", true);
+            Invoke("SetIsLeaveFalse", animationTime);
         }
+    }
+
+    private void SetIsLeaveFalse()
+    {
+        playerGoalInstance.GetComponent<Animator>().SetBool("IsLeave", false);
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
     }
 
     private void OnTriggerStay2D(Collider2D collision)
