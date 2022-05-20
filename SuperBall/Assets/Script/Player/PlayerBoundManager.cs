@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class PlayerBoundManager : MonoBehaviour
 {
+    [SerializeField] HitStopManager hitStopManager;
+
     [SerializeField] float sideBoundCor; //横バウンド時Y+方向補正値
     BlockVariable blockVariable;
     new Rigidbody2D rigidbody2D;
@@ -17,6 +19,8 @@ public class PlayerBoundManager : MonoBehaviour
 
     GameObject[] groundObj = null;
 
+    float hitStopCount;
+
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -27,11 +31,11 @@ public class PlayerBoundManager : MonoBehaviour
 
     private void Update()
     {
-       // Debug.Log(isBound);
-        if(!isBound)
+        //Debug.Log(rigidbody2D.velocity.magnitude);
+        if (!isBound)
         {
             boundCnt++;
-            if(boundCnt >= BOUND_COUNT_MAX)
+            if (boundCnt >= BOUND_COUNT_MAX)
             {
                 isBound = true;
                 boundCnt = 0;
@@ -117,30 +121,34 @@ public class PlayerBoundManager : MonoBehaviour
 
             //Debug.Log(localPoint);
 
-           
+
             float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
 
             //上方向
             if (localPoint.y <= -0.25)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower + boundAddition);
+                HitStopDecision();
             }
             //下方向
             else if (localPoint.y >= 0.25f)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
+                HitStopDecision();
             }
             else if (localPoint.x >= 0.25f)
             {
                 if (this.gameObject.transform.localScale.x >= 0)
                 {
                     //右方向
-                    rigidbody2D.velocity = new Vector2(-boundPower,  sideBoundCor);
+                    rigidbody2D.velocity = new Vector2(-boundPower, sideBoundCor);
+                    HitStopDecision();
                 }
                 else if (this.gameObject.transform.localScale.x <= 0)
                 {
                     //左方向
-                    rigidbody2D.velocity = new Vector2(boundPower,  sideBoundCor);
+                    rigidbody2D.velocity = new Vector2(boundPower, sideBoundCor);
+                    HitStopDecision();
                 }
             }
         }
@@ -187,11 +195,19 @@ public class PlayerBoundManager : MonoBehaviour
         //返す配列作成
         GameObject[] childrens = new GameObject[parent.transform.childCount];
         //子オブジェクト分のループ
-        for(int i=0;i< childrens.Length;i++)
+        for (int i = 0; i < childrens.Length; i++)
         {
             childrens[i] = parent.transform.GetChild(i).gameObject;
         }
 
         return childrens;
+    }
+
+    void HitStopDecision()
+    {
+        if (rigidbody2D.velocity.magnitude >= 30.0f )
+        {
+            //hitStopManager.SetHitStop(0.1f);
+        }
     }
 }
