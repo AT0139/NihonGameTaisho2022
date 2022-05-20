@@ -45,7 +45,7 @@ public class S_EffectLanding : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.transform.tag == "Tilemap")
+        if (collision.transform.tag == "Bound")
         {
             foreach (ContactPoint2D contactPoint in collision.contacts)
             {
@@ -62,8 +62,8 @@ public class S_EffectLanding : MonoBehaviour
                     }
                     else
                     {
-                        /*weekLanding.transform.position = transform.position;
-                        weekLanding.Play();*/
+                        //weekLanding.transform.position = transform.position;
+                        //weekLanding.Play();
                         Instantiate(WeekLanding, transform.position, Quaternion.identity);
                     }
                 }
