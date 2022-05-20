@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1aab0656a2a32047aa6d6941b1e14f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitStopManager: {fileID: 0}
   sideBoundCor: 30
 --- !u!114 &5368094049308756853
 MonoBehaviour:
