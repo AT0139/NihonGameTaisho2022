@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerAnimationManager : MonoBehaviour
 {
     new Rigidbody2D rigidbody2D;
-    Animator animator;
+    public Animator animator;
 
+    [SerializeField]
+    static float VEL = 5f;
     enum COLLISIONDILECTION{
         UP,
         DOWN,
@@ -38,7 +40,7 @@ public class PlayerAnimationManager : MonoBehaviour
         foreach(ContactPoint2D point in collision.contacts)
         {
             Vector3 relativePoint = transform.InverseTransformPoint(point.point);
-            if(rigidbody2D.velocity.magnitude > 7)
+            if(rigidbody2D.velocity.magnitude > VEL)
             {
                 if(relativePoint.x > 0.2)
                 {
@@ -66,20 +68,39 @@ public class PlayerAnimationManager : MonoBehaviour
                     animator.Play("Bounce_Down_Player", 0, 0);
                 }
             }
-            else
-            {
-                animator.SetInteger("trans", -1);
-            }
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        animator.SetBool("IsGround", true);
+        
+        foreach (ContactPoint2D point in collision.contacts)
+        {
+            Vector3 relativePoint = transform.InverseTransformPoint(point.point);
+            if (relativePoint.y < -0.2)
+            {
+                animator.SetBool("IsGround", true);
+                if (rigidbody2D.velocity.magnitude <= VEL)
+                {
+                    animator.SetInteger("trans", -1);
+                    animator.Play("Idle_Player", 0, 0);
+                }
+            }
+            
+        }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         animator.SetBool("IsGround", false);
+    }
+    public void AnimationJump()
+    {
+        if(animator.GetBool("IsGround"))
+        {
+            animator.SetInteger("trans", (int)COLLISIONDILECTION.DOWN);
+            animator.Play("Bounce_Down_Player", 0, 0);
+        }
     }
 
     private void MovingDirectionHor()
