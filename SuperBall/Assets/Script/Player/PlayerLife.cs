@@ -33,8 +33,16 @@ public class PlayerLife : MonoBehaviour
         // 表示部分に残機のセット
         playerStock.SetStockGauge(m_PlayerStock);
 
-        m_PlayerLife = m_PlayerLifeMax;
-
+        if(HPwarehouse.h_PlayerHP == 0)
+        {
+            // ゲームオーバーなどの後にはリセットされているので最大値を代入
+            m_PlayerLife = m_PlayerLifeMax;
+        }
+        else
+        {
+            // シーンを跨ぐ(別のプレイヤーがStartする想定)ときはHPwarehouseを読む
+            m_PlayerLife = HPwarehouse.h_PlayerHP;
+        }
     }
 
     void Update()
@@ -45,8 +53,29 @@ public class PlayerLife : MonoBehaviour
             // ゲームオーバー
             SceneManager.LoadScene("GameOverScene");
         }
-    }
 
+        HPwarehouse.h_PlayerHP = m_PlayerLife;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("TestScene_furuichi");
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            lifeManager.ShowLife(m_PlayerLife);
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            GetDamege(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Recovery(1);
+        }
+    }
 
     // ダメージ処理
     public void GetDamege(int damege)
