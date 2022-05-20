@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2295248382118700353}
   m_Layer: 0
-  m_Name: GroundLevel
+  m_Name: FieldHeightPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
