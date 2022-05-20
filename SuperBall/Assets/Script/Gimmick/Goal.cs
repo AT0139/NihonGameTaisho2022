@@ -5,43 +5,42 @@ using Cinemachine;
 
 public class Goal : MonoBehaviour
 {
-    GameObject sceneControllerCam;
-    [SerializeField] GameObject playerGoal;
-    [SerializeField] float animationTime = 1.0f;
-
+    
+    [SerializeField] GameObject playerGoal;    
     [SerializeField] GameObject coin;
     [SerializeField] float awakeTime = 1.0f;
-
-    bool IsEnter2D = false;
-    bool IsCoin = false;
-    bool IsLeave = false;
-    private GameObject playerGoalInstance;
-    private float coinTime = 1.0f;
-    private Rigidbody2D ridig2DPlayerGoal;
     [SerializeField] float oneCoinTime = 0.1f;
+    [SerializeField] float animationTime = 1.0f;
+
+    private GameObject sceneControllerCam;
+    private GameObject playerGoalInstance;
+    private GameObject CMvcam1;    
+    private Rigidbody2D ridig2DPlayerGoal;    
     private Animator playerGoalAnimator;
-    private GameObject CMvcam1;
+    private float coinTime = 1.0f;
+    
+    private bool IsEnter2D = false;
+    private bool IsCoin = false;
+    private bool IsLeave = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        sceneControllerCam = Camera.main.gameObject;
-        ScoreManager.scoreManagerInstance.AddScore(10);
+        //  Get
+        sceneControllerCam = Camera.main.gameObject;        
         CMvcam1 = GameObject.Find("CM vcam1");
+
+                
     }
 
-    void IsCoinTrue()
-    {
-        IsEnter2D = false;
-        IsCoin = true;
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
         if (IsEnter2D)
         {
-            IsCoinTrue();            
+            IsCoinTrue();
         }
 
         if (IsCoin)
@@ -57,11 +56,8 @@ public class Goal : MonoBehaviour
             //  これはコイン処理が終わってからにしたい。
             //  「去る」アニメーションフラグ設定
             playerGoalAnimator.SetBool("IsLeave", true);
-
             
-            coinTime *= ScoreManager.scoreManagerInstance.GetCoinNum();
-            
-            
+            coinTime = oneCoinTime  *  ScoreManager.scoreManagerInstance.GetCoinNum();                       
 
             //  アニメーション遷移時間＋コイン処理時間
             float totalTime = animationTime + coinTime;
@@ -70,10 +66,7 @@ public class Goal : MonoBehaviour
             Invoke("SetIsLeaveFalse", totalTime);
         }
     }
-    void startCoroutin()
-    {
-        StartCoroutine("CoinThrowCol");
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -84,35 +77,52 @@ public class Goal : MonoBehaviour
 
             //  プレイヤーをそのまま使うのは変更するのがだるいので
             //  新しいゴール用のプレイヤーを使う
-
             collision.gameObject.SetActive(false);
-
             playerGoalInstance = Instantiate(playerGoal, collision.transform.position, Quaternion.identity);
+
+            //  GetComponent
             ridig2DPlayerGoal = playerGoalInstance.GetComponent<Rigidbody2D>();
             Camera.main.gameObject.GetComponent<Animator>().SetBool("IsGoal", true);
             playerGoalAnimator = playerGoalInstance.GetComponent<Animator>();
+
+            //  Animator SetBool
             playerGoalAnimator.SetBool("IsEnter", true);
 
-            CMvcam1.GetComponent<CinemachineVirtualCamera>().Follow = playerGoalInstance.transform;
-            
+            // other            
+            CMvcam1.GetComponent<CinemachineVirtualCamera>().Follow = playerGoalInstance.transform;            
         }
     }
 
+    //  コインの枚数分をoneCoinTime秒毎に投げる
     private IEnumerator CoinThrowCol()
     {
+        //  コインの枚数取得
         int coinNum = ScoreManager.scoreManagerInstance.GetCoinNum();
+
         for (int i = 0; i < coinNum; i++)
         {
             GameObject coinInstance = Instantiate(coin, playerGoalInstance.transform.position, Quaternion.identity);
+
+            //  コイン数-1
             ScoreManager.scoreManagerInstance.SubstractScore(1);
-            Debug.Log("i:"+i);
+            
+            //  oneCoinTime秒後に
             yield return new WaitForSeconds(oneCoinTime);
         }
 
         IsLeave = true;               
     }
 
+    private void IsCoinTrue()
+    {
+        IsEnter2D = false;
+        IsCoin = true;
+    }
 
+    private void startCoroutin()
+    {
+        StartCoroutine("CoinThrowCol");
+    }
     private void SetIsLeaveFalse()
     {
         playerGoalAnimator.SetBool("IsLeave", false);

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_landingmore
-  m_Shader: {fileID: -6465566751694194690, guid: 8b39632d5cb0ad54cb84c7b7f29c6b85,
+  m_Name: M_sphereMore
+  m_Shader: {fileID: -6465566751694194690, guid: d60e066ad3ef3cc42b8d353c97f179af,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,10 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture2D_56DFE7E0:
-        m_Texture: {fileID: 2800000, guid: a7a7082e3b3a54a44af3e9849695cb2d, type: 3}
+    - _Texture2D_528BEC25:
+        m_Texture: {fileID: 2800000, guid: cf8ad084c5295784c99eda173175562a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - _Color_80A0015E: {r: 0.8901766, g: 0.8182049, b: 0.40531445, a: 0.7176471}
+    - _Color_67104671: {r: 1, g: 1, b: 1, a: 1}

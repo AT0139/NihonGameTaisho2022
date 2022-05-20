@@ -29,6 +29,7 @@ public class Item : MonoBehaviour
             Debug.Log("Itemに衝突");
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(ItemSound, transform.position);//効果音をならす
+            
             Instantiate(getParticle, transform.position, Quaternion.identity);            
         }
 
@@ -36,6 +37,7 @@ public class Item : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(getParticle, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(ItemSound, transform.position);//効果音をならす
         }
     }
 
