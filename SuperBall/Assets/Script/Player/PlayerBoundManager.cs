@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class PlayerBoundManager : MonoBehaviour
 {
+    [SerializeField] HitStopManager hitStopManager;
+
     [SerializeField] float sideBoundCor; //横バウンド時Y+方向補正値
     BlockVariable blockVariable;
     new Rigidbody2D rigidbody2D;
@@ -17,20 +19,23 @@ public class PlayerBoundManager : MonoBehaviour
 
     GameObject[] groundObj = null;
 
+    float hitStopCount;
+
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
 
-        groundObj = GameObject.FindGameObjectsWithTag("Ground");
+        //タイルマップの子オブジェクト取得
+        groundObj = GetChildrens(GameObject.Find("Tilemap"));
     }
 
     private void Update()
     {
-       // Debug.Log(isBound);
-        if(!isBound)
+        //Debug.Log(rigidbody2D.velocity.magnitude);
+        if (!isBound)
         {
             boundCnt++;
-            if(boundCnt >= BOUND_COUNT_MAX)
+            if (boundCnt >= BOUND_COUNT_MAX)
             {
                 isBound = true;
                 boundCnt = 0;
@@ -84,6 +89,7 @@ public class PlayerBoundManager : MonoBehaviour
         {
             if (collision.gameObject.name != "Tilemap")
             {
+                //衝突がタイルマップじゃなかったら衝突オブジェクトでリソースを探す
                 blockVariable = Resources.Load<BlockVariable>(collision.gameObject.name);
                 if (blockVariable == null)
                 {
@@ -92,18 +98,20 @@ public class PlayerBoundManager : MonoBehaviour
             }
             else
             {
+                //タイルマップだったら1番近いオブジェクトでリソースを探す
                 GameObject ground = GetNearObject(contactPoint.point);
 
-                if (ground.name == "GroundNotBound")
+                //跳ねないオブジェクト
+                if (ground.tag == "GroundNotBound")
                 {
                     return;
                 }
 
-                //反発力取得
-                blockVariable = Resources.Load<BlockVariable>(ground.name);
+                //タグで反発力取得
+                blockVariable = Resources.Load<BlockVariable>(ground.tag);
                 if (blockVariable == null)
                 {
-                    Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                    Debug.LogError("タグの名前とBoundPowerの名前を一致させてください");
                 }
             }
             boundPower = blockVariable.boundPower;
@@ -113,30 +121,34 @@ public class PlayerBoundManager : MonoBehaviour
 
             //Debug.Log(localPoint);
 
-           
+
             float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
 
             //上方向
             if (localPoint.y <= -0.25)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower + boundAddition);
+                HitStopDecision();
             }
             //下方向
             else if (localPoint.y >= 0.25f)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
+                HitStopDecision();
             }
             else if (localPoint.x >= 0.25f)
             {
                 if (this.gameObject.transform.localScale.x >= 0)
                 {
                     //右方向
-                    rigidbody2D.velocity = new Vector2(-boundPower,  sideBoundCor);
+                    rigidbody2D.velocity = new Vector2(-boundPower, sideBoundCor);
+                    HitStopDecision();
                 }
                 else if (this.gameObject.transform.localScale.x <= 0)
                 {
                     //左方向
-                    rigidbody2D.velocity = new Vector2(boundPower,  sideBoundCor);
+                    rigidbody2D.velocity = new Vector2(boundPower, sideBoundCor);
+                    HitStopDecision();
                 }
             }
         }
@@ -176,5 +188,26 @@ public class PlayerBoundManager : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         stayGroundCount = 0;
+    }
+
+    GameObject[] GetChildrens(GameObject parent)
+    {
+        //返す配列作成
+        GameObject[] childrens = new GameObject[parent.transform.childCount];
+        //子オブジェクト分のループ
+        for (int i = 0; i < childrens.Length; i++)
+        {
+            childrens[i] = parent.transform.GetChild(i).gameObject;
+        }
+
+        return childrens;
+    }
+
+    void HitStopDecision()
+    {
+        if (rigidbody2D.velocity.magnitude >= 30.0f )
+        {
+            //hitStopManager.SetHitStop(0.1f);
+        }
     }
 }

@@ -14,7 +14,7 @@ public class Goal : MonoBehaviour
 
     private GameObject sceneControllerCam;
     private GameObject playerGoalInstance;
-    private GameObject CMvcam1;    
+    //private GameObject CMvcam1;    
     private Rigidbody2D ridig2DPlayerGoal;    
     private Animator playerGoalAnimator;
     private float coinTime = 1.0f;
@@ -28,7 +28,7 @@ public class Goal : MonoBehaviour
     {
         //  Get
         sceneControllerCam = Camera.main.gameObject;        
-        CMvcam1 = GameObject.Find("CM vcam1");
+        //CMvcam1 = GameObject.Find("CM vcam1");
 
                 
     }
@@ -50,7 +50,7 @@ public class Goal : MonoBehaviour
             IsCoin = false;
         }
         
-
+        
         if (IsLeave)
         {
             //  これはコイン処理が終わってからにしたい。
@@ -82,14 +82,14 @@ public class Goal : MonoBehaviour
 
             //  GetComponent
             ridig2DPlayerGoal = playerGoalInstance.GetComponent<Rigidbody2D>();
-            Camera.main.gameObject.GetComponent<Animator>().SetBool("IsGoal", true);
+            //Camera.main.gameObject.GetComponent<Animator>().SetBool("IsGoal", true);
             playerGoalAnimator = playerGoalInstance.GetComponent<Animator>();
 
             //  Animator SetBool
             playerGoalAnimator.SetBool("IsEnter", true);
 
             // other            
-            CMvcam1.GetComponent<CinemachineVirtualCamera>().Follow = playerGoalInstance.transform;            
+            //CMvcam1.GetComponent<CinemachineVirtualCamera>().Follow = playerGoalInstance.transform;            
         }
     }
 
