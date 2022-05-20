@@ -292,6 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1102954331528260231}
   - component: {fileID: 1102954331528260230}
+  - component: {fileID: 1465628406574254645}
   m_Layer: 0
   m_Name: PlayerHP
   m_TagString: Untagged
@@ -333,6 +334,18 @@ MonoBehaviour:
   Life_3: {fileID: 1102954331110377332}
   Life_2: {fileID: 1102954330794327397}
   Life_1: {fileID: 1102954329802764441}
+--- !u!114 &1465628406574254645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102954331528260228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2184629c7ca494aacdff2d0b8beb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5194350929849697788
 GameObject:
   m_ObjectHideFlags: 0
