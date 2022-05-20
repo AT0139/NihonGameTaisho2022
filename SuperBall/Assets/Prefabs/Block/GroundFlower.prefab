@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7517914456977957298}
   m_Layer: 8
   m_Name: GroundFlower
-  m_TagString: Bound
+  m_TagString: GroundSoft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

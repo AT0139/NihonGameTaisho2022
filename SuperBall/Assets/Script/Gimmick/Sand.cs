@@ -7,6 +7,7 @@ public class Sand : MonoBehaviour
     //thrusterのスクリプト取得
     GameObject thruster;
     Thruster thrusterScript;
+    SandSE sandSE;
     
     //砂の抵抗力
     public int SandDrag = 100;

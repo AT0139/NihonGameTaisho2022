@@ -21,7 +21,8 @@ public class PlayerBoundManager : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
 
-        groundObj = GameObject.FindGameObjectsWithTag("Ground");
+        //タイルマップの子オブジェクト取得
+        groundObj = GetChildrens(GameObject.Find("Tilemap"));
     }
 
     private void Update()
@@ -84,6 +85,7 @@ public class PlayerBoundManager : MonoBehaviour
         {
             if (collision.gameObject.name != "Tilemap")
             {
+                //衝突がタイルマップじゃなかったら衝突オブジェクトでリソースを探す
                 blockVariable = Resources.Load<BlockVariable>(collision.gameObject.name);
                 if (blockVariable == null)
                 {
@@ -92,18 +94,20 @@ public class PlayerBoundManager : MonoBehaviour
             }
             else
             {
+                //タイルマップだったら1番近いオブジェクトでリソースを探す
                 GameObject ground = GetNearObject(contactPoint.point);
 
-                if (ground.name == "GroundNotBound")
+                //跳ねないオブジェクト
+                if (ground.tag == "GroundNotBound")
                 {
                     return;
                 }
 
-                //反発力取得
-                blockVariable = Resources.Load<BlockVariable>(ground.name);
+                //タグで反発力取得
+                blockVariable = Resources.Load<BlockVariable>(ground.tag);
                 if (blockVariable == null)
                 {
-                    Debug.LogError("プレハブの名前とBoundPowerの名前を一致させてください");
+                    Debug.LogError("タグの名前とBoundPowerの名前を一致させてください");
                 }
             }
             boundPower = blockVariable.boundPower;
@@ -176,5 +180,18 @@ public class PlayerBoundManager : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         stayGroundCount = 0;
+    }
+
+    GameObject[] GetChildrens(GameObject parent)
+    {
+        //返す配列作成
+        GameObject[] childrens = new GameObject[parent.transform.childCount];
+        //子オブジェクト分のループ
+        for(int i=0;i< childrens.Length;i++)
+        {
+            childrens[i] = parent.transform.GetChild(i).gameObject;
+        }
+
+        return childrens;
     }
 }
