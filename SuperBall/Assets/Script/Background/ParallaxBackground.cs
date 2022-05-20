@@ -148,7 +148,7 @@ public class ParallaxBackground : MonoBehaviour
             proportion                              = distFromsurface / stageHeight;
             distFromCenter                          = StageLowestPosY + halfStageHeight - playerPosition.y;// 地表と天井間の中心までの高さ
             proportionC                             = distFromCenter / halfStageHeight;
-            moveAmounts             = (backgroundSpriteSizes[i].y - 1080f) / 2f;
+            moveAmounts                             = (backgroundSpriteSizes[i].y - 1080f) / 2f;
 
 
             backgroundScrollValues[i].x -= (playerPosition.x - previousPlayerPosition.x) * scrollRatesX[i];
@@ -170,14 +170,20 @@ public class ParallaxBackground : MonoBehaviour
                     value = moveAmounts + -moveAmounts * proportion * scrollRatesY[i];
                 backgroundScrollValues[i].y = value;
             }
-
-            if (backgroundSpriteSizes[i].x < backgroundsRt[i].anchoredPosition.x)
+            var hosei = 0f;
+            if (backgroundSpriteSizes[i].x < 1980)
+            {
+                hosei = (1980 - backgroundSpriteSizes[i].x) / 2;
+            }
+            else
+                hosei = 0;
+            if (backgroundSpriteSizes[i].x - hosei < backgroundsRt[i].anchoredPosition.x)
             {
                 backgroundScrollValues[i].x         -= backgroundSpriteSizes[i].x;
                 tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, tempBackgroundsPosition.y);
                 backgroundsRt[i].anchoredPosition   -= tempBackgroundsPosition;
             }
-            else if (backgroundsRt[i].anchoredPosition.x < -backgroundSpriteSizes[i].x)
+            else if (backgroundsRt[i].anchoredPosition.x < -backgroundSpriteSizes[i].x + hosei)
             {
                 backgroundScrollValues[i].x         += backgroundSpriteSizes[i].x;
                 tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, tempBackgroundsPosition.y);
