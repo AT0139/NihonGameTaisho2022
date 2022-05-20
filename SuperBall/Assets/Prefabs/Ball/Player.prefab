@@ -876,7 +876,7 @@ MonoBehaviour:
     type: 3}
   WeekLanding: {fileID: 8549504675983452811, guid: 6df1d1740138d004a9eac94fc4f59383,
     type: 3}
-  minSpeed: 20
+  minSpeed: 30
 --- !u!61 &2362718574397916741
 BoxCollider2D:
   m_ObjectHideFlags: 0

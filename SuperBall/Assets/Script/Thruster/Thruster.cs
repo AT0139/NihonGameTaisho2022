@@ -38,7 +38,7 @@ public class Thruster : MonoBehaviour
 
     private Vector2 Lstick;
 
-    PlayerActionInput input;
+    static public PlayerActionInput input;
 
     [SerializeField] ParticleSystem thrusterEffect;
 

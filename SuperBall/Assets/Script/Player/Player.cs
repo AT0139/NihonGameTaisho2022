@@ -30,11 +30,11 @@ public class Player : MonoBehaviour
     //これ以下の速度になると動きを止める
     public float SpeedDeadZone = 0.001f;
 
-    private Rigidbody2D rb;
+    static public  Rigidbody2D rb;
 
     public Vector2 move { get; private set; }
 
-    PlayerActionInput input;
+    static public PlayerActionInput input;
 
     void Start()
     {

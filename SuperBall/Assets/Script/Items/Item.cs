@@ -29,9 +29,17 @@ public class Item : MonoBehaviour
             Debug.Log("Itemに衝突");
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(ItemSound, transform.position);//効果音をならす
-            Instantiate(getParticle, transform.position, Quaternion.identity);
-
             
+            Instantiate(getParticle, transform.position, Quaternion.identity);            
+        }
+
+        if(collision.gameObject.name == "Gatekeeper")
+        {
+            Destroy(gameObject);
+            Instantiate(getParticle, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(ItemSound, transform.position);//効果音をならす
         }
     }
+
+
 }
