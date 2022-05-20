@@ -79,7 +79,7 @@ public class PlayerLife : MonoBehaviour
     }
 
     // 回復処理
-    public void GetRecovery(int recovery)
+    public void Recovery(int recovery)
     {
         // ダメージ
         m_PlayerLife += recovery;
@@ -116,7 +116,7 @@ public class PlayerLife : MonoBehaviour
         if (other.gameObject.CompareTag("CheckPoint"))
         {
             // 回復処理
-            GetRecovery(m_PlayerLifeMax);
+            Recovery(m_PlayerLifeMax);
         }
     }
 

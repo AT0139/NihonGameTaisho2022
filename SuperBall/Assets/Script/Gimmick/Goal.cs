@@ -23,6 +23,7 @@ public class Goal : MonoBehaviour
     private bool IsCoin = false;
     private bool IsLeave = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,7 +78,7 @@ public class Goal : MonoBehaviour
 
             //  プレイヤーをそのまま使うのは変更するのがだるいので
             //  新しいゴール用のプレイヤーを使う
-            collision.gameObject.SetActive(false);
+            collision.gameObject.SetActive(false);            
             playerGoalInstance = Instantiate(playerGoal, collision.transform.position, Quaternion.identity);
 
             //  GetComponent
@@ -127,6 +128,7 @@ public class Goal : MonoBehaviour
     {
         playerGoalAnimator.SetBool("IsLeave", false);
         playerGoalAnimator.SetBool("IsGoal", false);
+        
         sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
     }
 

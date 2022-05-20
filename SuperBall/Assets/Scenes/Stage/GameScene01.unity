@@ -18113,7 +18113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.345175, y: 2.7659464, z: -10}
+  m_LocalPosition: {x: -8.35372, y: 2.7659492, z: -10}
   m_LocalScale: {x: 1, y: 1.7251, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43008,12 +43008,12 @@ PrefabInstance:
     - target: {fileID: 5532076073245665760, guid: d2e9ae1c0ac156844be830c8ad26cf4d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 145.33943
+      value: 11.7
       objectReference: {fileID: 0}
     - target: {fileID: 5532076073245665760, guid: d2e9ae1c0ac156844be830c8ad26cf4d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.402363
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5532076073245665760, guid: d2e9ae1c0ac156844be830c8ad26cf4d,
         type: 3}
@@ -43065,6 +43065,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 5532076073245665766, guid: d2e9ae1c0ac156844be830c8ad26cf4d,
+        type: 3}
+      propertyPath: playerGoal
+      value: 
+      objectReference: {fileID: 1059238011874603877, guid: 27be9d926888ec646a2bb2b0542cda1b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2e9ae1c0ac156844be830c8ad26cf4d, type: 3}
 --- !u!4 &1317240311 stripped
