@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
         if (scoreManagerInstance == null)
         {
             scoreManagerInstance = this;
-        }        
+        }
     }
 
     void Start()
