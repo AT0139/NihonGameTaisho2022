@@ -5,31 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TitleScene_new.unity
     guid: ef13f6e8a25d24047ac726db4fdbe7e9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/StageSelectScene.unity
     guid: 376a0171ceb585744a84df4eec112a95
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/GameScene01.unity
     guid: aac05d7248085b74fb6312e5146863a2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/GameScene02.unity
     guid: fe1d52fcee0637a4f98ed21f82a241fb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/GameScene03.unity
     guid: be26ed759e3ead746aa2791c00ab4170
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/GameScene04.unity
     guid: 52cd3bea899c8424689e6986103f1e63
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stage/GameScene05.unity
     guid: 3d8c6959a671b4d4b819f758d17b51e6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameClearScene.unity
     guid: a1c4534aebb888b4785ab09db3fe37f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOverScene.unity
     guid: 622284599bc2d5940b931840d283790f
+  - enabled: 1
+    path: Assets/Scenes/TestScene_furuichi.unity
+    guid: 7b2cd8e3e5d34414193e762e6868d0c6
   m_configObjects: {}
