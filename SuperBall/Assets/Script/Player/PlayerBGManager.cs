@@ -9,7 +9,7 @@ public class PlayerBGManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        parallaxBG = GameObject.FindGameObjectWithTag("Background_Parallax");
+        parallaxBG = GameObject.Find("Background");
         if (!parallaxBG)
             Debug.Log("ヒエラルキーに背景がありません。");
         if(parallaxBG)
