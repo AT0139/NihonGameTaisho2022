@@ -15,12 +15,12 @@ public class ParallaxBackground : MonoBehaviour
     [Header("背景画像のオフセット (ズラす値)(左右スクロール対応の場合は1画像分、左にズラす)")]
     [Header("X = -1920 Y = 0)")]
     [SerializeField]
-    Vector2[]       backgroundOffsets = new Vector2[2] {new Vector2(-1920, 0), new Vector2(-1920, 0)};
+    Vector2[]       backgroundOffsets = new Vector2[2] {new Vector2(-1920, 0), new Vector2(-1280, 0)};
 
     [Header("背景画像のサイズ")]
     [Header("X = 1920 Y = 1505.82")]
     [SerializeField]
-    Vector2[]       backgroundSpriteSizes = new Vector2[2] { new Vector2(1920, 1505.82f), new Vector2(1920, 1505.82f) };
+    Vector2[]       backgroundSpriteSizes = new Vector2[2] { new Vector2(1920, 1505.82f), new Vector2(1280, 1081f) };
 
     [Header("背景画像のXスクロール率 (奥(0)の物程小さめに指定)")]
     [Header("好みで設定　デフォルト値：Elem 0 = 5 Elem 1 = 15")]
@@ -31,7 +31,7 @@ public class ParallaxBackground : MonoBehaviour
     [Header("好みで設定　デフォルト値：Elem 0 = 1 Elem 1 = 2.5")]
 
     [SerializeField]
-    float[]         scrollRatesY = new float[2] { 1, 2.5f };
+    float[]         scrollRatesY = new float[2] { 1, 1125f };
 
     //3Dオブジェクト(キャラクター等)より奥になるように調整。カメラの位置や3Dオブジェクトのサイズによるが30～設定すれば良い。
     [Header("カメラからUIへの距離 (カメラの位置や3Dオブジェクトのサイズによるが30～指定)")]

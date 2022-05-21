@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerAnimationManager : MonoBehaviour
 {
-    new Rigidbody2D rigidbody2D;
-    public Animator animator;
-
     [SerializeField]
-    static float VEL = 5f;
+    float VEL = 5f;
+    new Rigidbody2D rigidbody2D;
+    Animator animator;
+
     enum COLLISIONDILECTION{
         UP,
         DOWN,
@@ -26,9 +26,7 @@ public class PlayerAnimationManager : MonoBehaviour
     void Update()
     {
         MovingDirectionHor();
-        //Debug.Log("magni");
-        //Debug.Log(GetComponent<Rigidbody2D>().velocity.magnitude);
-        animator.SetFloat("Speed", rigidbody2D.velocity.magnitude);
+        animator.SetFloat("Speed", 1 + (rigidbody2D.velocity.magnitude * 0.3f));
         if(Input.GetKey(KeyCode.N))
         {
             rigidbody2D.velocity = Vector2.zero;
@@ -83,7 +81,6 @@ public class PlayerAnimationManager : MonoBehaviour
                 if (rigidbody2D.velocity.magnitude <= VEL)
                 {
                     animator.SetInteger("trans", -1);
-                    animator.Play("Idle_Player", 0, 0);
                 }
             }
             
