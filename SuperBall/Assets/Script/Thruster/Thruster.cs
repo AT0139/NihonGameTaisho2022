@@ -69,6 +69,7 @@ public class Thruster : MonoBehaviour
     void Update()
     {
         particle.transform.position = transform.position;
+        //Debug.Log(Lstick);
     }
   //Invoke用関数
     void ThrusterSet()
@@ -179,11 +180,20 @@ public class Thruster : MonoBehaviour
 
                 rb.velocity = new Vector3(0, 0, 0);
 
-                //左右の移動
-                rb.AddForce(transform.right * X_SpeedAirDush * Lstick.x, ForceMode2D.Impulse);
-                //上下の移動
-                rb.AddForce(transform.up * Y_SpeedAirDush * Lstick.y, ForceMode2D.Impulse);
-                SwitchThrusterCheck = false;
+                //Lスティックを入力してなかったら
+                if (Lstick.y <= 0.6f && Lstick.y >= -0.6f
+                    && Lstick.x <= 0.6f && Lstick.x >= -0.6f)
+                {
+                    rb.AddForce(transform.up * Y_SpeedAirDush, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    //左右の移動
+                    rb.AddForce(transform.right * X_SpeedAirDush * Lstick.x, ForceMode2D.Impulse);
+                    //上下の移動
+                    rb.AddForce(transform.up * Y_SpeedAirDush * Lstick.y, ForceMode2D.Impulse);
+                }
+                    SwitchThrusterCheck = false;
             }
         }
     }
