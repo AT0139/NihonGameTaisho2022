@@ -2923,7 +2923,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.7251, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420034
 MonoBehaviour:
@@ -5902,7 +5902,7 @@ PrefabInstance:
     - target: {fileID: 3072803519556803404, guid: 45a11d5808f600f4293951f25fbe1e1f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3072803519556803404, guid: 45a11d5808f600f4293951f25fbe1e1f,
         type: 3}
@@ -7009,6 +7009,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: 6dbf1e66-0267-4c4d-b069-41dd681fddf0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: e9e10e06-4916-4a33-8e12-e63633230b65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Player/JustAction[/Keyboard/downArrow]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 82f17edd-190b-4f8d-b39f-4da7130fb655
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Player/Thruster[/Keyboard/i,/Keyboard/k,/Keyboard/j,/Keyboard/l]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 22f3f145-0212-4afa-b08d-e29767c83f1e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Player/JustJump[/Keyboard/space]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 3f60512c-516f-4e98-a948-758a0f44ec8b
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368094049308756850, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Player/ThrusterButton[/Keyboard/space]
       objectReference: {fileID: 0}
     - target: {fileID: 5368094049308756862, guid: 2ab86f7175a351343994909ee1cb1677,
         type: 3}

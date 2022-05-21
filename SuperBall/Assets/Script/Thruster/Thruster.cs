@@ -59,27 +59,32 @@ public class Thruster : MonoBehaviour
 
         input.Enable();
 
-        Invoke("ThrusterSet", 1);
-
         // アニメーション用変数
         pAM = transform.GetComponent<PlayerAnimationManager>();
     }
 
     private void Awake()
     {
+        //Invoke("ThrusterSet", 1);
+
         particle = Instantiate(thrusterEffect, transform.position, Quaternion.identity);
         particle.Stop();
     }
 
     void Update()
     {
+        if(input.Player.ThrusterButton.triggered)
+        {
+            ButtonThruster();
+        }
+
         particle.transform.position = transform.position;
         //Debug.Log(Lstick);
     }
   //Invoke用関数
     void ThrusterSet()
     {
-        input.Player.ThrusterButton.performed += context => ButtonThruster();
+        //input.Player.ThrusterButton.performed += context => ButtonThruster();
         
     }
 

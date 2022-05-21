@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: 622284599bc2d5940b931840d283790f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene_yanagisawa.unity
     guid: 834fc37e94b31c84eb0b832606a94b02
   m_configObjects: {}
