@@ -9,22 +9,22 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene_new.unity
     guid: ef13f6e8a25d24047ac726db4fdbe7e9
   - enabled: 1
-    path: Assets/Scenes/Stage/StageSelectScene.unity
+    path: Assets/Scenes/Stage/StageSelectScene01.unity
     guid: 376a0171ceb585744a84df4eec112a95
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene01.unity
+    path: Assets/Scenes/Stage/GameScene11.unity
     guid: aac05d7248085b74fb6312e5146863a2
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene02.unity
+    path: Assets/Scenes/Stage/GameScene12.unity
     guid: fe1d52fcee0637a4f98ed21f82a241fb
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene03.unity
+    path: Assets/Scenes/Stage/GameScene13.unity
     guid: be26ed759e3ead746aa2791c00ab4170
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene04.unity
+    path: Assets/Scenes/Stage/GameScene14.unity
     guid: 52cd3bea899c8424689e6986103f1e63
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene05.unity
+    path: Assets/Scenes/Stage/GameScene15.unity
     guid: 3d8c6959a671b4d4b819f758d17b51e6
   - enabled: 1
     path: Assets/Scenes/GameClearScene.unity
@@ -35,4 +35,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene_yanagisawa.unity
     guid: 834fc37e94b31c84eb0b832606a94b02
+  - enabled: 1
+    path: Assets/Scenes/Stage/AreaSelectScene.unity
+    guid: 754ae7300e067fb4191d5a0bbd2864f9
+  - enabled: 1
+    path: Assets/Scenes/Stage/StageSelectScene02.unity
+    guid: 1ff0bc38d94e4834d95aeee61541652a
+  - enabled: 1
+    path: Assets/Scenes/Stage/StageSelectScene03.unity
+    guid: bb13a7d8f30d1c74b877ac7604d21658
+  - enabled: 1
+    path: Assets/Scenes/Stage/StageSelectScene04.unity
+    guid: 1c2402dc87e2d9e45a7fc8e3a2bc7ac6
+  - enabled: 1
+    path: Assets/Scenes/Stage/StageSelectScene05.unity
+    guid: 38aaeb8a73b39ff48bfe8c8139f20560
   m_configObjects: {}
