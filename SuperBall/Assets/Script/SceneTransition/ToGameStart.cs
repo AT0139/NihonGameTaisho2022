@@ -41,7 +41,7 @@ public class ToGameStart : MonoBehaviour
     //  少し左に動いたら、GameStartのスケールを大きくするアニメーションなどの制御
     private void GameStartRange()
     {
-        float diff = Mathf.Abs(player.transform.position.x - xPos) / EmissionNormalize;
+        float diff = Mathf.Abs(player.transform.position.x + xPos) / EmissionNormalize;
 
 
         if (player.transform.position.x < xPos)

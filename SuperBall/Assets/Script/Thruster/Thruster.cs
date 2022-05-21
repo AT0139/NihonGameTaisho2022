@@ -38,7 +38,7 @@ public class Thruster : MonoBehaviour
 
     private Vector2 Lstick;
 
-    PlayerActionInput input;
+    static public PlayerActionInput input;
 
     [SerializeField] ParticleSystem thrusterEffect;
 
@@ -46,6 +46,8 @@ public class Thruster : MonoBehaviour
 
     int stayCount;
 
+    // アニメーション用変数
+    PlayerAnimationManager pAM;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,6 +60,9 @@ public class Thruster : MonoBehaviour
         input.Enable();
 
         Invoke("ThrusterSet", 1);
+
+        // アニメーション用変数
+        pAM = transform.GetComponent<PlayerAnimationManager>();
     }
 
     private void Awake()
@@ -75,6 +80,7 @@ public class Thruster : MonoBehaviour
     void ThrusterSet()
     {
         input.Player.ThrusterButton.performed += context => ButtonThruster();
+        
     }
 
     //// 侵入判定
@@ -175,7 +181,7 @@ public class Thruster : MonoBehaviour
             // AirDushMode有効
             else
             {
-
+                pAM.AnimationJump();
                 particle.Play();
 
                 rb.velocity = new Vector3(0, 0, 0);

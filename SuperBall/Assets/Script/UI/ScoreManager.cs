@@ -8,7 +8,16 @@ public class ScoreManager : MonoBehaviour
     private ScoreChange ScoreChange;
 
     // 現在のスコア
-    public static int m_Score;
+    private int m_Score;
+    public static ScoreManager scoreManagerInstance;
+
+    private void Awake()
+    {
+        if (scoreManagerInstance == null)
+        {
+            scoreManagerInstance = this;
+        }
+    }
 
     void Start()
     {
@@ -22,5 +31,17 @@ public class ScoreManager : MonoBehaviour
         m_Score += score;
 
         ScoreChange.ShowScore(m_Score);
+    }
+
+    public void SubstractScore(int score)
+    {
+        m_Score -= score;
+
+        ScoreChange.ShowScore(m_Score);
+    }
+
+    public int GetCoinNum()
+    {
+        return m_Score;
     }
 }
