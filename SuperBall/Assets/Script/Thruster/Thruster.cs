@@ -16,15 +16,6 @@ public class Thruster : MonoBehaviour
 {
     [SerializeField] bool isButton = false;
 
-    // 横方向の速度
-    public float X_Speed;
-
-    // 縦方向の速度
-    public float Y_Speed;
-
-    //trueにすると速度を0にしてからスラスターを使用する
-    public bool AirDushMode;
-
     public float X_SpeedAirDush;
     public float Y_SpeedAirDush;
 
@@ -46,8 +37,13 @@ public class Thruster : MonoBehaviour
 
     int stayCount;
 
+    //スラスタークールダウン用変数
+    int cooldown = 0;
+    const int COOL_DOWN_COUNT = 30;
+
     // アニメーション用変数
     PlayerAnimationManager pAM;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -73,31 +69,19 @@ public class Thruster : MonoBehaviour
 
     void Update()
     {
-        if(input.Player.ThrusterButton.triggered)
+        cooldown--;
+
+        if (cooldown <= 0)
         {
-            ButtonThruster();
+            if (input.Player.ThrusterButton.triggered)
+            {
+                ButtonThruster();
+                cooldown = COOL_DOWN_COUNT;
+            }
         }
 
         particle.transform.position = transform.position;
-        //Debug.Log(Lstick);
     }
-  //Invoke用関数
-    void ThrusterSet()
-    {
-        //input.Player.ThrusterButton.performed += context => ButtonThruster();
-        
-    }
-
-    //// 侵入判定
-    //void OnTriggerStay2D(Collider2D other)
-    //{
-    //    // スラスターレンジに入ったら
-    //    if (other.gameObject.CompareTag("Thruster Range"))
-    //    {
-    //        if(!SwitchThrusterCheck)
-    //        Invoke("SwitchThruster", ThrusterCooltime);
-    //    }
-    //}
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -124,7 +108,6 @@ public class Thruster : MonoBehaviour
                         {
                             SwitchThruster();
                             stayCount = 0;
-
                         }
                     }
                 }
@@ -171,41 +154,26 @@ public class Thruster : MonoBehaviour
         if (SwitchThrusterCheck)
         {
             Lstick = input.Player.Move.ReadValue<Vector2>();
-            // AirDushMode無効
-            if (!AirDushMode)
+
+            pAM.AnimationJump();
+            particle.Play();
+
+            rb.velocity = new Vector3(0, 0, 0);
+
+            //Lスティックを入力してなかったら
+            if (Lstick.y <= 0.6f && Lstick.y >= -0.6f
+                && Lstick.x <= 0.6f && Lstick.x >= -0.6f)
             {
-
-                particle.Play();
-
-                //左右の移動
-                rb.AddForce(transform.right * X_Speed * Lstick.x, ForceMode2D.Impulse);
-                //上下の移動
-                rb.AddForce(transform.up * Y_Speed * Lstick.y, ForceMode2D.Impulse);
-                SwitchThrusterCheck = false;
+                rb.AddForce(transform.up * Y_SpeedAirDush, ForceMode2D.Impulse);
             }
-            // AirDushMode有効
             else
             {
-                pAM.AnimationJump();
-                particle.Play();
-
-                rb.velocity = new Vector3(0, 0, 0);
-
-                //Lスティックを入力してなかったら
-                if (Lstick.y <= 0.6f && Lstick.y >= -0.6f
-                    && Lstick.x <= 0.6f && Lstick.x >= -0.6f)
-                {
-                    rb.AddForce(transform.up * Y_SpeedAirDush, ForceMode2D.Impulse);
-                }
-                else
-                {
-                    //左右の移動
-                    rb.AddForce(transform.right * X_SpeedAirDush * Lstick.x, ForceMode2D.Impulse);
-                    //上下の移動
-                    rb.AddForce(transform.up * Y_SpeedAirDush * Lstick.y, ForceMode2D.Impulse);
-                }
-                    SwitchThrusterCheck = false;
+                //左右の移動
+                rb.AddForce(transform.right * X_SpeedAirDush * Lstick.x, ForceMode2D.Impulse);
+                //上下の移動
+                rb.AddForce(transform.up * Y_SpeedAirDush * Lstick.y, ForceMode2D.Impulse);
             }
+            SwitchThrusterCheck = false;
         }
     }
 }
