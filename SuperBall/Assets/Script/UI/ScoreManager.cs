@@ -17,13 +17,15 @@ public class ScoreManager : MonoBehaviour
         {
             scoreManagerInstance = this;
         }
+
+        m_Score = 0;
+
+        ScoreChange.ShowScore(m_Score);
     }
 
     void Start()
     {
-        m_Score = 0;
 
-        ScoreChange.ShowScore(m_Score);
     }
 
     public void AddScore(int score)

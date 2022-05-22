@@ -129,7 +129,7 @@ public class Goal : MonoBehaviour
         playerGoalAnimator.SetBool("IsLeave", false);
         playerGoalAnimator.SetBool("IsGoal", false);
         
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
     }
 
     private void OnTriggerStay2D(Collider2D collision)
