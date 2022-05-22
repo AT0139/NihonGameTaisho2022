@@ -12,7 +12,7 @@ public class SceneController : MonoBehaviour
 
     public GameObject fadeCanvas;
 
-    public int fadeTime = 1000;
+    public int fadeTime = 500;
 
     void Start()
     {

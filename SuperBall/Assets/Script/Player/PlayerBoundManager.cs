@@ -19,6 +19,9 @@ public class PlayerBoundManager : MonoBehaviour
 
     GameObject[] groundObj = null;
 
+    GameObject nearobj = null;
+    GameObject secondobj = null;
+
     float hitStopCount;
 
     private void Start()
@@ -56,11 +59,11 @@ public class PlayerBoundManager : MonoBehaviour
         }
     }
 
-    GameObject GetNearObject(Vector3 pos)
+    void GetNearObject(Vector3 pos)
     {
         float tmpDis = 0;           //距離用一時変数
         float nearDis = 0;          //最も近いオブジェクトの距離
-        GameObject targetObj = null; //オブジェクト
+        float secondDis = 0;        //2番目に近いオブジェクトの距離
 
         //タグ指定されたオブジェクトを配列で取得する
         foreach (GameObject obs in groundObj)
@@ -68,18 +71,28 @@ public class PlayerBoundManager : MonoBehaviour
             //自身と取得したオブジェクトの距離を取得
             tmpDis = Vector3.Distance(obs.transform.position, pos);
 
+            if(obs.tag != "GroundNotBound")
+            {
+                tmpDis -= 1;
+            }
+
             //オブジェクトの距離が近いか、距離0であればオブジェクト名を取得
             //一時変数に距離を格納
             if (nearDis == 0 || nearDis > tmpDis)
-            {
+            {       
+                secondobj = nearobj;
+                secondDis = nearDis;
+
                 nearDis = tmpDis;
-                //nearObjName = obs.name;
-                targetObj = obs;
+                nearobj = obs;
+            }
+            //1番近いオブジェクトより遠かったら2番目とも比較する
+            else if (secondDis == 0 || nearDis > tmpDis)
+            {
+                secondDis = tmpDis;
+                secondobj = obs;
             }
         }
-        //最も近かったオブジェクトを返す
-        //return GameObject.Find(nearObjName);
-        return targetObj;
     }
 
     void GroundBound(Collision2D collision)
@@ -99,27 +112,35 @@ public class PlayerBoundManager : MonoBehaviour
             else
             {
                 //タイルマップだったら1番近いオブジェクトでリソースを探す
-                GameObject ground = GetNearObject(contactPoint.point);
+                GetNearObject(contactPoint.point);
 
                 //跳ねないオブジェクト
-                if (ground.tag == "GroundNotBound")
+                if (nearobj.tag == "GroundNotBound")
                 {
-                    return;
+                    if (secondobj.tag == "GroundNotBound")
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        //nearobj = secondobj;
+                    }
                 }
 
                 //タグで反発力取得
-                blockVariable = Resources.Load<BlockVariable>(ground.tag);
+                blockVariable = Resources.Load<BlockVariable>(nearobj.tag);
                 if (blockVariable == null)
                 {
                     Debug.LogError("タグの名前とBoundPowerの名前を一致させてください");
                 }
             }
+
             boundPower = blockVariable.boundPower;
 
             //プレイヤーのローカル座標に変換
             Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-            //Debug.Log(localPoint);
+            Debug.Log(boundPower);
 
 
             float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);

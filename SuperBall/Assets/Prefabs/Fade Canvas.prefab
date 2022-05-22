@@ -191,7 +191,7 @@ MonoBehaviour:
   isFadeIn: 0
   isFadeOut: 0
   alpha: 0
-  fadeSpeed: 2
+  fadeSpeed: 0.4
   xsize: 3
   ysize: 3
   rotation: 6.15

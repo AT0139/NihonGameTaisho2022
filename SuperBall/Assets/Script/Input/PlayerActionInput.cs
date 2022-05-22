@@ -47,7 +47,7 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
                     ""type"": ""Button"",
                     ""id"": ""22f3f145-0212-4afa-b08d-e29767c83f1e"",
                     ""expectedControlType"": ""Button"",
-                    ""processors"": ""StickDeadzone(min=0.8,max=1)"",
+                    ""processors"": """",
                     ""interactions"": """"
                 },
                 {
@@ -55,7 +55,7 @@ public class @PlayerActionInput : IInputActionCollection, IDisposable
                     ""type"": ""Button"",
                     ""id"": ""3f60512c-516f-4e98-a948-758a0f44ec8b"",
                     ""expectedControlType"": ""Button"",
-                    ""processors"": ""StickDeadzone(min=0.8,max=1)"",
+                    ""processors"": """",
                     ""interactions"": """"
                 }
             ],
