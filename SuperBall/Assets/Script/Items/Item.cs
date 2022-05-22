@@ -26,7 +26,7 @@ public class Item : MonoBehaviour
             // スコア加算
             scoreManager.AddScore(1);
 
-            Debug.Log("Itemに衝突");
+            //Debug.Log("Itemに衝突");
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(ItemSound, transform.position);//効果音をならす
             

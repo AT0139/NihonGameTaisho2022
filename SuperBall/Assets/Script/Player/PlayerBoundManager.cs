@@ -73,7 +73,7 @@ public class PlayerBoundManager : MonoBehaviour
         //プレイヤーのローカル座標に変換
         Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
 
-        Debug.Log(boundPower);
+        //Debug.Log(localPoint);
 
         //上方向に跳ねるとき前フレームの力を加算していく
         float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
@@ -82,11 +82,6 @@ public class PlayerBoundManager : MonoBehaviour
         if (localPoint.y <= -0.25)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower + boundAddition);
-        }
-        //下方向
-        else if (localPoint.y >= 0.25f)
-        {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
         }
         else if (localPoint.x >= 0.25f)
         {
@@ -100,6 +95,11 @@ public class PlayerBoundManager : MonoBehaviour
                 //左方向
                 rigidbody2D.velocity = new Vector2(boundPower, sideBoundCor);
             }
+        } 
+        //下方向
+        else if (localPoint.y >= 0.25f)
+        {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
         }
         boundCnt = 0;
         isBound = true;
