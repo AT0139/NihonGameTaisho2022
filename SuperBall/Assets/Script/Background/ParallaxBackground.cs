@@ -160,7 +160,7 @@ public class ParallaxBackground : MonoBehaviour
                     value = -moveAmounts;
                 else
                     value = moveAmounts * proportionC;
-                backgroundScrollValues[i].y = value;
+                backgroundScrollValues[i].y = value + backgroundOffsets[i].y;
             }
             else {
                 float value = 0;
@@ -168,15 +168,17 @@ public class ParallaxBackground : MonoBehaviour
                     value = moveAmounts;
                 else
                     value = moveAmounts + -moveAmounts * proportion * scrollRatesY[i];
-                backgroundScrollValues[i].y = value;
+                backgroundScrollValues[i].y = value + backgroundOffsets[i].y;
             }
+
             var hosei = 0f;
             if (backgroundSpriteSizes[i].x < 1980)
             {
-                hosei = (1980 - backgroundSpriteSizes[i].x) / 2;
+                hosei = (1980 - backgroundSpriteSizes[i].x) / 2 + backgroundOffsets[i].y;
             }
             else
-                hosei = 0;
+                hosei = 0 + backgroundOffsets[i].y;
+
             if (backgroundSpriteSizes[i].x - hosei < backgroundsRt[i].anchoredPosition.x)
             {
                 backgroundScrollValues[i].x         -= backgroundSpriteSizes[i].x;
