@@ -129,6 +129,12 @@ public class PlayerLife : MonoBehaviour
             // 回復処理
             Recovery(m_PlayerLifeMax);
         }
+
+        // 即死ポイントに触れたら
+        if (other.gameObject.CompareTag("DeathPoint"))
+        {
+            GetDamege(m_PlayerLife);
+        }
     }
 
     public int GetLife()
