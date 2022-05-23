@@ -25,9 +25,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_E5881C7B: 0
+    - Boolean_E5881C7B: 1
     - _BlinkSpeed: 1
-    - _Emission: 1.04
+    - _Emission: 1.82
     - _FluctuationSpeed: 8.36
     - _IsBlackTexture: 0
     - _IsBlinking: 0
@@ -35,4 +35,4 @@ Material:
     - _IsFluctuation: 1
     - _IsVertexColor: 1
     m_Colors:
-    - _MainColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 2.4483106, g: 0.4503968, b: 0.4503968, a: 1}

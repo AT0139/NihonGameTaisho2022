@@ -15,12 +15,12 @@ public class ParallaxBackground : MonoBehaviour
     [Header("背景画像のオフセット (ズラす値)(左右スクロール対応の場合は1画像分、左にズラす)")]
     [Header("X = -1920 Y = 0)")]
     [SerializeField]
-    Vector2[]       backgroundOffsets = new Vector2[2] {new Vector2(-1920, 0), new Vector2(-1920, 0)};
+    Vector2[]       backgroundOffsets = new Vector2[2] {new Vector2(-1920, 0), new Vector2(-1280, 0)};
 
     [Header("背景画像のサイズ")]
     [Header("X = 1920 Y = 1505.82")]
     [SerializeField]
-    Vector2[]       backgroundSpriteSizes = new Vector2[2] { new Vector2(1920, 1505.82f), new Vector2(1920, 1505.82f) };
+    Vector2[]       backgroundSpriteSizes = new Vector2[2] { new Vector2(1920, 1505.82f), new Vector2(1280, 1081f) };
 
     [Header("背景画像のXスクロール率 (奥(0)の物程小さめに指定)")]
     [Header("好みで設定　デフォルト値：Elem 0 = 5 Elem 1 = 15")]
@@ -31,7 +31,7 @@ public class ParallaxBackground : MonoBehaviour
     [Header("好みで設定　デフォルト値：Elem 0 = 1 Elem 1 = 2.5")]
 
     [SerializeField]
-    float[]         scrollRatesY = new float[2] { 1, 2.5f };
+    float[]         scrollRatesY = new float[2] { 1, 1125f };
 
     //3Dオブジェクト(キャラクター等)より奥になるように調整。カメラの位置や3Dオブジェクトのサイズによるが30～設定すれば良い。
     [Header("カメラからUIへの距離 (カメラの位置や3Dオブジェクトのサイズによるが30～指定)")]
@@ -148,7 +148,7 @@ public class ParallaxBackground : MonoBehaviour
             proportion                              = distFromsurface / stageHeight;
             distFromCenter                          = StageLowestPosY + halfStageHeight - playerPosition.y;// 地表と天井間の中心までの高さ
             proportionC                             = distFromCenter / halfStageHeight;
-            moveAmounts             = (backgroundSpriteSizes[i].y - 1080f) / 2f;
+            moveAmounts                             = (backgroundSpriteSizes[i].y - 1080f) / 2f;
 
 
             backgroundScrollValues[i].x -= (playerPosition.x - previousPlayerPosition.x) * scrollRatesX[i];
@@ -170,14 +170,20 @@ public class ParallaxBackground : MonoBehaviour
                     value = moveAmounts + -moveAmounts * proportion * scrollRatesY[i];
                 backgroundScrollValues[i].y = value;
             }
-
-            if (backgroundSpriteSizes[i].x < backgroundsRt[i].anchoredPosition.x)
+            var hosei = 0f;
+            if (backgroundSpriteSizes[i].x < 1980)
+            {
+                hosei = (1980 - backgroundSpriteSizes[i].x) / 2;
+            }
+            else
+                hosei = 0;
+            if (backgroundSpriteSizes[i].x - hosei < backgroundsRt[i].anchoredPosition.x)
             {
                 backgroundScrollValues[i].x         -= backgroundSpriteSizes[i].x;
                 tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, tempBackgroundsPosition.y);
                 backgroundsRt[i].anchoredPosition   -= tempBackgroundsPosition;
             }
-            else if (backgroundsRt[i].anchoredPosition.x < -backgroundSpriteSizes[i].x)
+            else if (backgroundsRt[i].anchoredPosition.x < -backgroundSpriteSizes[i].x + hosei)
             {
                 backgroundScrollValues[i].x         += backgroundSpriteSizes[i].x;
                 tempBackgroundsPosition.Set(backgroundSpriteSizes[i].x, tempBackgroundsPosition.y);
