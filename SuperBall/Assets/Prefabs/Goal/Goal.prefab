@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1685575c93a34554e94596387b2f2294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGoal: {fileID: 5368094049308756857, guid: 3ed449da4af222b4782ccafd32617ecd,
+  playerGoal: {fileID: 1059238011874603877, guid: 27be9d926888ec646a2bb2b0542cda1b,
     type: 3}
   coin: {fileID: 6758149054230073142, guid: cddef6d1156e7cd4e9f6a7bed47b21ab, type: 3}
   awakeTime: 1

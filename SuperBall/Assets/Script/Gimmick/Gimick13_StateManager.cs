@@ -22,7 +22,7 @@ public class Gimick13_StateManager : MonoBehaviour
     //}
 
     public GameObject particleObject;
-    [SerializeField] GameObject DestroyObject;      //　破壊するオブジェクト
+    [SerializeField] GameObject  DestroyObject;      //　破壊するオブジェクト
 
     private bool DestroyCheck = false;              //trueになったらすでに破壊済み
 
@@ -40,6 +40,7 @@ public class Gimick13_StateManager : MonoBehaviour
     protected virtual void Update()
     {
         _checkSuccess();
+       
     }
 
     // フロア内スイッチをカウント
@@ -72,7 +73,7 @@ public class Gimick13_StateManager : MonoBehaviour
     // 子からスイッチが入った時に送ってもらうための関数
     public void sendON()
     {
-        // 
+        
         if (_switchCount > 0)
         {
             _switchCount--;
@@ -101,6 +102,7 @@ public class Gimick13_StateManager : MonoBehaviour
 
             //  破壊済みフラグオン
             DestroyCheck = true;
+
         }
     }
 
