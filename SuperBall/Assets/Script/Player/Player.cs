@@ -58,15 +58,15 @@ public class Player : MonoBehaviour
         vec1 = rb.velocity;
 
         move = input.Player.Move.ReadValue<Vector2>();
-
+        
         // 左右入力で動く
         if (move.x != 0)
         {
             // スティックの倒し具合で速度も変わる
             rb.AddForce(transform.right * XSpeed * move.x);
 
-            // 入力している方向と反対に力がかかっているとき更に入力方向に力を加える ※要はブレーキ
-            if(Brake)
+            //入力している方向と反対に力がかかっているとき更に入力方向に力を加える ※要はブレーキ
+            if (Brake)
             {
                 if (rb.velocity.x < 0 && move.x > 0 ||
                 rb.velocity.x > 0 && move.x < 0)
@@ -74,17 +74,17 @@ public class Player : MonoBehaviour
                     rb.AddForce(transform.right * XSpeed * move.x * BrakeForce);
                 }
             }
-            
+
 
             //一定以上の速度にならない
-            if (SpeedLimit_X <= rb.velocity.x)
-            {
-                rb.velocity = new Vector3(SpeedLimit_X, vec1.y, vec1.z);
-            }
-            else if (-SpeedLimit_X >= rb.velocity.x)
-            {
-                rb.velocity = new Vector3(-SpeedLimit_X, vec1.y, vec1.z);
-            }
+            //if (SpeedLimit_X <= rb.velocity.x)
+            //{
+            //    rb.velocity = new Vector3(SpeedLimit_X, vec1.y, vec1.z);
+            //}
+            //else if (-SpeedLimit_X >= rb.velocity.x)
+            //{
+            //    rb.velocity = new Vector3(-SpeedLimit_X, vec1.y, vec1.z);
+            //}
         }
         //操作していないときは減速する (X方向)
         else
@@ -97,8 +97,6 @@ public class Player : MonoBehaviour
                 rb.AddForce(transform.right * SpeedDece);
 
         }
-
-        
     }
 
 

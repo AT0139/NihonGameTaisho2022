@@ -95,7 +95,8 @@ public class PlayerBoundManager : MonoBehaviour
                 //左方向
                 rigidbody2D.velocity = new Vector2(boundPower, sideBoundCor);
             }
-        } 
+        }
+
         //下方向
         else if (localPoint.y >= 0.25f)
         {
