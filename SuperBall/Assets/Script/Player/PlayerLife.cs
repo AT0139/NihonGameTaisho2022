@@ -54,27 +54,9 @@ public class PlayerLife : MonoBehaviour
             SceneManager.LoadScene("GameOverScene");
         }
 
+        // HPwarehouseに現在体力格納
         HPwarehouse.h_PlayerHP = m_PlayerLife;
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            SceneManager.LoadScene("TestScene_furuichi");
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            lifeManager.ShowLife(m_PlayerLife);
-        }
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            GetDamege(1);
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Recovery(1);
-        }
     }
 
     // ダメージ処理

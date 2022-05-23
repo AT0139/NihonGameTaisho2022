@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc5cf6928b75a7419ce2e1518b92255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stockObj: {fileID: 3940062401026541420, guid: 5e2b8467085366946bbf485bda7b951d,
+  stockObj: {fileID: 6395158268998417939, guid: 21bfe7d0e8139c841a4cc3548e29d687,
     type: 3}
   AnimSpeed: 6
   AnimCooltime: 15
@@ -752,9 +752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButton: 1
-  X_Speed: 30
-  Y_Speed: 30
-  AirDushMode: 1
   X_SpeedAirDush: 20
   Y_SpeedAirDush: 30
   SwitchThrusterCheck: 0
@@ -817,7 +814,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1aab0656a2a32047aa6d6941b1e14f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitStopManager: {fileID: 0}
   sideBoundCor: 30
 --- !u!114 &5368094049308756853
 MonoBehaviour:
