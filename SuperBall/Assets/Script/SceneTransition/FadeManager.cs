@@ -20,11 +20,10 @@ public class FadeManager : MonoBehaviour
 
     Image image;
 
-    
-    
+    [SerializeField]
+    private float fadeEmissionAmount = 25;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         if (!isFadeInstance)
         {
@@ -36,8 +35,14 @@ public class FadeManager : MonoBehaviour
             Destroy(this);
         }
 
+      
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
         image = this.GetComponentInChildren<Image>();
-        
+
     }
 
     // Update is called once per frame
@@ -52,9 +57,10 @@ public class FadeManager : MonoBehaviour
                 alpha = 0.0f;
             }
 
-            
 
-            this.GetComponentInChildren<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);
+
+            //image.color = new Color(0.0f, 0.0f, 0.0f, alpha);
+            image.material.SetFloat("_Emission",alpha* fadeEmissionAmount);
             //image.transform.localScale = new Vector3(xsize * alpha, ysize * alpha, 1.0f);
             //image.transform.Rotate(new Vector3(0.0f, 0.0f, alpha * rotation));
         }
@@ -67,15 +73,16 @@ public class FadeManager : MonoBehaviour
                 alpha = 1.0f;
             }
 
-            
 
-            this.GetComponentInChildren<Image>().color = new Color(0.0f, 0.0f, 0.0f, alpha);
+
+            //image.color = new Color(0.0f, 0.0f, 0.0f, alpha);
+            image.material.SetFloat("_Emission",alpha* fadeEmissionAmount);
             //image.transform.localScale = new Vector3(xsize * alpha, ysize * alpha, 1.0f);
             //image.transform.Rotate(new Vector3(0.0f, 0.0f, alpha * rotation));
         }
 
         
-        image.material.SetFloat("_Emission", alpha*2.0f);
+        //image.material.SetFloat("_Emission", alpha*2.0f);
         
 
         //image.rectTransform.sizeDelta = new Vector2(xsize*alpha, ysize*alpha);        
