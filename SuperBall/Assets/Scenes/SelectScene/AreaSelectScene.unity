@@ -446,7 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 294513478}
   fadeCanvas: {fileID: 294513478}
-  fadeTime: 1000
+  fadeTime: 1500
 --- !u!114 &317771321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1592,7 +1592,7 @@ PrefabInstance:
     - target: {fileID: 1984880510252659698, guid: 45a11d5808f600f4293951f25fbe1e1f,
         type: 3}
       propertyPath: m_RenderMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1984880510252659698, guid: 45a11d5808f600f4293951f25fbe1e1f,
         type: 3}
@@ -1603,7 +1603,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d1e583ae2a62f504cb40ca465ab49624,
+      objectReference: {fileID: 21300000, guid: c976795da694c2a4dab917f2eb62083f,
         type: 3}
     - target: {fileID: 3072803519556803404, guid: 45a11d5808f600f4293951f25fbe1e1f,
         type: 3}
@@ -1728,7 +1728,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 3da45b6c8398dda4ab0a241c8a3354e5, type: 2}
+      objectReference: {fileID: 2100000, guid: 51c6b2dffcf8ea04981bf446ae7465d7, type: 2}
+    - target: {fileID: 235751614342641141, guid: d7e9975a7687b29428cafcf3d91513db,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 235751614342641141, guid: d7e9975a7687b29428cafcf3d91513db,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 235751614342641142, guid: d7e9975a7687b29428cafcf3d91513db,
         type: 3}
       propertyPath: m_Name
@@ -1839,6 +1849,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 235751614342641144, guid: d7e9975a7687b29428cafcf3d91513db,
+        type: 3}
+      propertyPath: deselectMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: ddbf13b5f67dfea48a3190bd800221ab, type: 2}
+    - target: {fileID: 235751614342641144, guid: d7e9975a7687b29428cafcf3d91513db,
+        type: 3}
+      propertyPath: selectMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 51c6b2dffcf8ea04981bf446ae7465d7, type: 2}
+    - target: {fileID: 235751614342641144, guid: d7e9975a7687b29428cafcf3d91513db,
+        type: 3}
+      propertyPath: selectSprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 235751614342641144, guid: d7e9975a7687b29428cafcf3d91513db,
+        type: 3}
+      propertyPath: deselectSprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 235751615430038447, guid: d7e9975a7687b29428cafcf3d91513db,
         type: 3}
       propertyPath: m_FontData.m_FontSize
