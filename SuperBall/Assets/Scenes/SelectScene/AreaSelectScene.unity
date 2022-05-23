@@ -577,14 +577,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8520727}
-        m_MethodName: ToStageSelectScene02
-        m_Mode: 1
+        m_MethodName: ToStageSelectScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 02
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &333670180
@@ -935,14 +935,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8520727}
-        m_MethodName: ToStageSelectScene04
-        m_Mode: 1
+        m_MethodName: ToStageSelectScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 04
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &459787857
@@ -1065,14 +1065,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8520727}
-        m_MethodName: ToStageSelectScene05
-        m_Mode: 1
+        m_MethodName: ToStageSelectScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 05
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &469871353
@@ -1853,14 +1853,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8520727}
-        m_MethodName: ToStageSelectScene01
-        m_Mode: 1
+        m_MethodName: ToStageSelectScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 01
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &1417948599
@@ -1983,14 +1983,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8520727}
-        m_MethodName: ToStageSelectScene03
-        m_Mode: 1
+        m_MethodName: ToStageSelectScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 03
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1463340152
