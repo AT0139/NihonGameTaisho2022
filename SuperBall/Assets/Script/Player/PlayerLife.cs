@@ -33,8 +33,16 @@ public class PlayerLife : MonoBehaviour
         // 表示部分に残機のセット
         playerStock.SetStockGauge(m_PlayerStock);
 
-        m_PlayerLife = m_PlayerLifeMax;
-
+        if(HPwarehouse.h_PlayerHP == 0)
+        {
+            // ゲームオーバーなどの後にはリセットされているので最大値を代入
+            m_PlayerLife = m_PlayerLifeMax;
+        }
+        else
+        {
+            // シーンを跨ぐ(別のプレイヤーがStartする想定)ときはHPwarehouseを読む
+            m_PlayerLife = HPwarehouse.h_PlayerHP;
+        }
     }
 
     void Update()
@@ -45,8 +53,11 @@ public class PlayerLife : MonoBehaviour
             // ゲームオーバー
             SceneManager.LoadScene("GameOverScene");
         }
-    }
 
+        // HPwarehouseに現在体力格納
+        HPwarehouse.h_PlayerHP = m_PlayerLife;
+
+    }
 
     // ダメージ処理
     public void GetDamege(int damege)
@@ -79,7 +90,7 @@ public class PlayerLife : MonoBehaviour
     }
 
     // 回復処理
-    public void GetRecovery(int recovery)
+    public void Recovery(int recovery)
     {
         // ダメージ
         m_PlayerLife += recovery;
@@ -116,7 +127,18 @@ public class PlayerLife : MonoBehaviour
         if (other.gameObject.CompareTag("CheckPoint"))
         {
             // 回復処理
-            GetRecovery(m_PlayerLifeMax);
+            Recovery(m_PlayerLifeMax);
         }
+
+        // 即死ポイントに触れたら
+        if (other.gameObject.CompareTag("DeathPoint"))
+        {
+            GetDamege(m_PlayerLife);
+        }
+    }
+
+    public int GetLife()
+    {
+        return m_PlayerLife;
     }
 }

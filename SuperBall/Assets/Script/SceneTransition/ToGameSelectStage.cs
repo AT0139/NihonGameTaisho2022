@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ToGameSelectStage : MonoBehaviour
 {
@@ -9,30 +10,27 @@ public class ToGameSelectStage : MonoBehaviour
 
     // ステージ選択ではマウスで選択
 
-    public void ToGameScene_01()
+
+    public void ToTitleScene()
     {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene01");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("TitleScene_new");
     }
 
-    public void ToGameScene_02()
-    {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene02");
+    public void ToGameScene(string areaStage)
+    {        
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene"+areaStage);
     }
+    
+    public void ToStageSelectScene(string zeroStage)
+    {
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene"+ zeroStage);
+    }
+    public void ToAreaSelectScene()
+    {
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
+    }
+      
 
-    public void ToGameScene_03()
-    {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene03");
-    }
-
-    public void ToGameScene_04()
-    {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene04");
-    }
-
-    public void ToGameScene_05()
-    {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("GameScene05");
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +43,6 @@ public class ToGameSelectStage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Enterキー
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            //SceneManager.LoadScene("StageSelectScene");
-            sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
-        }
+
     }
 }

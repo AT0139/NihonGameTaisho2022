@@ -9,22 +9,22 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene_new.unity
     guid: ef13f6e8a25d24047ac726db4fdbe7e9
   - enabled: 1
-    path: Assets/Scenes/Stage/StageSelectScene.unity
+    path: Assets/Scenes/SelectScene/StageSelectScene01.unity
     guid: 376a0171ceb585744a84df4eec112a95
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene01.unity
+    path: Assets/Scenes/Stage/GameScene11.unity
     guid: aac05d7248085b74fb6312e5146863a2
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene02.unity
+    path: Assets/Scenes/Stage/GameScene12.unity
     guid: fe1d52fcee0637a4f98ed21f82a241fb
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene03.unity
+    path: Assets/Scenes/Stage/GameScene13.unity
     guid: be26ed759e3ead746aa2791c00ab4170
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene04.unity
+    path: Assets/Scenes/Stage/GameScene14.unity
     guid: 52cd3bea899c8424689e6986103f1e63
   - enabled: 1
-    path: Assets/Scenes/Stage/GameScene05.unity
+    path: Assets/Scenes/Stage/GameScene15.unity
     guid: 3d8c6959a671b4d4b819f758d17b51e6
   - enabled: 1
     path: Assets/Scenes/GameClearScene.unity
@@ -32,4 +32,82 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: 622284599bc2d5940b931840d283790f
+  - enabled: 0
+    path: Assets/Scenes/SampleScene_yanagisawa.unity
+    guid: 834fc37e94b31c84eb0b832606a94b02
+  - enabled: 1
+    path: Assets/Scenes/SelectScene/AreaSelectScene.unity
+    guid: 754ae7300e067fb4191d5a0bbd2864f9
+  - enabled: 1
+    path: Assets/Scenes/SelectScene/StageSelectScene02.unity
+    guid: 1ff0bc38d94e4834d95aeee61541652a
+  - enabled: 1
+    path: Assets/Scenes/SelectScene/StageSelectScene03.unity
+    guid: bb13a7d8f30d1c74b877ac7604d21658
+  - enabled: 1
+    path: Assets/Scenes/SelectScene/StageSelectScene04.unity
+    guid: 1c2402dc87e2d9e45a7fc8e3a2bc7ac6
+  - enabled: 1
+    path: Assets/Scenes/SelectScene/StageSelectScene05.unity
+    guid: 38aaeb8a73b39ff48bfe8c8139f20560
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene21.unity
+    guid: d3f4746f69d7cad41a96eb7c5e09b14e
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene22.unity
+    guid: e47cc260c1ae6964990b6a57fb5de064
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene23.unity
+    guid: ae56434b8c2f65344be81f210398deb2
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene24.unity
+    guid: 2232e982575c6ac488865982c220d308
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene25.unity
+    guid: 9882ea09d4c52d34db600efec6a391fa
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene31.unity
+    guid: 1981be21c1105ee4a8d7a36c539a1b74
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene32.unity
+    guid: a545a725e79233d438f67b656efbf782
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene33.unity
+    guid: 600bc8396cdc8ee44ad2497bcb49ab43
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene34.unity
+    guid: 38f4abf6ab57cb4499e9dfaab030caf3
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene35.unity
+    guid: ede1fd7faf14e3346908ccd578178c14
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene41.unity
+    guid: 2c2dc9a2e24d2324da24fbc4da60d01e
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene42.unity
+    guid: d97ddbb885eada84b9168798cc2fa793
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene43.unity
+    guid: 3bcc6cf8268e12e449bc7945b49c8bd0
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene44.unity
+    guid: e12f1bf0f7f498444bf0190a0cb0b246
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene45.unity
+    guid: 410a3b328e8f11c428dbc88b0cb17499
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene51.unity
+    guid: 29250164426f59648be2224c64c15c50
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene52.unity
+    guid: b55ab9b8bef7a884e86542c640eb054c
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene53.unity
+    guid: 307a67122ff592a4a8fb95c8802e0268
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene54.unity
+    guid: da56603f18aadc3448abedae6ae535c8
+  - enabled: 1
+    path: Assets/Scenes/Stage/GameScene55.unity
+    guid: aa17dd7915e4a0048a8ac152f1da2275
   m_configObjects: {}

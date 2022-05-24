@@ -9,12 +9,23 @@ public class ScoreManager : MonoBehaviour
 
     // 現在のスコア
     private int m_Score;
+    public static ScoreManager scoreManagerInstance;
 
-    void Start()
+    private void Awake()
     {
+        if (scoreManagerInstance == null)
+        {
+            scoreManagerInstance = this;
+        }
+
         m_Score = 0;
 
         ScoreChange.ShowScore(m_Score);
+    }
+
+    void Start()
+    {
+
     }
 
     public void AddScore(int score)
@@ -22,5 +33,17 @@ public class ScoreManager : MonoBehaviour
         m_Score += score;
 
         ScoreChange.ShowScore(m_Score);
+    }
+
+    public void SubstractScore(int score)
+    {
+        m_Score -= score;
+
+        ScoreChange.ShowScore(m_Score);
+    }
+
+    public int GetCoinNum()
+    {
+        return m_Score;
     }
 }

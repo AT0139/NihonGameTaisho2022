@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //  GameStartオブジェクトのスクリプト操作
 //  Author :柳澤優太
@@ -40,7 +41,7 @@ public class ToGameStart : MonoBehaviour
     //  少し左に動いたら、GameStartのスケールを大きくするアニメーションなどの制御
     private void GameStartRange()
     {
-        float diff = Mathf.Abs(player.transform.position.x - xPos) / EmissionNormalize;
+        float diff = Mathf.Abs(player.transform.position.x + xPos) / EmissionNormalize;
 
 
         if (player.transform.position.x < xPos)
@@ -86,6 +87,7 @@ public class ToGameStart : MonoBehaviour
 
     void ChangeStageSelectScene()
     {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("StageSelectScene");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
+        //SceneManager.LoadScene("AreaSelectScene");
     }
 }

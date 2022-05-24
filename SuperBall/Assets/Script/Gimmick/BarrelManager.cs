@@ -7,7 +7,6 @@ public class BarrelManager : MonoBehaviour
     private bool isCatch;
     private Rigidbody2D playerRigitBody2D;
 
-
     void Start()
     {
         isCatch = false;
