@@ -28,6 +28,8 @@ public class PlayerBoundManager : MonoBehaviour
 
     private void Update()
     {
+        //Debug.Log(rigidbody2D.velocity.x);
+
         if(isBound)
         {
             boundCnt++;
@@ -40,16 +42,15 @@ public class PlayerBoundManager : MonoBehaviour
         {
 
             //衝突位置取得
-            foreach (ContactPoint2D contactPoint in collision.contacts)
+
+            if (CheckBoundObject(collision))
             {
-                if (CheckBoundObject(collision, contactPoint))
+                if (!isBound)
                 {
-                    if (!isBound)
-                    {
-                        GroundBound(contactPoint);
-                    }
+                    GroundBound(collision);
                 }
             }
+
         }
     }
 
@@ -62,52 +63,59 @@ public class PlayerBoundManager : MonoBehaviour
                 isBound = false;
             }
         }
+        
     }
 
     //バウンドする関数
-    void GroundBound(ContactPoint2D contactPoint)
+    void GroundBound(Collision2D collision)
     {
         //バウンドパワーをスクリプタブルオブジェクトから代入
         boundPower = blockVariable.boundPower;
 
-        //プレイヤーのローカル座標に変換
-        Vector2 localPoint = transform.InverseTransformPoint(contactPoint.point);
-
-        //Debug.Log(localPoint);
+        //Debug.Log(collsion.contacts[0].normal);
 
         //上方向に跳ねるとき前フレームの力を加算していく
         float boundAddition = Mathf.Abs(rigidbody2D.velocity.y * 0.5f);
 
         //上方向
-        if (localPoint.y <= -0.25)
+        if (collision.contacts[0].normal == Vector2.up)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower + boundAddition);
-        }
-        else if (localPoint.x >= 0.25f)
+        }  
+        //下方向
+        else if (collision.contacts[0].normal == Vector2.down)
         {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
+        }
+
+        //横方向
+        if (collision.contacts[0].normal == Vector2.right)
+        {
+            //float velX = Mathf.Abs(rigidbody2D.velocity.x);
+            float velY = rigidbody2D.velocity.y * 0.5f;
+
+            if (velY <= 0)
+                velY = 0;
+
+
             if (this.gameObject.transform.localScale.x >= 0)
             {
                 //右方向
-                rigidbody2D.velocity = new Vector2(-boundPower, sideBoundCor);
+                rigidbody2D.velocity = new Vector2(-boundPower, velY + sideBoundCor);
             }
             else if (this.gameObject.transform.localScale.x <= 0)
             {
                 //左方向
-                rigidbody2D.velocity = new Vector2(boundPower, sideBoundCor);
+                rigidbody2D.velocity = new Vector2(boundPower, velY + sideBoundCor);
             }
         }
-
-        //下方向
-        else if (localPoint.y >= 0.25f)
-        {
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
-        }
+ 
         boundCnt = 0;
         isBound = true;
     }
 
 
-    bool CheckBoundObject(Collision2D collision, ContactPoint2D contactPoint)
+    bool CheckBoundObject(Collision2D collision)
     {
         if (collision.gameObject.name != "Tilemap")
         {
@@ -121,8 +129,7 @@ public class PlayerBoundManager : MonoBehaviour
         else
         {
             //タイルマップだったら1番近いオブジェクトでリソースを探す
-            GetNearObject(contactPoint.point);
-
+            GetNearObject(collision.contacts[0].point);
             //跳ねないオブジェクト
             if (nearobj.tag == "GroundNotBound")
             {
@@ -131,6 +138,21 @@ public class PlayerBoundManager : MonoBehaviour
                     boundCnt = 0;
                     isBound = false;
                 }
+                //跳ねないオブジェクトに横方向で当たったら
+                if (collision.contacts[0].normal == Vector2.right)
+                {
+                    //右方向
+                    Debug.Log("migi");
+                    rigidbody2D.velocity = new Vector2(5, rigidbody2D.velocity.y);
+                }
+                else if (collision.contacts[0].normal == Vector2.left)
+                {
+                    //左方向
+                    Debug.Log("hidari");
+                    rigidbody2D.velocity = new Vector2(-5, rigidbody2D.velocity.y);
+                }
+                
+
                 return false;
             }
 
@@ -158,7 +180,7 @@ public class PlayerBoundManager : MonoBehaviour
 
             if (obs.tag != "GroundNotBound")
             {
-                tmpDis -= 1;
+                tmpDis -= 0.1f;
             }
 
             //オブジェクトの距離が近いか、距離0であればオブジェクト名を取得
