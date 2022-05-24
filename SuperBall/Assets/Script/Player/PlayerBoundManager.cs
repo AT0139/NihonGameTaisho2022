@@ -82,25 +82,34 @@ public class PlayerBoundManager : MonoBehaviour
         if (localPoint.y <= -0.25)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, boundPower + boundAddition);
-        }
-        else if (localPoint.x >= 0.25f)
-        {
-            if (this.gameObject.transform.localScale.x >= 0)
-            {
-                //右方向
-                rigidbody2D.velocity = new Vector2(-boundPower, sideBoundCor);
-            }
-            else if (this.gameObject.transform.localScale.x <= 0)
-            {
-                //左方向
-                rigidbody2D.velocity = new Vector2(boundPower, sideBoundCor);
-            }
-        } 
+        }  
         //下方向
         else if (localPoint.y >= 0.25f)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -boundPower * 0.5f);
         }
+
+
+        if (localPoint.x >= 0.25f)
+        {
+            float velY = rigidbody2D.velocity.y * 0.5f;
+
+            if (velY <= 0)
+                velY = 0;
+
+            if (this.gameObject.transform.localScale.x >= 0)
+            {
+                    //右方向
+                    rigidbody2D.velocity = new Vector2(-boundPower, velY + sideBoundCor);
+            }
+            else if (this.gameObject.transform.localScale.x <= 0)
+            {
+                //左方向
+                rigidbody2D.velocity = new Vector2(boundPower, velY + sideBoundCor);
+            }
+        }
+
+ 
         boundCnt = 0;
         isBound = true;
     }

@@ -63,7 +63,11 @@ public class Goal : MonoBehaviour
             //  アニメーション遷移時間＋コイン処理時間
             float totalTime = animationTime + coinTime;
 
-            //  シーン遷移・フラグ初期化
+           
+
+            IsLeave = false;
+
+            //  シーン遷移・
             Invoke("SetIsLeaveFalse", totalTime);
         }
     }
@@ -126,9 +130,10 @@ public class Goal : MonoBehaviour
     }
     private void SetIsLeaveFalse()
     {
+        //  フラグ初期化
         playerGoalAnimator.SetBool("IsLeave", false);
         playerGoalAnimator.SetBool("IsGoal", false);
-        
+
         sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
     }
 
