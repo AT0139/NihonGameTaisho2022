@@ -27,4 +27,5 @@ Material:
     m_Floats:
     - Vector1_5D258DCC: 5
     - _Emission: 0
+    - _IsTwirl: 0
     m_Colors: []
