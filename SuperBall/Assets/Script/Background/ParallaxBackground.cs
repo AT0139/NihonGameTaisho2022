@@ -172,9 +172,9 @@ public class ParallaxBackground : MonoBehaviour
             }
 
             var hosei = 0f;
-            if (backgroundSpriteSizes[i].x < 1980)
+            if (backgroundSpriteSizes[i].x < 1920)
             {
-                hosei = (1980 - backgroundSpriteSizes[i].x) / 2 + backgroundOffsets[i].y;
+                hosei = (1920 - backgroundSpriteSizes[i].x) / 2 + backgroundOffsets[i].y;
             }
             else
                 hosei = 0 + backgroundOffsets[i].y;
