@@ -11,7 +11,7 @@ public class FadeManager : MonoBehaviour
     public bool isFadeOut = false;
 
     public float alpha = 0.0f;
-    public float fadeSpeed = 0.2f;
+    private float fadeSpeed = 2.0f;
 
     public float xsize = 1920.0f;
     public float ysize = 1080.0f;

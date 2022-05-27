@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_UG_ButtonDeselect
-  m_Shader: {fileID: -6465566751694194690, guid: d3c9e7eaa6aac5543bd104d6e5b53a82,
+  m_Name: M_BlockEffect_CastleHard
+  m_Shader: {fileID: -6465566751694194690, guid: 10cbfef6fbbfed84d83d47076cc74a5c,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,21 +20,27 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_8870F86E:
+        m_Texture: {fileID: 2800000, guid: f2c8a551b56875d43bb824cccd262216, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_E5881C7B: 1
-    - IsGradientColor: 0
+    - Boolean_E5881C7B: 0
+    - RotateSpeed: 0.9
+    - Vector1_5C677FEE: 2.39
+    - Vector1_88F0B0B7: 1.53
     - Vector1_DEEEFE8B: 0
-    - _BlinkDelay: 1
-    - _BlinkMinAlphaValue: 0.25
-    - _BlinkSpeed: 1
+    - Vector1_F8AB79F: 1
+    - _BlinkSpeed: 6.73
     - _Emission: 1
     - _IsBlackTexture: 0
-    - _IsBlinking: 1
-    - _IsEmission: 0
+    - _IsBlinking: 0
+    - _IsEmission: 1
     - _IsVertexColor: 0
     m_Colors:
-    - _MainColor: {r: 0.6996112, g: 0.6337053, b: 0.85570395, a: 1}
+    - Color_9D134BFB: {r: 0, g: 1, b: 0.80329275, a: 0}
+    - _MainColor: {r: 0.8523645, g: 3.5648696, b: 0, a: 1}

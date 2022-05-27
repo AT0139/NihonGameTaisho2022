@@ -12,6 +12,10 @@ public class Goal : MonoBehaviour
     [SerializeField] float oneCoinTime = 0.1f;
     [SerializeField] float animationTime = 1.0f;
 
+    [Header("クリアシーンに遷移するか？")]
+    [SerializeField]
+    bool IsClear = false;    
+
     private GameObject sceneControllerCam;
     private GameObject playerGoalInstance;
     //private GameObject CMvcam1;    
@@ -134,7 +138,15 @@ public class Goal : MonoBehaviour
         playerGoalAnimator.SetBool("IsLeave", false);
         playerGoalAnimator.SetBool("IsGoal", false);
 
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
+        if (IsClear)
+        {
+            sceneControllerCam.GetComponent<SceneController>().sceneChange("GameClearScene");
+        }
+        else
+        {
+            sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
