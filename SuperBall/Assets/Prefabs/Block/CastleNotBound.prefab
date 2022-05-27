@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8779477806925918016}
   - component: {fileID: 8779477806925918023}
   m_Layer: 8
-  m_Name: GroundNotBound
+  m_Name: CastleNotBound
   m_TagString: GroundNotBound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
