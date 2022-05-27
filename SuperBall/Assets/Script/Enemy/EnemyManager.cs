@@ -10,9 +10,16 @@ public partial class EnemyManager : MonoBehaviour
         Bee,
         Worm,
     }
+    enum DIR
+    {
+        RIGHT,
+        LEFT,
+    }
 
     [SerializeField] ENEMY_TYPE enemyType;
-
+    [Header("初期移動方向 (現状ハリネズミのみ)")]
+    [SerializeField] DIR dir;
+    [Header("")]
     [SerializeField] GameObject player;
     [SerializeField] GameObject explosion;
     new Rigidbody2D rigidbody2D;
@@ -53,7 +60,8 @@ public partial class EnemyManager : MonoBehaviour
             case ENEMY_TYPE.Worm:
                 stateIdol = new WormStateIdol();
                 stateAttack = new WormStateAttack();
-
+                skeletonAnimation = GetComponent<SkeletonAnimation>();
+                enemyAnimeState = skeletonAnimation.AnimationState;
                 rigidbody2D.gravityScale = 0;
                 break;
         }

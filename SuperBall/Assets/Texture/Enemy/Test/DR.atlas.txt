@@ -1,0 +1,59 @@
+DR.png
+size:162,929
+filter:Linear,Linear
+pma:true
+eye_cl
+bounds:2,278,195,75
+offsets:1,1,197,77
+rotate:90
+kuti
+bounds:125,654,38,19
+offsets:1,1,40,21
+rotate:90
+フォルダー 11
+bounds:2,475,150,129
+offsets:1,2,152,132
+フォルダー 13 のコピー 3
+bounds:2,606,121,174
+offsets:1,1,123,177
+フォルダー 17
+bounds:79,262,85,79
+offsets:1,1,87,81
+rotate:90
+フォルダー 18
+bounds:2,194,82,74
+offsets:1,1,84,76
+rotate:90
+フォルダー 21
+bounds:125,694,86,30
+offsets:1,1,88,32
+rotate:90
+フォルダー 22
+bounds:2,782,145,156
+offsets:1,1,147,158
+rotate:90
+フォルダー 24
+bounds:2,2,60,44
+offsets:2,1,63,47
+フォルダー 24 のコピー
+bounds:121,47,61,37
+offsets:2,1,65,41
+rotate:90
+フォルダー 7
+bounds:77,12,96,42
+offsets:1,1,98,44
+rotate:90
+フォルダー 8
+bounds:2,109,83,73
+offsets:1,1,85,75
+rotate:90
+フォルダー 9
+bounds:2,48,59,60
+offsets:1,1,61,64
+rotate:90
+レイヤー 35
+bounds:78,110,82,150
+offsets:1,1,85,152
+レイヤー 36
+bounds:79,349,79,124
+offsets:1,1,81,126

@@ -1,0 +1,50 @@
+midori.png
+size:536,550
+filter:Linear,Linear
+pma:true
+フォルダー 12
+bounds:327,357,130,54
+offsets:1,1,132,56
+rotate:90
+フォルダー 16
+bounds:412,47,104,107
+offsets:1,1,106,109
+rotate:90
+フォルダー 18 のコピー 5
+bounds:213,411,112,76
+offsets:1,2,116,79
+フォルダー 18 のコピー 6
+bounds:300,2,110,110
+offsets:1,1,113,113
+フォルダー 18 のコピー 7
+bounds:157,6,95,141
+offsets:3,3,101,147
+rotate:90
+フォルダー 18 のコピー 8
+bounds:213,489,59,172
+offsets:2,2,63,177
+rotate:90
+フォルダー 18 のコピー 9
+bounds:2,12,89,153
+offsets:1,1,91,155
+rotate:90
+フォルダー 22
+bounds:2,103,197,207
+offsets:1,1,199,209
+フォルダー 23
+bounds:389,153,145,185
+offsets:1,1,147,187
+フォルダー 24
+bounds:2,312,236,209
+offsets:1,1,238,211
+rotate:90
+レイヤー 38
+bounds:201,114,186,196
+offsets:1,1,188,198
+レイヤー 55
+bounds:389,340,208,141
+offsets:1,1,210,143
+rotate:90
+レイヤー 57
+bounds:213,331,77,78
+offsets:1,2,79,81

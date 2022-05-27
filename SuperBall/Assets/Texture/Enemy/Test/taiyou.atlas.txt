@@ -1,0 +1,16 @@
+taiyou.png
+size:1044,661
+filter:Linear,Linear
+pma:true
+フォルダー 15
+bounds:682,205,227,92
+offsets:1,1,229,94
+フォルダー 16
+bounds:682,167,34,36
+offsets:1,1,36,38
+レイヤー 38
+bounds:682,299,360,360
+offsets:1,1,362,362
+レイヤー 40
+bounds:2,2,678,657
+offsets:1,2,680,662

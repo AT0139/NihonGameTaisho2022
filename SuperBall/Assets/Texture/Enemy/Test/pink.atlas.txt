@@ -1,0 +1,63 @@
+pink.png
+size:860,205
+filter:Linear,Linear
+pma:true
+L_asi
+bounds:630,2,96,74
+offsets:2,2,99,77
+L_leg_sita
+bounds:2,4,41,132
+offsets:1,1,43,134
+rotate:90
+L_leg_ue
+bounds:790,100,68,103
+offsets:1,1,70,105
+R_asi
+bounds:728,3,93,78
+offsets:1,1,95,80
+rotate:90
+R_leg_sita
+bounds:630,78,67,125
+offsets:2,1,70,128
+R_leg_ue
+bounds:699,98,89,105
+offsets:1,1,91,107
+eye
+bounds:197,12,93,37
+offsets:1,1,95,39
+face
+bounds:149,51,151,152
+offsets:1,1,155,154
+head
+bounds:2,47,145,156
+offsets:1,1,147,158
+kosi
+bounds:508,60,143,120
+offsets:1,1,145,122
+rotate:90
+kuti
+bounds:598,24,34,14
+offsets:1,1,36,16
+rotate:90
+zyouhansin
+bounds:302,58,145,204
+offsets:1,1,147,206
+rotate:90
+レイヤー 113
+bounds:292,12,37,18
+offsets:1,1,39,20
+rotate:90
+レイヤー 136
+bounds:136,5,33,40
+offsets:1,1,35,42
+レイヤー 139
+bounds:171,3,24,46
+offsets:1,1,26,48
+レイヤー 62
+bounds:455,5,51,141
+offsets:1,1,54,143
+rotate:90
+レイヤー 63
+bounds:312,3,53,141
+offsets:1,1,55,143
+rotate:90
