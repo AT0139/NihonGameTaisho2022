@@ -15,14 +15,14 @@ public class JumpSE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Bound")
+        if (collision.gameObject.tag == "Bound")
         {
             audioSource.PlayOneShot(jumpSound);
-        }  
+        }
     }
 }
