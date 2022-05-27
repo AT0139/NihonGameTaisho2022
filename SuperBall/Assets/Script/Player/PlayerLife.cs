@@ -110,12 +110,15 @@ public class PlayerLife : MonoBehaviour
         // エネミーに接触したら
         if (other.gameObject.CompareTag("Enemy"))
         {
-            int enemystate = other.gameObject.GetComponent<EnemyManager>().GetEnemyState();
-
-            // エネミーが攻撃状態だったら
-            if (enemystate == 1)
+            if(other.gameObject.GetComponent<EnemyManager>())
             {
-                GetDamege(1);
+                int enemystate = other.gameObject.GetComponent<EnemyManager>().GetEnemyState();
+
+                // エネミーが攻撃状態だったら
+                if (enemystate == 1)
+                {
+                    GetDamege(1);
+                }
             }
         }
 
