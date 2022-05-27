@@ -1,0 +1,86 @@
+tensi2.png
+size:1305,157
+filter:Linear,Linear
+pma:true
+husime
+bounds:968,18,80,24
+offsets:1,1,82,26
+me
+bounds:607,2,96,38
+offsets:1,1,98,40
+フォルダー 12
+bounds:1050,20,23,15
+offsets:1,1,25,17
+rotate:90
+フォルダー 16
+bounds:773,5,35,25
+offsets:1,1,37,27
+rotate:90
+フォルダー 17
+bounds:871,44,101,111
+offsets:1,1,103,113
+フォルダー 23
+bounds:2,7,154,148
+offsets:7,1,162,151
+フォルダー 7
+bounds:348,10,145,156
+offsets:1,1,147,158
+rotate:90
+レイヤー 1
+bounds:709,42,113,98
+offsets:1,2,115,101
+rotate:90
+レイヤー 15
+bounds:605,42,113,102
+offsets:1,1,115,104
+rotate:90
+レイヤー 16
+bounds:1067,3,79,51
+offsets:1,2,81,54
+レイヤー 17
+bounds:1208,79,76,66
+offsets:1,1,78,68
+rotate:90
+レイヤー 18
+bounds:1256,9,68,47
+offsets:1,1,70,50
+rotate:90
+レイヤー 19
+bounds:800,7,69,33
+offsets:1,1,71,35
+レイヤー 20
+bounds:1148,2,49,53
+offsets:2,1,53,55
+レイヤー 21
+bounds:705,4,66,36
+offsets:2,1,69,38
+レイヤー 22
+bounds:1199,7,48,55
+offsets:1,1,50,57
+rotate:90
+レイヤー 39
+bounds:158,9,188,146
+offsets:1,1,191,149
+レイヤー 67
+bounds:871,13,29,95
+offsets:1,1,31,97
+rotate:90
+レイヤー 68
+bounds:506,2,34,99
+offsets:1,1,36,101
+rotate:90
+レイヤー 77 のコピー
+bounds:974,45,75,110
+offsets:1,1,77,112
+レイヤー 78 のコピー
+bounds:1051,56,64,99
+offsets:1,1,66,101
+レイヤー 89
+bounds:506,38,97,117
+offsets:1,1,99,119
+レイヤー 90
+bounds:809,42,60,113
+offsets:1,1,62,115
+レイヤー 92
+bounds:1117,57,89,98
+offsets:3,2,95,101

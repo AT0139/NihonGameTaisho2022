@@ -1,0 +1,123 @@
+mohu3.png
+size:1421,1008
+filter:Linear,Linear
+pma:true
+asimae のコピー
+bounds:1300,176,54,110
+offsets:2,2,57,113
+rotate:90
+asimae
+bounds:1300,176,54,110
+offsets:2,2,57,113
+rotate:90
+asiusiro のコピー
+bounds:1004,2,88,120
+offsets:1,1,90,122
+asiusiro
+bounds:1004,2,88,120
+offsets:1,1,90,122
+body
+bounds:1004,866,259,140
+offsets:1,1,261,142
+head
+bounds:1004,529,185,159
+offsets:1,1,187,161
+momomae のコピー
+bounds:1205,29,117,131
+offsets:1,1,119,133
+momomae
+bounds:1205,29,117,131
+offsets:1,1,119,133
+momousiro のコピー
+bounds:1265,871,135,154
+offsets:1,1,137,156
+rotate:90
+momousiro
+bounds:1265,871,135,154
+offsets:1,1,137,156
+rotate:90
+mune
+bounds:1094,16,136,109
+offsets:1,1,138,111
+rotate:90
+sippo
+bounds:1004,690,212,174
+offsets:1,1,214,176
+フォルダー 24
+bounds:1229,187,161,69
+offsets:1,1,163,71
+rotate:90
+フォルダー 25
+bounds:1004,336,191,113
+offsets:1,1,197,115
+rotate:90
+フォルダー 26
+bounds:1147,162,169,80
+offsets:3,2,174,85
+rotate:90
+フォルダー 27
+bounds:1290,550,129,130
+offsets:1,1,131,132
+フォルダー 28
+bounds:1324,70,91,104
+offsets:1,1,93,106
+フォルダー 29
+bounds:1191,530,150,97
+offsets:1,1,152,100
+rotate:90
+フォルダー 30
+bounds:1218,682,182,74
+offsets:1,1,184,76
+rotate:90
+フォルダー 31
+bounds:1300,232,139,108
+offsets:1,1,141,110
+rotate:90
+フォルダー 32
+bounds:1068,154,177,77
+offsets:1,1,180,79
+rotate:90
+フォルダー 33
+bounds:1277,373,155,94
+offsets:1,1,157,96
+rotate:90
+フォルダー 35
+bounds:1196,350,178,79
+offsets:1,1,180,81
+rotate:90
+フォルダー 36
+bounds:1294,714,155,114
+offsets:1,1,157,116
+rotate:90
+フォルダー 37
+bounds:1004,124,210,62
+offsets:1,1,212,64
+rotate:90
+フォルダー 38
+bounds:1119,333,194,75
+offsets:1,1,197,77
+rotate:90
+レイヤー 64 のコピー 2
+bounds:1373,474,74,41
+offsets:1,1,76,43
+rotate:90
+レイヤー 64
+bounds:1373,474,74,41
+offsets:1,1,76,43
+rotate:90
+レイヤー 64 のコピー 3
+bounds:1324,18,84,50
+offsets:2,1,87,52
+レイヤー 64 のコピー
+bounds:1324,18,84,50
+offsets:2,1,87,52
+用紙
+bounds:2,6,1000,1000
+offsets:1,1,1002,1002
+目
+bounds:1373,423,49,45
+offsets:2,2,53,49
+rotate:90
+目とじ
+bounds:1373,389,45,32
+offsets:1,1,47,34

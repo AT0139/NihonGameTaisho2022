@@ -1,0 +1,118 @@
+yose2.png
+size:1118,269
+filter:Linear,Linear
+pma:true
+L_arm_ue
+bounds:95,4,53,73
+offsets:1,1,55,75
+L_hane
+bounds:444,119,117,148
+offsets:2,2,121,152
+R_arm_ue
+bounds:968,190,52,77
+offsets:1,1,54,79
+R_hane
+bounds:314,116,128,151
+offsets:1,1,130,153
+eye
+bounds:890,180,87,39
+offsets:1,1,89,41
+rotate:90
+eye_toji
+bounds:931,182,85,35
+offsets:1,1,87,37
+rotate:90
+te
+bounds:1009,141,68,47
+offsets:1,1,70,50
+zyohansin
+bounds:231,7,111,102
+offsets:1,1,113,104
+フォルダー 30 のコピー
+bounds:677,9,129,114
+offsets:1,1,131,116
+フォルダー 30 のコピー 3
+bounds:546,3,129,114
+offsets:1,1,131,116
+フォルダー 34
+bounds:344,2,66,112
+offsets:1,1,68,114
+フォルダー 36
+bounds:167,93,16,13
+offsets:2,1,19,16
+rotate:90
+フォルダー 43
+bounds:945,62,70,76
+offsets:2,1,73,80
+フォルダー 43 のコピー
+bounds:1078,197,36,70
+offsets:1,1,38,80
+レイヤー 104
+bounds:563,125,142,138
+offsets:1,1,145,140
+rotate:90
+レイヤー 104 のコピー
+bounds:412,4,110,132
+offsets:1,1,112,134
+rotate:90
+レイヤー 109
+bounds:703,135,86,132
+offsets:1,1,88,134
+レイヤー 114
+bounds:2,79,188,163
+offsets:2,1,191,165
+rotate:90
+レイヤー 119
+bounds:150,5,79,72
+offsets:1,1,81,75
+レイヤー 121
+bounds:1022,191,54,76
+offsets:1,1,56,78
+レイヤー 122
+bounds:1017,70,64,69
+offsets:1,1,66,71
+レイヤー 123
+bounds:952,4,56,47
+offsets:1,1,58,49
+rotate:90
+レイヤー 123 のコピー
+bounds:858,2,53,31
+offsets:1,1,55,33
+レイヤー 125
+bounds:791,139,128,97
+offsets:1,1,130,99
+rotate:90
+レイヤー 129
+bounds:808,9,48,128
+offsets:1,2,50,131
+レイヤー 147
+bounds:936,140,71,40
+offsets:1,1,73,42
+レイヤー 147 のコピー
+bounds:913,2,37,31
+offsets:1,1,39,33
+レイヤー 150
+bounds:858,35,85,102
+offsets:2,1,88,104
+レイヤー 151
+bounds:2,4,73,91
+offsets:1,1,75,94
+rotate:90
+レイヤー 5
+bounds:1037,31,37,37
+offsets:1,1,39,41
+レイヤー 5 のコピー
+bounds:890,140,38,44
+offsets:1,1,41,46
+rotate:90
+レイヤー 79
+bounds:1079,155,40,37
+offsets:1,1,42,39
+rotate:90
+レイヤー 80
+bounds:1001,8,52,34
+offsets:1,1,54,36
+rotate:90
+頭ベース のコピー 3
+bounds:167,111,145,156
+offsets:1,1,147,158

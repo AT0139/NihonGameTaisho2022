@@ -1,0 +1,58 @@
+yurei.png
+size:735,204
+filter:Linear,Linear
+pma:true
+フォルダー 53
+bounds:356,58,16,10
+offsets:1,1,18,12
+フォルダー 56
+bounds:619,3,105,101
+offsets:1,1,107,103
+rotate:90
+フォルダー 59
+bounds:149,58,144,134
+offsets:1,1,146,136
+rotate:90
+フォルダー 60
+bounds:356,70,132,113
+offsets:1,1,134,115
+rotate:90
+フォルダー 64
+bounds:158,5,119,51
+offsets:1,1,121,53
+レイヤー 215
+bounds:505,7,71,93
+offsets:1,1,73,95
+rotate:90
+レイヤー 219
+bounds:279,5,51,111
+offsets:1,2,53,114
+rotate:90
+レイヤー 221
+bounds:619,110,92,114
+offsets:1,1,94,116
+rotate:90
+レイヤー 235
+bounds:2,2,44,37
+offsets:1,1,46,39
+rotate:90
+レイヤー 241
+bounds:285,69,133,69
+offsets:2,1,136,71
+rotate:90
+レイヤー 244
+bounds:392,7,111,61
+offsets:2,3,114,66
+レイヤー 247
+bounds:523,86,116,94
+offsets:1,1,119,96
+rotate:90
+レイヤー 248
+bounds:471,80,50,122
+offsets:1,1,52,124
+レイヤー 252
+bounds:41,3,115,43
+offsets:1,1,117,45
+頭ベース のコピー
+bounds:2,48,145,154
+offsets:1,1,147,156
