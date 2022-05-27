@@ -1,0 +1,700 @@
+{
+"skeleton": {
+	"hash": "KpoRO7HX9Lc",
+	"spine": "4.0.64",
+	"x": -126.77,
+	"y": -9.4,
+	"width": 483,
+	"height": 392,
+	"images": "../mohu/",
+	"audio": "C:/Users/MIYUU/Downloads/ゲーム大賞素材書き出し用"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "mune", "parent": "root", "length": 106.25, "rotation": -25.83, "x": -72.72, "y": 194.18 },
+	{ "name": "body", "parent": "mune", "length": 223.94, "rotation": 29.75, "x": 39.59, "y": 5.14 },
+	{ "name": "head", "parent": "mune", "length": 141.93, "rotation": 145.92, "x": 59.29, "y": 6.59 },
+	{ "name": "フォルダー 28", "parent": "head", "length": 119.25, "rotation": -70.92, "x": 119.89, "y": 1.75 },
+	{ "name": "フォルダー 27", "parent": "head", "length": 162.58, "rotation": -78.7, "x": 104.39, "y": -2.79 },
+	{ "name": "フォルダー 26", "parent": "head", "length": 164, "rotation": -111.3, "x": 80.24, "y": -10.04 },
+	{ "name": "フォルダー 24", "parent": "head", "length": 152.75, "rotation": -117.58, "x": 53.55, "y": -13.88 },
+	{ "name": "フォルダー 29", "parent": "フォルダー 24", "length": 194.34, "rotation": 18.84, "x": 63.57, "y": -25.08 },
+	{ "name": "フォルダー 35", "parent": "フォルダー 24", "length": 164.02, "rotation": 10.44, "x": 77.06, "y": -47.97 },
+	{ "name": "フォルダー 31", "parent": "フォルダー 26", "length": 158.19, "rotation": 24.28, "x": 46.5, "y": 9.15 },
+	{ "name": "フォルダー 32", "parent": "フォルダー 26", "length": 150.28, "rotation": 8.23, "x": 67.19, "y": -6.45 },
+	{ "name": "フォルダー 34", "parent": "フォルダー 31", "length": 4.45, "rotation": 47.46, "x": -72.68, "y": -99 },
+	{ "name": "フォルダー 36", "parent": "フォルダー 31", "length": 170.06, "rotation": -3.31, "x": 42.77, "y": -5.42 },
+	{ "name": "フォルダー 37", "parent": "フォルダー 32", "length": 172.47, "rotation": -2.55, "x": 35.03, "y": 23.66 },
+	{ "name": "フォルダー 33", "parent": "フォルダー 29", "length": 172.56, "rotation": -4.1, "x": 59.5, "y": 2.07 },
+	{ "name": "フォルダー 38", "parent": "フォルダー 29", "length": 178.24, "rotation": 13.98, "x": 87.54, "y": -51.66 },
+	{ "name": "フォルダー 40", "parent": "フォルダー 35", "length": 182.83, "rotation": -2.47, "x": 80.44, "y": -0.69 },
+	{ "name": "フォルダー 41", "parent": "フォルダー 35", "length": 204.47, "rotation": -26.49, "x": 79.17, "y": -12.77 },
+	{ "name": "sippo2", "parent": "body", "length": 112.79, "rotation": -95.15, "x": 30.34, "y": -4.37 },
+	{ "name": "asimae", "parent": "sippo2", "length": 87.35, "rotation": 7.64, "x": 70.07, "y": -13.09 },
+	{ "name": "レイヤー 64", "parent": "asimae", "length": 62.55, "rotation": -86.69, "x": 81.46, "y": 20.25 },
+	{ "name": "momousiro", "parent": "body", "length": 125.96, "rotation": -97.24, "x": 187.82, "y": 3.55 },
+	{ "name": "asiusiro", "parent": "momousiro", "length": 103.29, "rotation": 36.14, "x": 82.49, "y": -21.21 },
+	{ "name": "レイヤー 64 のコピー", "parent": "asiusiro", "length": 58.08, "rotation": -110.72, "x": 106.52, "y": 9.5 },
+	{ "name": "sippo", "parent": "body", "length": 206.2, "rotation": -41.41, "x": 198.07, "y": 4.82 },
+	{ "name": "目", "parent": "head", "length": 43.13, "rotation": -22.32, "x": 57.98, "y": 34.63 },
+	{ "name": "mune2", "parent": "mune", "length": 111.87, "rotation": -70.57, "x": 107.65, "y": 28.41 },
+	{ "name": "mune3", "parent": "mune2", "length": 74.29, "rotation": 18.92, "x": 71.14, "y": -2.44 },
+	{ "name": "mune4", "parent": "mune3", "length": 51.36, "rotation": -84.94, "x": 74.29 },
+	{ "name": "body2", "parent": "body", "length": 86.37, "rotation": -109.72, "x": 147.5, "y": -15.68 },
+	{ "name": "body3", "parent": "body2", "length": 65.26, "rotation": 51.02, "x": 86.37 },
+	{ "name": "body4", "parent": "body3", "length": 50.88, "rotation": -91.53, "x": 65.26 }
+],
+"slots": [
+	{ "name": "用紙", "bone": "root" },
+	{ "name": "asimae のコピー", "bone": "mune3", "attachment": "asimae のコピー" },
+	{ "name": "レイヤー 64 のコピー 2", "bone": "mune4", "attachment": "レイヤー 64 のコピー 2" },
+	{ "name": "momomae のコピー", "bone": "mune2", "attachment": "momomae のコピー" },
+	{ "name": "momousiro のコピー", "bone": "body2", "attachment": "momousiro のコピー" },
+	{ "name": "asiusiro のコピー", "bone": "body3", "attachment": "asiusiro のコピー" },
+	{ "name": "レイヤー 64 のコピー 3", "bone": "body4", "attachment": "レイヤー 64 のコピー 3" },
+	{ "name": "body", "bone": "body", "attachment": "body" },
+	{ "name": "asimae", "bone": "asimae", "attachment": "asimae" },
+	{ "name": "asiusiro", "bone": "asiusiro", "attachment": "asiusiro" },
+	{ "name": "sippo", "bone": "sippo", "attachment": "sippo" },
+	{ "name": "momomae", "bone": "sippo2", "attachment": "momomae" },
+	{ "name": "momousiro", "bone": "momousiro", "attachment": "momousiro" },
+	{ "name": "mune", "bone": "mune", "attachment": "mune" },
+	{ "name": "head", "bone": "head", "attachment": "head" },
+	{ "name": "フォルダー 38", "bone": "フォルダー 40", "attachment": "フォルダー 38" },
+	{ "name": "フォルダー 37", "bone": "フォルダー 41", "attachment": "フォルダー 37" },
+	{ "name": "フォルダー 36", "bone": "フォルダー 38", "attachment": "フォルダー 36" },
+	{ "name": "フォルダー 35", "bone": "フォルダー 35", "attachment": "フォルダー 35" },
+	{ "name": "フォルダー 33", "bone": "フォルダー 36", "attachment": "フォルダー 33" },
+	{ "name": "フォルダー 32", "bone": "フォルダー 37", "attachment": "フォルダー 32" },
+	{ "name": "フォルダー 31", "bone": "フォルダー 31", "attachment": "フォルダー 31" },
+	{ "name": "フォルダー 30", "bone": "フォルダー 33", "attachment": "フォルダー 30" },
+	{ "name": "フォルダー 29", "bone": "フォルダー 32", "attachment": "フォルダー 29" },
+	{ "name": "フォルダー 28", "bone": "フォルダー 28", "attachment": "フォルダー 28" },
+	{ "name": "フォルダー 27", "bone": "フォルダー 27", "attachment": "フォルダー 27" },
+	{ "name": "フォルダー 26", "bone": "フォルダー 26", "attachment": "フォルダー 26" },
+	{ "name": "フォルダー 25", "bone": "フォルダー 29", "attachment": "フォルダー 25" },
+	{ "name": "フォルダー 24", "bone": "フォルダー 24", "attachment": "フォルダー 24" },
+	{ "name": "レイヤー 64", "bone": "レイヤー 64", "attachment": "レイヤー 64" },
+	{ "name": "レイヤー 64 のコピー", "bone": "レイヤー 64 のコピー", "attachment": "レイヤー 64 のコピー" },
+	{ "name": "目", "bone": "目", "attachment": "目" },
+	{ "name": "目とじ", "bone": "root" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"asimae": {
+				"asimae": { "x": 45.75, "y": 9.56, "rotation": 83.6, "width": 57, "height": 113 }
+			},
+			"asimae のコピー": {
+				"asimae のコピー": { "x": 27.94, "y": -3.51, "rotation": 82.73, "width": 57, "height": 113 }
+			},
+			"asiusiro": {
+				"asiusiro": { "x": 49.2, "y": 0.27, "rotation": 57.18, "width": 90, "height": 122 }
+			},
+			"asiusiro のコピー": {
+				"asiusiro のコピー": { "x": 16.2, "y": 0.45, "rotation": 54.78, "width": 90, "height": 122 }
+			},
+			"body": {
+				"body": { "x": 113.91, "y": -42.84, "rotation": -3.92, "width": 261, "height": 142 }
+			},
+			"head": {
+				"head": { "x": 74.02, "y": -23.48, "rotation": -120.09, "width": 187, "height": 161 }
+			},
+			"momomae": {
+				"momomae": { "x": 63.35, "y": -7.64, "rotation": 91.24, "width": 119, "height": 133 }
+			},
+			"momomae のコピー": {
+				"momomae のコピー": { "x": 42.05, "y": 5.28, "rotation": 74.76, "width": 119, "height": 133 }
+			},
+			"momousiro": {
+				"momousiro": { "x": 63.48, "y": -0.9, "rotation": 93.32, "width": 137, "height": 156 }
+			},
+			"momousiro のコピー": {
+				"momousiro のコピー": { "x": 39.7, "rotation": -82.64, "width": 137, "height": 156 }
+			},
+			"mune": {
+				"mune": { "x": 56.72, "y": -4.85, "rotation": 25.83, "width": 138, "height": 111 }
+			},
+			"sippo": {
+				"sippo": { "x": 112.87, "y": -4.55, "rotation": 37.49, "width": 214, "height": 176 }
+			},
+			"フォルダー 24": {
+				"フォルダー 24": { "x": 75.64, "y": -10.79, "rotation": -2.51, "width": 163, "height": 71 }
+			},
+			"フォルダー 25": {
+				"フォルダー 25": { "x": 93.67, "y": -14.27, "rotation": -21.34, "width": 197, "height": 115 }
+			},
+			"フォルダー 26": {
+				"フォルダー 26": { "x": 82.87, "y": -2.33, "rotation": -8.79, "width": 174, "height": 85 }
+			},
+			"フォルダー 27": {
+				"フォルダー 27": { "x": 81.56, "y": -4.44, "rotation": -41.39, "width": 131, "height": 132 }
+			},
+			"フォルダー 28": {
+				"フォルダー 28": { "x": 56.31, "y": 1.31, "rotation": -49.17, "width": 93, "height": 106 }
+			},
+			"フォルダー 29": {
+				"フォルダー 29": { "x": 74.2, "y": -13.35, "rotation": -17.02, "width": 152, "height": 100 }
+			},
+			"フォルダー 30": {
+				"フォルダー 30": { "x": 89.95, "y": 2.15, "rotation": -17.25, "width": 184, "height": 76 }
+			},
+			"フォルダー 31": {
+				"フォルダー 31": { "x": 76.3, "y": -2.3, "rotation": -33.07, "width": 141, "height": 110 }
+			},
+			"フォルダー 32": {
+				"フォルダー 32": { "x": 85.51, "y": -5.98, "rotation": -14.48, "width": 180, "height": 79 }
+			},
+			"フォルダー 33": {
+				"フォルダー 33": { "x": 83.52, "y": -1.78, "rotation": -29.76, "width": 157, "height": 96 }
+			},
+			"フォルダー 35": {
+				"フォルダー 35": { "x": 84.34, "y": -10.08, "rotation": -12.95, "width": 180, "height": 81 }
+			},
+			"フォルダー 36": {
+				"フォルダー 36": { "x": 90.84, "y": 0.04, "rotation": -35.32, "width": 157, "height": 116 }
+			},
+			"フォルダー 37": {
+				"フォルダー 37": { "x": 102.23, "y": 0.22, "rotation": 13.54, "width": 212, "height": 64 }
+			},
+			"フォルダー 38": {
+				"フォルダー 38": { "x": 91.72, "y": -12.16, "rotation": -10.48, "width": 197, "height": 77 }
+			},
+			"レイヤー 64": {
+				"レイヤー 64": { "x": 31.17, "y": 9.59, "rotation": 170.29, "width": 76, "height": 43 }
+			},
+			"レイヤー 64 のコピー": {
+				"レイヤー 64 のコピー": { "x": 30.03, "y": 9.75, "rotation": 167.91, "width": 87, "height": 52 }
+			},
+			"レイヤー 64 のコピー 2": {
+				"レイヤー 64 のコピー 2": { "x": 25.41, "y": -0.49, "rotation": 167.66, "width": 76, "height": 43 }
+			},
+			"レイヤー 64 のコピー 3": {
+				"レイヤー 64 のコピー 3": { "x": 32.64, "y": 0.28, "rotation": 146.31, "width": 87, "height": 52 }
+			},
+			"用紙": {
+				"用紙": { "x": 79.23, "y": 300.6, "width": 1002, "height": 1002 }
+			},
+			"目": {
+				"目": { "x": 21.78, "y": -3.21, "rotation": -97.77, "width": 53, "height": 49 }
+			},
+			"目とじ": {
+				"目とじ": { "x": -74.27, "y": 220.6, "width": 47, "height": 34 }
+			}
+		}
+	}
+],
+"animations": {
+	"idou": {
+		"bones": {
+			"mune": {
+				"rotate": [
+					{},
+					{ "time": 0.2333, "value": 6.72 },
+					{ "time": 0.3, "value": 0.35 },
+					{ "time": 0.5 }
+				],
+				"translate": [
+					{},
+					{ "time": 0.2333, "y": -26.61 },
+					{ "time": 0.5 }
+				]
+			},
+			"body": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 4.51 },
+					{ "time": 0.5 }
+				]
+			},
+			"head": {
+				"rotate": [
+					{},
+					{ "time": 0.2333, "value": 13.31 },
+					{ "time": 0.5 }
+				]
+			},
+			"フォルダー 28": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 11.33 },
+					{ "time": 0.3, "value": 11.63 },
+					{ "time": 0.5, "value": 0.38 }
+				]
+			},
+			"フォルダー 27": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 12.2 },
+					{ "time": 0.5, "value": 0.41 }
+				]
+			},
+			"フォルダー 26": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 11.78 },
+					{ "time": 0.5, "value": 0.39 }
+				]
+			},
+			"フォルダー 24": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 6.44 },
+					{ "time": 0.3, "value": 5.79 },
+					{ "time": 0.5, "value": 0.26 }
+				]
+			},
+			"フォルダー 29": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 3.64 },
+					{ "time": 0.5, "value": 0.12 }
+				]
+			},
+			"フォルダー 35": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -6.08 },
+					{ "time": 0.5, "value": 0.13 }
+				]
+			},
+			"フォルダー 31": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 8.8 },
+					{ "time": 0.5, "value": 0.29 }
+				]
+			},
+			"フォルダー 32": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -6.61 },
+					{ "time": 0.5, "value": -0.22 }
+				]
+			},
+			"フォルダー 36": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -8.86 },
+					{ "time": 0.5, "value": -0.3 }
+				]
+			},
+			"フォルダー 37": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 12.71 },
+					{ "time": 0.5, "value": 0.42 }
+				]
+			},
+			"フォルダー 33": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 8 },
+					{ "time": 0.5, "value": 0.03 }
+				]
+			},
+			"フォルダー 38": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 6.55 },
+					{ "time": 0.5 }
+				]
+			},
+			"フォルダー 40": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 16.82 },
+					{ "time": 0.5, "value": -0.16 }
+				]
+			},
+			"フォルダー 41": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 4.42 },
+					{ "time": 0.5, "value": 0.18 }
+				]
+			},
+			"sippo2": {
+				"rotate": [
+					{ "value": -32.57 },
+					{ "time": 0.2667, "value": -9.91 },
+					{ "time": 0.5, "value": -32.57 }
+				]
+			},
+			"asimae": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 55.39 },
+					{ "time": 0.5 }
+				]
+			},
+			"レイヤー 64": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -7.11 },
+					{ "time": 0.5 }
+				]
+			},
+			"momousiro": {
+				"rotate": [
+					{ "value": 38.15 },
+					{ "time": 0.2667, "value": -17.25 },
+					{ "time": 0.5, "value": 38.15 }
+				]
+			},
+			"asiusiro": {
+				"rotate": [
+					{ "value": 22.54 },
+					{ "time": 0.2667, "value": 11.48 },
+					{ "time": 0.5, "value": 22.54 }
+				]
+			},
+			"レイヤー 64 のコピー": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 13.21 },
+					{ "time": 0.5 }
+				]
+			},
+			"sippo": {
+				"rotate": [
+					{},
+					{ "time": 0.3, "value": 19 },
+					{ "time": 0.5, "value": 0.76 }
+				]
+			},
+			"mune2": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -29.09 },
+					{ "time": 0.5 }
+				]
+			},
+			"mune3": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": -27.14 },
+					{ "time": 0.5 }
+				]
+			},
+			"mune4": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 42.57 },
+					{ "time": 0.5 }
+				]
+			},
+			"body2": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 74.17 },
+					{ "time": 0.5 }
+				]
+			},
+			"body4": {
+				"rotate": [
+					{},
+					{ "time": 0.2667, "value": 49.29 },
+					{ "time": 0.5 }
+				]
+			}
+		}
+	},
+	"kougeki": {
+		"bones": {
+			"フォルダー 28": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 29.87 },
+					{ "time": 0.3333, "value": 26.16 },
+					{ "time": 0.4333, "value": 29.87 },
+					{ "time": 0.5667, "value": 26.16 },
+					{ "time": 0.6667, "value": 29.87 },
+					{ "time": 0.8, "value": 26.16 }
+				]
+			},
+			"フォルダー 27": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 27.35 },
+					{ "time": 0.3333, "value": 19.53 },
+					{ "time": 0.4333, "value": 27.35 },
+					{ "time": 0.5667, "value": 19.53 },
+					{ "time": 0.6667, "value": 27.35 },
+					{ "time": 0.8, "value": 19.53 }
+				]
+			},
+			"フォルダー 26": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 17.61 },
+					{ "time": 0.3333, "value": 9.86 },
+					{ "time": 0.4333, "value": 17.61 },
+					{ "time": 0.5667, "value": 9.86 },
+					{ "time": 0.6667, "value": 17.61 },
+					{ "time": 0.8, "value": 9.86 }
+				]
+			},
+			"フォルダー 24": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 10.03 },
+					{ "time": 0.3333, "value": 7.12 },
+					{ "time": 0.4333, "value": 10.03 },
+					{ "time": 0.5667, "value": 7.12 },
+					{ "time": 0.6667, "value": 10.03 },
+					{ "time": 0.8, "value": 7.12 }
+				]
+			},
+			"フォルダー 29": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 17.47 },
+					{ "time": 0.3333, "value": 8.55 },
+					{ "time": 0.4333, "value": 17.47 },
+					{ "time": 0.5667, "value": 8.55 },
+					{ "time": 0.6667, "value": 17.47 },
+					{ "time": 0.8, "value": 8.55 }
+				]
+			},
+			"フォルダー 35": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 4.92 },
+					{ "time": 0.3333, "value": -3.4 },
+					{ "time": 0.4333, "value": 4.92 },
+					{ "time": 0.5667, "value": -3.4 },
+					{ "time": 0.6667, "value": 4.92 },
+					{ "time": 0.8, "value": -3.4 }
+				]
+			},
+			"フォルダー 31": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 28.02 },
+					{ "time": 0.3333, "value": 11.92 },
+					{ "time": 0.4333, "value": 28.02 },
+					{ "time": 0.5667, "value": 11.92 },
+					{ "time": 0.6667, "value": 28.02 },
+					{ "time": 0.8, "value": 11.92 }
+				]
+			},
+			"フォルダー 32": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 29.35 },
+					{ "time": 0.3333, "value": 13.26 },
+					{ "time": 0.4333, "value": 29.35 },
+					{ "time": 0.5667, "value": 13.26 },
+					{ "time": 0.6667, "value": 29.35 },
+					{ "time": 0.8, "value": 13.26 }
+				]
+			},
+			"フォルダー 36": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 31.1 },
+					{ "time": 0.3333, "value": 26.92 },
+					{ "time": 0.4333, "value": 31.1 },
+					{ "time": 0.5667, "value": 26.92 },
+					{ "time": 0.6667, "value": 31.1 },
+					{ "time": 0.8, "value": 26.92 }
+				]
+			},
+			"フォルダー 37": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 18.99 }
+				]
+			},
+			"フォルダー 33": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 9.52 },
+					{ "time": 0.3333, "value": 5.29 },
+					{ "time": 0.4333, "value": 9.52 },
+					{ "time": 0.5667, "value": 5.29 },
+					{ "time": 0.6667, "value": 9.52 },
+					{ "time": 0.8, "value": 5.29 }
+				]
+			},
+			"フォルダー 38": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": -0.19 },
+					{ "time": 0.3333, "value": -25.95 },
+					{ "time": 0.4333, "value": -0.19 },
+					{ "time": 0.5667, "value": -25.95 },
+					{ "time": 0.6667, "value": -0.19 },
+					{ "time": 0.8, "value": -25.95 }
+				]
+			},
+			"フォルダー 40": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 19.77 },
+					{ "time": 0.3333, "value": 35.97 },
+					{ "time": 0.4333, "value": 19.77 },
+					{ "time": 0.5667, "value": 35.97 },
+					{ "time": 0.6667, "value": 19.77 },
+					{ "time": 0.8, "value": 35.97 }
+				]
+			},
+			"フォルダー 41": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 10.74 },
+					{ "time": 0.3333, "value": 17.48 },
+					{ "time": 0.4333, "value": 10.74 },
+					{ "time": 0.5667, "value": 17.48 },
+					{ "time": 0.6667, "value": 10.74 },
+					{ "time": 0.8, "value": 17.48 }
+				]
+			},
+			"sippo": {
+				"rotate": [
+					{ "value": 8.23 },
+					{ "time": 0.2, "value": 52.03 },
+					{ "time": 0.3333, "value": 81.92 },
+					{ "time": 0.5667, "value": 52.03, "curve": "stepped" },
+					{ "time": 0.6667, "value": 52.03 },
+					{ "time": 0.8, "value": 52.28 }
+				]
+			},
+			"mune": {
+				"rotate": [
+					{ "value": 23.7, "curve": "stepped" },
+					{ "time": 0.2, "value": 23.7 },
+					{ "time": 0.3333, "value": 27.53 },
+					{ "time": 0.4333, "value": 23.7 },
+					{ "time": 0.5667, "value": 27.53 },
+					{ "time": 0.6667, "value": 23.7 },
+					{ "time": 0.8, "value": 27.53 }
+				],
+				"translate": [
+					{ "y": -75.26 },
+					{ "time": 0.2, "y": -83.1 },
+					{ "time": 0.3333, "y": -87.81 },
+					{ "time": 0.4333, "y": -83.1 },
+					{ "time": 0.5667, "y": -87.81 },
+					{ "time": 0.6667, "y": -83.1 },
+					{ "time": 0.8, "y": -87.81 }
+				]
+			},
+			"sippo2": {
+				"rotate": [
+					{ "value": -23.55 },
+					{ "time": 0.2, "value": -31.42 },
+					{ "time": 0.3333, "value": -37.69 },
+					{ "time": 0.4333, "value": -31.42 },
+					{ "time": 0.5667, "value": -37.69 },
+					{ "time": 0.6667, "value": -31.42 },
+					{ "time": 0.8, "value": -37.69 }
+				],
+				"translate": [
+					{ "x": 12.05, "y": 23.46 }
+				]
+			},
+			"asimae": {
+				"rotate": [
+					{
+						"value": -38.13,
+						"curve": [ 0.067, -39.89, 0.133, -43.41 ]
+					},
+					{ "time": 0.2, "value": -43.41, "curve": "stepped" },
+					{
+						"time": 0.6667,
+						"value": -43.41,
+						"curve": [ 0.711, -43.41, 0.756, -37.71 ]
+					},
+					{ "time": 0.8, "value": -34.87 }
+				],
+				"translate": [
+					{ "x": 0.43, "y": 11.37 }
+				]
+			},
+			"レイヤー 64": {
+				"rotate": [
+					{ "value": 39.6 },
+					{ "time": 0.3333, "value": 30.89 },
+					{ "time": 0.8, "value": 39.6 }
+				],
+				"translate": [
+					{ "x": -11.38, "y": -11.37 },
+					{ "time": 0.3333, "x": -11.38, "y": -6 },
+					{ "time": 0.8, "x": -11.38, "y": -11.37 }
+				]
+			},
+			"root": {
+				"translate": [
+					{},
+					{ "time": 0.3333, "x": 17.25 }
+				]
+			},
+			"body": {
+				"rotate": [
+					{ "value": -11.45 },
+					{ "time": 0.2, "value": -1.19 }
+				]
+			},
+			"asiusiro": {
+				"rotate": [
+					{ "value": 20.19 },
+					{ "time": 0.2, "value": -21.4 },
+					{ "time": 0.3333, "value": -31.12 },
+					{ "time": 0.4333, "value": -21.4 },
+					{ "time": 0.5667, "value": -31.12 },
+					{ "time": 0.6667, "value": -21.4 },
+					{ "time": 0.8, "value": -31.12 }
+				]
+			},
+			"レイヤー 64 のコピー": {
+				"rotate": [
+					{ "value": -11.71 },
+					{ "time": 0.2, "value": 0.78 },
+					{ "time": 0.3333, "value": 10.53 },
+					{ "time": 0.4333, "value": 0.78 },
+					{ "time": 0.5667, "value": 10.53 },
+					{ "time": 0.6667, "value": 0.78 },
+					{ "time": 0.8, "value": 10.53 }
+				]
+			},
+			"mune2": {
+				"rotate": [
+					{ "value": -52.58 }
+				]
+			},
+			"mune3": {
+				"rotate": [
+					{ "value": -11.44 }
+				]
+			},
+			"body3": {
+				"rotate": [
+					{ "value": 17.71 },
+					{ "time": 0.2, "value": -11.91 }
+				]
+			},
+			"body4": {
+				"rotate": [
+					{ "value": -22.88 },
+					{ "time": 0.2, "value": -20.67 }
+				]
+			},
+			"body2": {
+				"rotate": [
+					{},
+					{ "time": 0.2, "value": 5.46 }
+				]
+			},
+			"mune4": {
+				"rotate": [
+					{ "value": 26.44 },
+					{ "time": 0.2, "value": 25.76 }
+				]
+			}
+		}
+	}
+}
+}
