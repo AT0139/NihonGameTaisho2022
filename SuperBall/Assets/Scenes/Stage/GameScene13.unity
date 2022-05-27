@@ -12149,7 +12149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6076508, y: -1.1379536, z: -10}
+  m_LocalPosition: {x: 4.628586, y: -1.1379956, z: -10}
   m_LocalScale: {x: 1, y: 1.7251, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -26499,6 +26499,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 897012880e405154fa461ca2d96b8c81, type: 3}
   - {fileID: 21300000, guid: 05994b9c878033748b44d4987bf93490, type: 3}
   - {fileID: 21300000, guid: 6e647989aa03d1642b7395341965939b, type: 3}
+  backgroundMaterials:
+  - {fileID: 2100000, guid: b39f3fe5c49d73d44aa95bbbb6a77217, type: 2}
+  - {fileID: 2100000, guid: b39f3fe5c49d73d44aa95bbbb6a77217, type: 2}
+  - {fileID: 2100000, guid: b39f3fe5c49d73d44aa95bbbb6a77217, type: 2}
   backgroundOffsets:
   - {x: -1920, y: 0}
   - {x: -1920, y: 0}
@@ -26508,12 +26512,12 @@ MonoBehaviour:
   - {x: 1920, y: 1505.82}
   - {x: 1920, y: 1505.82}
   scrollRatesX:
-  - 5
-  - 7
-  - 15
+  - 3
+  - 6.5
+  - 9
   scrollRatesY:
   - 1
-  - 1.3
+  - 1.4
   - 1.8
   planeDistance: 30
   imageMax: 3
@@ -42389,8 +42393,10 @@ Transform:
   - {fileID: 1210591984}
   - {fileID: 2008921739}
   - {fileID: 1401832014}
+  - {fileID: 374644122}
   - {fileID: 1047431169}
   - {fileID: 717376381}
+  - {fileID: 869286284}
   - {fileID: 318813843}
   - {fileID: 71072925}
   - {fileID: 117234961}
@@ -42402,6 +42408,7 @@ Transform:
   - {fileID: 689017611}
   - {fileID: 584054154}
   - {fileID: 932528166}
+  - {fileID: 1618206668}
   - {fileID: 187538978}
   - {fileID: 841668267}
   - {fileID: 1469583560}
@@ -42409,38 +42416,35 @@ Transform:
   - {fileID: 897970775}
   - {fileID: 1294715435}
   - {fileID: 1798392453}
+  - {fileID: 1678244113}
   - {fileID: 996146423}
   - {fileID: 317888877}
+  - {fileID: 1315865404}
   - {fileID: 323752111}
+  - {fileID: 2088437710}
   - {fileID: 952256754}
   - {fileID: 1561325471}
   - {fileID: 2115520632}
   - {fileID: 815945762}
-  - {fileID: 374644122}
+  - {fileID: 465813814}
+  - {fileID: 1812445407}
   - {fileID: 137067220}
-  - {fileID: 686946164}
   - {fileID: 563915399}
+  - {fileID: 1971535624}
+  - {fileID: 686946164}
+  - {fileID: 612895224}
+  - {fileID: 957790119}
   - {fileID: 202940246}
   - {fileID: 969397387}
-  - {fileID: 539686485}
-  - {fileID: 2088437710}
-  - {fileID: 957790119}
-  - {fileID: 1350571300}
-  - {fileID: 1727603986}
-  - {fileID: 1618206668}
-  - {fileID: 869286284}
-  - {fileID: 1678244113}
-  - {fileID: 465813814}
-  - {fileID: 1315865404}
-  - {fileID: 1971535624}
-  - {fileID: 612895224}
-  - {fileID: 1812445407}
   - {fileID: 1279602554}
+  - {fileID: 539686485}
   - {fileID: 1256809043}
   - {fileID: 408051756}
   - {fileID: 725388227}
-  - {fileID: 1328828563}
   - {fileID: 1172964068}
+  - {fileID: 1328828563}
+  - {fileID: 1350571300}
+  - {fileID: 1727603986}
   - {fileID: 1684757647}
   m_Father: {fileID: 1279724595}
   m_RootOrder: 0
@@ -53374,7 +53378,7 @@ PrefabInstance:
     - target: {fileID: 8453569059869363613, guid: fdfcc7f8921fbf74abb377e91b89e60b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.8
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8453569059869363613, guid: fdfcc7f8921fbf74abb377e91b89e60b,
         type: 3}
