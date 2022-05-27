@@ -14,7 +14,10 @@ public class Goal : MonoBehaviour
 
     [Header("クリアシーンに遷移するか？")]
     [SerializeField]
-    bool IsClear = false;    
+    bool IsClear = false;
+
+    [Header("クリアシーンに遷移しないときのシーン")]
+    [SerializeField] SceneObject m_nextScene;
 
     private GameObject sceneControllerCam;
     private GameObject playerGoalInstance;
@@ -144,7 +147,7 @@ public class Goal : MonoBehaviour
         }
         else
         {
-            sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
+            sceneControllerCam.GetComponent<SceneController>().sceneChange(m_nextScene);
         }
 
     }
