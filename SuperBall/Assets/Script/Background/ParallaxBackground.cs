@@ -12,6 +12,10 @@ public class ParallaxBackground : MonoBehaviour
     [SerializeField]
     Sprite[]        backgroundSprites;
 
+    [Header("マテリアル (0が最奥、順に手前)")]
+    [SerializeField]
+    Material[] backgroundMaterials;
+
     [Header("背景画像のオフセット (ズラす値)(左右スクロール対応の場合は1画像分、左にズラす)")]
     [Header("X = -1920 Y = 0)")]
     [SerializeField]
@@ -273,7 +277,7 @@ public class ParallaxBackground : MonoBehaviour
     public void CreateParallaxBackground()
     {
         if (backgroundSprites == null || backgroundSprites.Length == 0)
-            return;
+            return;         
 
         backgroundMax               = backgroundSprites.Length;
 
@@ -324,6 +328,7 @@ public class ParallaxBackground : MonoBehaviour
                 tempBackgroundRt = tempBackgroundGo.AddComponent<RectTransform>();
                 tempBackgroundImg = tempBackgroundGo.AddComponent<Image>();
                 tempBackgroundImg.sprite = backgroundSprites[i];
+                tempBackgroundImg.material = backgroundMaterials[i];
                 tempBackgroundImg.raycastTarget = false;
 
                 tempBackgroundRt.SetParent(backgroundsRt[i]);
