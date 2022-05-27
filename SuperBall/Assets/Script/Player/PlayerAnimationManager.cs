@@ -16,7 +16,7 @@ public class PlayerAnimationManager : MonoBehaviour
     int contactStayFrameCount;
     bool jumpTriger;
 
-    enum COLLISIONDILECTION{
+    enum COLLISIONDIRECTION{
         UP,
         DOWN,
         RIGHT,
@@ -66,7 +66,7 @@ public class PlayerAnimationManager : MonoBehaviour
 #if MYDEBUG
                     Debug.Log("Right");
 #endif
-                    animator.SetInteger("trans", (int)COLLISIONDILECTION.RIGHT);
+                    animator.SetInteger("trans", (int)COLLISIONDIRECTION.RIGHT);
                     animator.Play("Bounce_Right_Player", 0, 0);
                 }
                 else if(collision.contacts[0].normal == Vector2.right)
@@ -74,25 +74,24 @@ public class PlayerAnimationManager : MonoBehaviour
 #if MYDEBUG
                     Debug.Log("Left");
 #endif
-                    animator.SetInteger("trans", (int)COLLISIONDILECTION.LEFT);
+                    animator.SetInteger("trans", (int)COLLISIONDIRECTION.LEFT);
                     animator.Play("Bounce_Right_Player", 0, 0);
                 }
-
                 else if(collision.contacts[0].normal == Vector2.down)
                 {
 #if MYDEBUG
                     Debug.Log("Up");
 #endif
-                    animator.SetInteger("trans", (int)COLLISIONDILECTION.UP);
+                    animator.SetInteger("trans", (int)COLLISIONDIRECTION.UP);
                     animator.Play("Bounce_Up_Player", 0, 0);
                     jumpTriger = true;
                 }
-                else if(collision.contacts[0].normal == Vector2.up)
+                else
                 {
 #if MYDEBUG
                     Debug.Log("Down");
 #endif
-                    animator.SetInteger("trans", (int)COLLISIONDILECTION.DOWN);
+                    animator.SetInteger("trans", (int)COLLISIONDIRECTION.DOWN);
                     animator.Play("Bounce_Down_Player", 0, 0);
                 }
             //}
@@ -118,7 +117,7 @@ public class PlayerAnimationManager : MonoBehaviour
 
     public void AnimationJump()
 {
-        animator.SetInteger("trans", (int)COLLISIONDILECTION.DOWN);
+        animator.SetInteger("trans", (int)COLLISIONDIRECTION.DOWN);
         animator.Play("Bounce_Down_Player", 0, 0);
         jumpTriger = true;
     }
