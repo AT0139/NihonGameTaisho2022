@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class DestructibleBlock : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class DestructibleBlock : MonoBehaviour
         {
             Debug.Log("DestructibleBlockに衝突");
 
-            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude > PLAYER_MAGNITUDE)
+            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.sqrMagnitude > PLAYER_MAGNITUDE * PLAYER_MAGNITUDE)
             {
                 Debug.Log("破壊");
                 Destroy(gameObject);
