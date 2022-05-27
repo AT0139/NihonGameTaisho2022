@@ -237,6 +237,9 @@ MonoBehaviour:
   awakeTime: 1
   oneCoinTime: 0.1
   animationTime: 3.5
+  IsClear: 0
+  m_nextScene:
+    m_SceneName: AreaSelectScene
 --- !u!1001 &7742623461054358299
 PrefabInstance:
   m_ObjectHideFlags: 0
