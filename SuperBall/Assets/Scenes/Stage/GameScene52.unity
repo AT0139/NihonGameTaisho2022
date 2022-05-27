@@ -26095,6 +26095,7 @@ MonoBehaviour:
   backgroundSprites:
   - {fileID: 21300000, guid: ff8ae8d14c74cc143ac5cfdba1af5e14, type: 3}
   - {fileID: 21300000, guid: daca595a4f36e0c4eb1687e593960f4e, type: 3}
+  backgroundMaterials: []
   backgroundOffsets:
   - {x: -1920, y: 0}
   - {x: -1280, y: 0}
@@ -26367,6 +26368,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1438852895}
+    - target: {fileID: 4538407916522826604, guid: 2d70833ab43350c48b4e024200b6382d,
+        type: 3}
+      propertyPath: THROW_POWER
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4538407916522826606, guid: 2d70833ab43350c48b4e024200b6382d,
         type: 3}
       propertyPath: m_Name
@@ -32036,6 +32042,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1438852895}
+    - target: {fileID: 4538407916522826604, guid: 2d70833ab43350c48b4e024200b6382d,
+        type: 3}
+      propertyPath: THROW_POWER
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4538407916522826606, guid: 2d70833ab43350c48b4e024200b6382d,
         type: 3}
       propertyPath: m_Name
