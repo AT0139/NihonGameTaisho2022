@@ -91,25 +91,27 @@ public class PlayerBoundManager : MonoBehaviour
         //横方向
         if (collision.contacts[0].normal == Vector2.right)
         {
-            //float velX = Mathf.Abs(rigidbody2D.velocity.x);
             float velY = rigidbody2D.velocity.y * 0.5f;
 
             if (velY <= 0)
                 velY = 0;
 
+            //左方向
+            //Debug.Log("hidari");
+            rigidbody2D.velocity = new Vector2(boundPower, velY + sideBoundCor);
 
-            if (this.gameObject.transform.localScale.x >= 0)
-            {
-                //右方向
-                rigidbody2D.velocity = new Vector2(-boundPower, velY + sideBoundCor);
-            }
-            else if (this.gameObject.transform.localScale.x <= 0)
-            {
-                //左方向
-                rigidbody2D.velocity = new Vector2(boundPower, velY + sideBoundCor);
-            }
         }
- 
+        else if (collision.contacts[0].normal == Vector2.left)
+        {
+            float velY = rigidbody2D.velocity.y * 0.5f;
+
+            if (velY <= 0)
+                velY = 0;
+            //右方向
+            // Debug.Log("migi");
+            rigidbody2D.velocity = new Vector2(-boundPower, velY + sideBoundCor);
+        }
+
         boundCnt = 0;
         isBound = true;
     }
@@ -142,13 +144,13 @@ public class PlayerBoundManager : MonoBehaviour
                 if (collision.contacts[0].normal == Vector2.right)
                 {
                     //右方向
-                    Debug.Log("migi");
+                    //Debug.Log("migi");
                     rigidbody2D.velocity = new Vector2(5, rigidbody2D.velocity.y);
                 }
                 else if (collision.contacts[0].normal == Vector2.left)
                 {
                     //左方向
-                    Debug.Log("hidari");
+                    //Debug.Log("hidari");
                     rigidbody2D.velocity = new Vector2(-5, rigidbody2D.velocity.y);
                 }
                 
