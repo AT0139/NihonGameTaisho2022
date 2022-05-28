@@ -358,6 +358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bee
       objectReference: {fileID: 0}
+    - target: {fileID: 1160155917546944200, guid: 3451d04b4444d2c46894424b03cf96bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1160155917546944204, guid: 3451d04b4444d2c46894424b03cf96bb,
         type: 3}
       propertyPath: m_Mesh
