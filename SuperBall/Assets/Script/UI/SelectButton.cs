@@ -9,13 +9,13 @@ public class SelectButton : MonoBehaviour
     private Image image;
     private Animator animator;
 
-    [Header("選択時スプライト")]
+    /*[Header("選択時スプライト")]
     [SerializeField]
     Sprite selectSprite;
 
     [Header("非選択時スプライト")]
     [SerializeField]
-    Sprite deselectSprite;
+    Sprite deselectSprite;*/
 
     [Header("選択時マテリアル")]
     [SerializeField]
@@ -40,7 +40,7 @@ public class SelectButton : MonoBehaviour
     {
         animator.SetBool("IsSelect", true);
         image.material.SetFloat("_IsBlinking", 0);
-        ChangeSprite(selectSprite);
+        //ChangeSprite(selectSprite);
         ChangeMaterial(selectMaterial);
     }
 
@@ -48,7 +48,7 @@ public class SelectButton : MonoBehaviour
     {
         animator.SetBool("IsSelect", false);
         image.material.SetFloat("_IsBlinking", 1);
-        ChangeSprite(deselectSprite);
+        //ChangeSprite(deselectSprite);
         ChangeMaterial(deselectMaterial);
     }
 
