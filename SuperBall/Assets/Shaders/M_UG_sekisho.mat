@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_UG_TitleBG
-  m_Shader: {fileID: -6465566751694194690, guid: d3c9e7eaa6aac5543bd104d6e5b53a82,
+  m_Name: M_UG_sekisho
+  m_Shader: {fileID: -6465566751694194690, guid: 11aef90da1a61df4eaf38c8247a4acd3,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -21,22 +21,24 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d1e583ae2a62f504cb40ca465ab49624, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6ea7264e63350f04896c860764da19b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_E5881C7B: 0
-    - IsGradientColor: 0
-    - Vector1_DEEEFE8B: 0
-    - _BlinkDelay: 40
-    - _BlinkMinAlphaValue: 0.5
-    - _BlinkSpeed: 0.2
-    - _Emission: 1.17
+    - Vector1_B264D0A: 0.49
+    - Vector1_CC02996B: 3
+    - _BlinkSpeed: 1
+    - _EgdeThickness: 0.01
+    - _Emission: 1.82
     - _FluctuationSpeed: 8.36
     - _IsBlackTexture: 0
-    - _IsBlinking: 1
+    - _IsBlinking: 0
+    - _IsEgde: 1
     - _IsEmission: 1
     - _IsFluctuation: 1
     - _IsVertexColor: 1
     m_Colors:
-    - _MainColor: {r: 3.2764156, g: 3.2764156, b: 3.2764156, a: 1}
+    - Color_E160EED9: {r: 1, g: 0, b: 0.74655247, a: 0}
+    - Color_FCABA32: {r: 0, g: 0.80277205, b: 1, a: 0}
+    - _MainColor: {r: 0.46146172, g: 2.1993454, b: 2.4483106, a: 1}

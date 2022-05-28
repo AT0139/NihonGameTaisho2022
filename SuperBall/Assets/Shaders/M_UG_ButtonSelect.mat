@@ -34,7 +34,7 @@ Material:
     - Vector1_5C4359F2: 0.7
     - Vector1_DEEEFE8B: 1
     - _BlinkDelay: 1
-    - _BlinkMinAlphaValue: 0.5
+    - _BlinkMinAlphaValue: 0.75
     - _BlinkSpeed: 6.39
     - _Emission: 1
     - _IsBlackTexture: 0
@@ -46,5 +46,5 @@ Material:
     - _NoiseScale: 10.26
     - _NoiseSpeed: 0.1
     m_Colors:
-    - _MainColor: {r: 0.9555911, g: 0.8472908, b: 0.095559105, a: 1}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseColor: {r: 1, g: 1, b: 1, a: 0}

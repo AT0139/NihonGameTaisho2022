@@ -161,7 +161,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e6c0bcb18e4298947a9597d9d9448ff3, type: 2}
+  - {fileID: 2100000, guid: d8ae8a8c36be4864a9363b23906a9125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -238,6 +238,8 @@ MonoBehaviour:
   oneCoinTime: 0.1
   animationTime: 3.5
   IsClear: 0
+  m_nextScene:
+    m_SceneName: 
 --- !u!1001 &736312719924249267
 PrefabInstance:
   m_ObjectHideFlags: 0
