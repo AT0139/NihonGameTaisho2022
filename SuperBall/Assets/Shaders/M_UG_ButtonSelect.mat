@@ -38,7 +38,7 @@ Material:
     - _BlinkSpeed: 6.39
     - _Emission: 1
     - _IsBlackTexture: 0
-    - _IsBlinking: 1
+    - _IsBlinking: 0
     - _IsEmission: 1
     - _IsNoise: 1
     - _IsVertexColor: 0

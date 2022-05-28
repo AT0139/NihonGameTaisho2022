@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_UG_sekisho
+  m_Name: M_UG_sekisho_maou
   m_Shader: {fileID: -6465566751694194690, guid: 11aef90da1a61df4eaf38c8247a4acd3,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -29,7 +29,7 @@ Material:
     - Vector1_B264D0A: 0.49
     - Vector1_CC02996B: 3
     - _BlinkSpeed: 1
-    - _EgdeThickness: 0.01
+    - _EgdeThickness: 0.03
     - _Emission: 1.82
     - _FluctuationSpeed: 8.36
     - _IsBlackTexture: 0
@@ -39,6 +39,6 @@ Material:
     - _IsFluctuation: 1
     - _IsVertexColor: 1
     m_Colors:
-    - Color_E160EED9: {r: 1, g: 0.43867922, b: 0.8569183, a: 0}
-    - Color_FCABA32: {r: 0.504717, g: 0.90288574, b: 1, a: 0}
+    - Color_E160EED9: {r: 1, g: 0.735833, b: 0, a: 0}
+    - Color_FCABA32: {r: 1, g: 0, b: 0.13088799, a: 1}
     - _MainColor: {r: 0.46146172, g: 2.1993454, b: 2.4483106, a: 1}
