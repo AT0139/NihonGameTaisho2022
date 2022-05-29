@@ -8,14 +8,15 @@ public class SpiderNet : MonoBehaviour
     readonly private int INPUTS_MAX = 15;
     
     [SerializeField]
-    private float       speedResistance;
+    private float       speedResistance = 20.5f;
     [SerializeField]
     private GameObject  explosion;
     private GameObject  player;
     private Vector2     previousInput;
     private Vector2[]   inputs;
     private int         inputsCount                 = 0;
-    public  bool        onNet { get; private set; } = false;
+    public  bool        playerOnNet { get; private set; } = false;
+    public  bool        spiderOnNet { get; private set; } = false;
     private Vector3     initialLocalPosition;
     private Vector3     initialAngle;
 
@@ -32,7 +33,7 @@ public class SpiderNet : MonoBehaviour
     void Update()
     {
         IntialTransform();
-        if (onNet)
+        if (playerOnNet)
         {
             if (player.GetComponent<Player>().move != previousInput && player.GetComponent<Player>().move.magnitude != 0) // 前回の入力と同じなら無視
             {
@@ -43,7 +44,7 @@ public class SpiderNet : MonoBehaviour
                 }
                 else // 入力が超えたんで破壊
                 {
-                    onNet = false;
+                    playerOnNet = false;
                     Destroy();
                     player.GetComponent<Rigidbody2D>().drag = 0;
                 }
@@ -51,31 +52,40 @@ public class SpiderNet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && 
+        if (collision.gameObject.CompareTag("Player") &&
             collision.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude > speedResistance)
         {
             Destroy();
         }
-        else if(collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Player"))
         {
-            onNet = true;
-            collision.gameObject.GetComponent<Rigidbody2D>().drag = 30;
+            var playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+            playerRB.gravityScale = 0.25f;
+            playerOnNet = true;
+            playerRB.drag = Mathf.Lerp(playerRB.drag, 200, 1 * Time.deltaTime);
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            player.GetComponent<Rigidbody2D>().drag = 0;
-            onNet = false;
+            var playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+            playerRB.gravityScale = 4;
+            playerRB.drag = 0;
+            playerOnNet = false;
         }
     }
 
     private void Destroy()
     {
+        playerOnNet = false;
         Instantiate(explosion, transform.position, new Quaternion());
         Destroy(gameObject);
     }
