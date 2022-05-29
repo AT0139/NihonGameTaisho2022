@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 1
   dir: 0
-  player: {fileID: 0}
+  player: {fileID: 5368094049308756857, guid: 2ab86f7175a351343994909ee1cb1677, type: 3}
   explosion: {fileID: 3924717693549208997, guid: 024a2bd6b5807f34f843210a7d61a7a3,
     type: 3}
 --- !u!61 &8750850388897569723
