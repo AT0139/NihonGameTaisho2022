@@ -92,10 +92,14 @@ public class StockGauge : MonoBehaviour
     //　ダメージ分だけ削除
     public void StockDamege(int damage)
     {
-        for (int i = 0; i < damage; i++)
+        // ストックが0より多いとき
+        if (transform.childCount > 0)
         {
-            // 列の最後のライフゲージを削除
-            Destroy(transform.GetChild(transform.childCount - 1 - i).gameObject);
+            for (int i = 0; i < damage; i++)
+            {
+                // 列の最後のライフゲージを削除
+                Destroy(transform.GetChild(transform.childCount - 1 - i).gameObject);
+            }
         }
 
     }
