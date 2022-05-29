@@ -30,6 +30,8 @@ public class Goal : MonoBehaviour
     private bool IsCoin = false;
     private bool IsLeave = false;
 
+    private bool isGoal = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -104,7 +106,9 @@ public class Goal : MonoBehaviour
             collision.GetComponent<SaveManager>().Save();
 
             // other            
-            //CMvcam1.GetComponent<CinemachineVirtualCamera>().Follow = playerGoalInstance.transform;            
+            //CMvcam1.GetComponent<CinemachineVirtualCamera>().Follow = playerGoalInstance.transform;
+            
+            isGoal = true;
         }
     }
 
@@ -161,5 +165,10 @@ public class Goal : MonoBehaviour
         {
             IsEnter2D = false;
         }
+    }
+
+    public bool GetGoal()
+    {
+        return isGoal;
     }
 }

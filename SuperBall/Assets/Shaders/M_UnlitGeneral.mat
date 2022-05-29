@@ -27,14 +27,14 @@ Material:
     m_Floats:
     - Boolean_E5881C7B: 0
     - Vector1_B264D0A: 0.49
-    - Vector1_CC02996B: 11.7
+    - Vector1_CC02996B: 3
     - _BlinkSpeed: 1
     - _EgdeThickness: 0.01
     - _Emission: 1.82
     - _FluctuationSpeed: 8.36
     - _IsBlackTexture: 0
     - _IsBlinking: 0
-    - _IsEgde: 1
+    - _IsEgde: 0
     - _IsEmission: 1
     - _IsFluctuation: 1
     - _IsVertexColor: 1

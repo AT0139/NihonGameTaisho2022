@@ -29,10 +29,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_787C0D5B: 1
     - Boolean_E5881C7B: 0
     - RotateSpeed: 0.9
-    - Vector1_5C677FEE: 2.39
-    - Vector1_88F0B0B7: 1.53
+    - Vector1_22962D5F: 0.05
+    - Vector1_5C677FEE: 4.36
+    - Vector1_88F0B0B7: -3.77
     - Vector1_DEEEFE8B: 0
     - Vector1_F8AB79F: 1
     - _BlinkSpeed: 6.73
@@ -42,5 +44,6 @@ Material:
     - _IsEmission: 1
     - _IsVertexColor: 0
     m_Colors:
-    - Color_9D134BFB: {r: 0, g: 1, b: 0.80329275, a: 0}
+    - Color_9D134BFB: {r: 4.355282, g: 4.355282, b: 4.355282, a: 1}
+    - Color_C64FAFDC: {r: 1.0888777, g: 0.9340724, b: 0, a: 1}
     - _MainColor: {r: 0.8523645, g: 3.5648696, b: 0, a: 1}
