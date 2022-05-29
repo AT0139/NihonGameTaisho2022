@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_BlockEffect_RemainsHard
+  m_Name: M_BlockEffect_TownHard
   m_Shader: {fileID: -6465566751694194690, guid: 10cbfef6fbbfed84d83d47076cc74a5c,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -44,6 +44,6 @@ Material:
     - _IsEmission: 1
     - _IsVertexColor: 0
     m_Colors:
-    - Color_9D134BFB: {r: 0.20225172, g: 0.9528302, b: 0.22209068, a: 0}
-    - Color_C64FAFDC: {r: 1, g: 1, b: 1, a: 0}
+    - Color_9D134BFB: {r: 1, g: 1, b: 1, a: 0}
+    - Color_C64FAFDC: {r: 0, g: 0, b: 0, a: 0}
     - _MainColor: {r: 0.8523645, g: 3.5648696, b: 0, a: 1}
