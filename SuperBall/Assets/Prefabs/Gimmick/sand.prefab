@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c34b75ae12579d4f8111f40b7a65460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SandDrag: 100
+  SandDrag: 10
 --- !u!61 &7411172476518131853
 BoxCollider2D:
   m_ObjectHideFlags: 0

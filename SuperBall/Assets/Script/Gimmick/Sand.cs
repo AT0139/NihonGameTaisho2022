@@ -10,7 +10,7 @@ public class Sand : MonoBehaviour
     SandSE sandSE;
     
     //砂の抵抗力
-    public int SandDrag = 100;
+    public int SandDrag = 10;
     // Start is called before the first frame update
     void Start()
     {
