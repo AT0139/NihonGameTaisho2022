@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 5532076073245665766}
   m_Layer: 0
   m_Name: SkyGoal
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +138,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8573816161160325832}
+  - {fileID: 389964400168058098}
   - {fileID: 2320456961294646121}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -307,11 +307,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gatekeeper
       objectReference: {fileID: 0}
+    - target: {fileID: 6930532427678082637, guid: 40af2003de5585544b683a59c063358f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40af2003de5585544b683a59c063358f, type: 3}
---- !u!4 &8573816161160325832 stripped
+--- !u!4 &389964400168058098 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2129924839735478739, guid: 40af2003de5585544b683a59c063358f,
+  m_CorrespondingSourceObject: {fileID: 7933721357736517609, guid: 40af2003de5585544b683a59c063358f,
     type: 3}
   m_PrefabInstance: {fileID: 7742623461054358299}
   m_PrefabAsset: {fileID: 0}
