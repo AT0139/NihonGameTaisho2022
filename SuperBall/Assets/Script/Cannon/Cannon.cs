@@ -6,45 +6,32 @@ public class Cannon : MonoBehaviour
 {
     // Start is called before the first frame update
     public enum CANNONMODE{
-        PLAYER,
-        OPTIONAL_ANGLE,
         RIGHT,
         LEFT,
-        UP
     }
 
     public CANNONMODE   cannonMode;
-    public float        second;
-    public float        optionalAngle;
-    public float        bulletSpeed;
+    public float        second          = 3;
+    public float        optionalAngle   = 270;
+    public float        bulletSpeed     = 7;
     public GameObject   cannonBullet;
     private float       angle;
     private Vector3     dir;
+    Animator            animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         StartCoroutine(WaitShoot(second));
         switch (cannonMode)
         {
-            case CANNONMODE.PLAYER:
-                LookAtPlayer();
-                break;
-            case CANNONMODE.OPTIONAL_ANGLE:
-                angle = optionalAngle;
-                transform.Rotate(new Vector3(0, 0, angle));
-                break;
-            case CANNONMODE.UP:
-                transform.Rotate(new Vector3(0, 0, 0));
-                angle = 0;
-                dir = Vector3.up;
-                break;
             case CANNONMODE.LEFT:
-                transform.rotation = Quaternion.Euler(0, 0, 90);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 angle = 90;
                 dir = Vector3.left;
                 break;
             case CANNONMODE.RIGHT:
-                transform.Rotate(new Vector3(0, 0, 270));
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 angle = 270;
                 dir = Vector3.right;
                 break;
@@ -54,24 +41,6 @@ public class Cannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (cannonMode)
-        {
-            case CANNONMODE.PLAYER:
-                LookAtPlayer();
-                break;
-            default:
-                break;
-        }
-    }
-
-    private void LookAtPlayer()
-    {
-        if (GameObject.Find("ball 1"))
-        {
-            dir = (GameObject.Find("ball 1").transform.position - transform.position).normalized;
-            dir.z = 0;// z軸固定
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.FromToRotation(Vector3.up, dir), 0.015f);
-        }
     }
 
     private void Shoot()
@@ -86,6 +55,12 @@ public class Cannon : MonoBehaviour
         {
             yield return new WaitForSeconds(second);
             Shoot();
+            animator.SetTrigger("Shooting");
         }
+    }
+
+    private void EndAnimationTrigger()
+    {
+        animator.SetTrigger("Shooting");
     }
 }
