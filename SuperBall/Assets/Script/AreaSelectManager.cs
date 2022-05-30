@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class AreaSelectManager : MonoBehaviour
 {
-    [SerializeField] int selectArea;
 
     Camera sceneCamera;
     GameObject selectObject;
@@ -67,7 +66,7 @@ public class AreaSelectManager : MonoBehaviour
     void SwitchButton(bool isLeft)
     {
         //右
-        if(!isLeft)
+        if (!isLeft)
         {
             objectNo++;
             if (objectNo >= 5)
@@ -76,7 +75,7 @@ public class AreaSelectManager : MonoBehaviour
             selectObject.GetComponent<SelectButton>().DeselectBehavior();
 
             GameObject obj = GameObject.Find("ButtonArea0" + objectNo);
-         
+
             EventSystem.current.SetSelectedGameObject(obj);
 
             obj.GetComponent<SelectButton>().SelectBehavior();
@@ -90,20 +89,19 @@ public class AreaSelectManager : MonoBehaviour
             selectObject.GetComponent<SelectButton>().DeselectBehavior();
 
             GameObject obj = GameObject.Find("ButtonArea0" + objectNo);
-            
+
             EventSystem.current.SetSelectedGameObject(obj);
 
             obj.GetComponent<SelectButton>().SelectBehavior();
         }
     }
 
-    void MoveCamera(Vector3 pos1,Vector3 pos2)
+    void MoveCamera(Vector3 pos1, Vector3 pos2)
     {
 
         //球面線形補間
         sceneCamera.transform.position = Vector3.Slerp(pos1, pos2, Time.deltaTime * 5.0f);
-        sceneCamera.transform.position = 
+        sceneCamera.transform.position =
             new Vector3(sceneCamera.transform.position.x, sceneCamera.transform.position.y, -20.0f);
     }
 }
-
