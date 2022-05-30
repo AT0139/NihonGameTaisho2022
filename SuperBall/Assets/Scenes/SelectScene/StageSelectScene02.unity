@@ -647,6 +647,56 @@ PrefabInstance:
       propertyPath: m_Text
       value: Stage2-1
       objectReference: {fileID: 0}
+    - target: {fileID: 563419857785345877, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39fedcfa61855284085ed13625b0f6ae,
+        type: 3}
+    - target: {fileID: 563419857785345877, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 563419857830803222, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d90e6b10081a56408d4aee91ffe6f1e,
+        type: 3}
+    - target: {fileID: 563419857830803222, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 563419858029671674, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 120db0e511893cf4a8fea7c7478c83b3,
+        type: 3}
+    - target: {fileID: 563419858029671674, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 563419858401753195, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 119c9c6697dcb154bb9daca70d757502,
+        type: 3}
+    - target: {fileID: 563419858401753195, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 563419858486877350, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8dae759bee92c7048bdd9d6d0f640e58,
+        type: 3}
     - target: {fileID: 563419858851787023, guid: afe9769d9ff754746b2e42933fdcace1,
         type: 3}
       propertyPath: m_Text

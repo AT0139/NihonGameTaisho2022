@@ -146,8 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8cbf2b447b229489bb34bb36140bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  deselectSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   selectMaterial: {fileID: 2100000, guid: 51c6b2dffcf8ea04981bf446ae7465d7, type: 2}
   deselectMaterial: {fileID: 2100000, guid: ddbf13b5f67dfea48a3190bd800221ab, type: 2}
 --- !u!114 &235751614342641147
