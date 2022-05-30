@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 49265403410105912}
   - component: {fileID: 49265403410105915}
   - component: {fileID: 49265403410105913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gimick14Manager
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 49265404149682013}
   - component: {fileID: 49265404149682012}
   - component: {fileID: 49265404149682015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gimick14 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 49265405118227816}
   - component: {fileID: 49265405118227819}
   - component: {fileID: 49265405118227818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gimick14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
