@@ -87,7 +87,7 @@ public class ToGameStart : MonoBehaviour
 
     void ChangeStageSelectScene()
     {
-        sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene_Test");
+        sceneControllerCam.GetComponent<SceneController>().sceneChange("AreaSelectScene");
         //SceneManager.LoadScene("AreaSelectScene");
     }
 }
