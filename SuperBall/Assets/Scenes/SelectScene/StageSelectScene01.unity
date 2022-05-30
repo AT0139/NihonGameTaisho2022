@@ -843,6 +843,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 563419857785345877, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6285087d727ec714baaae02a8fe0964b,
+        type: 3}
+    - target: {fileID: 563419857785345877, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 563419857785345878, guid: afe9769d9ff754746b2e42933fdcace1,
         type: 3}
       propertyPath: m_Name
@@ -853,6 +864,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonStage_15
       objectReference: {fileID: 0}
+    - target: {fileID: 563419857830803222, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 51c7eb5afb5ef6a45a664e72badfaf92,
+        type: 3}
+    - target: {fileID: 563419857830803222, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 563419857830803223, guid: afe9769d9ff754746b2e42933fdcace1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -862,6 +884,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ButtonStage_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 563419858029671674, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0ce7ff0bb87c5104aad2c91a80edda0f,
+        type: 3}
+    - target: {fileID: 563419858029671674, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 563419858029671675, guid: afe9769d9ff754746b2e42933fdcace1,
         type: 3}
@@ -878,11 +911,28 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 563419858401753195, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f56aa87ded3cf7545a1285628325bc6c,
+        type: 3}
+    - target: {fileID: 563419858401753195, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 563419858486877349, guid: afe9769d9ff754746b2e42933fdcace1,
         type: 3}
       propertyPath: m_Name
       value: ButtonStage_11
       objectReference: {fileID: 0}
+    - target: {fileID: 563419858486877350, guid: afe9769d9ff754746b2e42933fdcace1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e89a66c730b3bac4d92dbb1d69860fc9,
+        type: 3}
     - target: {fileID: 563419858486877351, guid: afe9769d9ff754746b2e42933fdcace1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument

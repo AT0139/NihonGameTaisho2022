@@ -29,7 +29,7 @@ Material:
     - IsGradientColor: 0
     - Vector1_DEEEFE8B: 0
     - _BlinkDelay: 1
-    - _BlinkMinAlphaValue: 0.25
+    - _BlinkMinAlphaValue: 1
     - _BlinkSpeed: 1
     - _Emission: 1
     - _IsBlackTexture: 0
