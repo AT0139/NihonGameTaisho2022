@@ -239,7 +239,7 @@ MonoBehaviour:
   animationTime: 3.5
   IsClear: 0
   m_nextScene:
-    m_SceneName: 
+    m_SceneName: AreaSelectScene_Test
 --- !u!1001 &736312719924249267
 PrefabInstance:
   m_ObjectHideFlags: 0
