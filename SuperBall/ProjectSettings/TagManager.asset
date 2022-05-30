@@ -25,6 +25,8 @@ TagManager:
   - GroundNotBound
   - GroundSoft
   - DeathPoint
+  - SpiderNetParent
+  - Goal
   layers:
   - Default
   - TransparentFX

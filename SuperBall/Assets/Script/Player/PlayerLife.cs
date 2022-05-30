@@ -26,9 +26,16 @@ public class PlayerLife : MonoBehaviour
 
     private PlayerTouchCheckPoint checkPoint;
 
+    private GameObject mainCamera;
+    private bool IsGameOver;
+
     void Start()
     {
         checkPoint = GetComponent<PlayerTouchCheckPoint>();
+
+        mainCamera = Camera.main.gameObject;
+
+        IsGameOver = false;
 
         // 表示部分に残機のセット
         playerStock.SetStockGauge(m_PlayerStock);
@@ -50,8 +57,13 @@ public class PlayerLife : MonoBehaviour
         // 残機が0未満になったら
         if (m_PlayerStock < 0)
         {
-            // ゲームオーバー
-            SceneManager.LoadScene("GameOverScene");
+            if (IsGameOver == false)
+            {
+                // ゲームオーバー            
+                mainCamera.gameObject.GetComponent<SceneController>().sceneChange("GameOverScene");
+                IsGameOver = true;
+            }
+
         }
 
         // HPwarehouseに現在体力格納
@@ -116,6 +128,13 @@ public class PlayerLife : MonoBehaviour
 
                 // エネミーが攻撃状態だったら
                 if (enemystate == 1)
+                {
+                    GetDamege(1);
+                }
+            }
+            if(other.gameObject.GetComponent<Spider>())
+            {
+                if(other.gameObject.GetComponent<Spider>().m_StateContext.m_CurrentState == new Attack_SpiderColonel())
                 {
                     GetDamege(1);
                 }
