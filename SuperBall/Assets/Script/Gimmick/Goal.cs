@@ -102,8 +102,8 @@ public class Goal : MonoBehaviour
             //  Animator SetBool
             playerGoalAnimator.SetBool("IsEnter", true);
 
-            collision.GetComponent<SaveManager>().StageClear();
-            collision.GetComponent<SaveManager>().Save();
+            //collision.GetComponent<SaveManager>().StageClear();
+            //collision.GetComponent<SaveManager>().Save();
 
             // other            
             //CMvcam1.GetComponent<CinemachineVirtualCamera>().Follow = playerGoalInstance.transform;
