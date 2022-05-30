@@ -21,6 +21,7 @@ public class CannonBullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<PlayerLife>().GetDamege(1);
             Destroy(gameObject);
             Instantiate(explosion, transform.position, new Quaternion());
         }
