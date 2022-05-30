@@ -24,7 +24,7 @@ public class DestructibleBlock : MonoBehaviour
         {
             Debug.Log("DestructibleBlockに衝突");
 
-            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.sqrMagnitude > PLAYER_MAGNITUDE * PLAYER_MAGNITUDE)
+            if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.sqrMagnitude > PLAYER_MAGNITUDE)
             {
                 Debug.Log("破壊");
                 Destroy(gameObject);
