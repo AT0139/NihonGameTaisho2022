@@ -132,13 +132,6 @@ public class PlayerLife : MonoBehaviour
                     GetDamege(1);
                 }
             }
-            if(other.gameObject.GetComponent<Spider>())
-            {
-                if(other.gameObject.GetComponent<Spider>().m_StateContext.m_CurrentState == new Attack_SpiderColonel())
-                {
-                    GetDamege(1);
-                }
-            }
         }
 
     }

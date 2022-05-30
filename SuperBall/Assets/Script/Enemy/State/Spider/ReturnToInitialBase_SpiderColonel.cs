@@ -27,7 +27,7 @@ public class ReturnToInitialBase_SpiderColonel : IState<Spider>
             owner.transform.position = Vector3.MoveTowards(
                                                     owner.transform.position,
                                                     owner.initialPosition,
-                                                    owner.getSpeed);
+                                                    owner.Speed);
         }
         else
         {

@@ -64,7 +64,7 @@ public class SpiderNet : MonoBehaviour
             var playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
             playerRB.gravityScale = 0.25f;
             playerOnNet = true;
-            playerRB.drag = Mathf.Lerp(playerRB.drag, 200, 1 * Time.deltaTime);
+            playerRB.drag = Mathf.Lerp(playerRB.drag, 200, 2 * Time.deltaTime);
         }
     }
 

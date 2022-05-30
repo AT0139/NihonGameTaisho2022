@@ -14,18 +14,28 @@ public class Spider : MonoBehaviour
     public string                   ATTACK_ANIMATION    { get; private set; }  = "kougeki";
 
     public  Vector3                 initialPosition { get; private set; }
+    public  Vector3                 previousPosition { get; private set; }
     [SerializeField] 
     private float                   movementSpeed   = 0.25f;
-    public  float                   getSpeed
+    public  float                   Speed
     {
                 get { return movementSpeed; }
         private set {                       }
     }
+    [SerializeField]
+    private float                   attackInterval  = 2f;
+    public  float                   getAttackInterval
+    {
+                get { return attackInterval; }
+    }
+    
+    float lapseTime     = 0;
+    public bool isAttackable { private set; get; } = true;
     [HideInInspector]
     public bool onNet { private set; get; } = true;
+    public bool isRight { private set; get; } = true;
+
     public bool isCollideWithPlayer { private set; get; } = false;
-    int         netMax;
-    int         collisionCount;
     public Vector2 netRangeMax { private set; get; } = Vector2.zero;
     public Vector2 netRangeMin { private set; get; } = Vector2.zero;
     Rigidbody2D rb;
@@ -33,8 +43,8 @@ public class Spider : MonoBehaviour
     private void Awake()
     {
         netRangeMin = netRangeMax = spiderNetParent.transform.GetChild(0).transform.position;
-        netMax = spiderNetParent.transform.childCount;
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,9 +72,9 @@ public class Spider : MonoBehaviour
         skeletonAnimation   = GetComponent<SkeletonAnimation>();
         enemyAnimeState     = skeletonAnimation.AnimationState;
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
         if(collision.gameObject.name == "Player")
         {
             isCollideWithPlayer = true;
@@ -81,6 +91,16 @@ public class Spider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isAttackable)
+        {
+            lapseTime += Time.deltaTime;
+        }
+        if(lapseTime >= attackInterval)
+        {
+            isAttackable = true;
+            lapseTime = 0;
+        }
+
         m_StateContext.Update();
         //Debug.Log(collisionCount);
         if (spiderNetParent.transform.childCount == 0)
@@ -91,8 +111,14 @@ public class Spider : MonoBehaviour
         {
             Destroy();
         }
-
-
+        if(transform.position.x - player.transform.position.x > 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (transform.position.x - player.transform.position.x < 0)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
     public bool IsContact(GameObject a, GameObject b)
@@ -109,6 +135,7 @@ public class Spider : MonoBehaviour
             return false;
         }
     }
+
     public bool IsOnNet(Vector3 pos)
     {
         if (spiderNetParent.transform.childCount != 0)
@@ -122,6 +149,12 @@ public class Spider : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void Attack()
+    {
+        player.GetComponent<PlayerLife>().GetDamege(1);
+        isAttackable = false;
     }
 
     public void Destroy()
