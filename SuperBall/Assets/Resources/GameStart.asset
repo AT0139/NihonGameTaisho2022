@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4bd68f7cc1f844bb12f7dbf05c4058, type: 3}
   m_Name: GameStart
   m_EditorClassIdentifier: 
-  boundPower: 50
+  boundPower: 100
