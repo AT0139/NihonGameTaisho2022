@@ -3073,7 +3073,7 @@ PrefabInstance:
     - target: {fileID: 2730090843768820235, guid: 492bbc2244fbf9d47af0129c8fdd9012,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2730090843768820235, guid: 492bbc2244fbf9d47af0129c8fdd9012,
         type: 3}
@@ -18464,7 +18464,6 @@ Transform:
   - {fileID: 1737817557}
   - {fileID: 421972517}
   - {fileID: 1408488907}
-  - {fileID: 2077735621}
   - {fileID: 379474258}
   - {fileID: 1008691181}
   - {fileID: 1228281662}
@@ -18480,18 +18479,19 @@ Transform:
   - {fileID: 96990445}
   - {fileID: 585783386}
   - {fileID: 1838398114}
-  - {fileID: 630010468}
   - {fileID: 788630493}
   - {fileID: 751307197}
-  - {fileID: 909234572}
   - {fileID: 1624128667}
+  - {fileID: 1957497812}
   - {fileID: 762292665}
   - {fileID: 1562782453}
   - {fileID: 626125543}
   - {fileID: 803959560}
   - {fileID: 2110884360}
+  - {fileID: 1432383366}
   - {fileID: 1467791079}
   - {fileID: 499361869}
+  - {fileID: 1204571882}
   - {fileID: 1182937777}
   - {fileID: 1617834262}
   - {fileID: 1769372633}
@@ -18502,9 +18502,9 @@ Transform:
   - {fileID: 788948235}
   - {fileID: 1040625693}
   - {fileID: 208003641}
-  - {fileID: 1204571882}
-  - {fileID: 1432383366}
-  - {fileID: 1957497812}
+  - {fileID: 630010468}
+  - {fileID: 909234572}
+  - {fileID: 2077735621}
   m_Father: {fileID: 1899558856}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32776,7 +32776,7 @@ RectTransform:
   m_Children:
   - {fileID: 234219390}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -34193,7 +34193,7 @@ PrefabInstance:
     - target: {fileID: 6317314618576819805, guid: 486f0141e36a1814396f35127fefefd6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6317314618576819805, guid: 486f0141e36a1814396f35127fefefd6,
         type: 3}
@@ -49148,7 +49148,7 @@ Transform:
   - {fileID: 2016597956}
   - {fileID: 842821987}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1968508787
 PrefabInstance:

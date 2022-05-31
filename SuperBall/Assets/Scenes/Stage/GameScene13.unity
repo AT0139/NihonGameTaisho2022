@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1045,17 +1045,38 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -2100,17 +2121,38 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -9614,17 +9656,33 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -11887,7 +11945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6199474, y: -1.1379803, z: -10}
+  m_LocalPosition: {x: 4.6162853, y: -1.1379708, z: -10}
   m_LocalScale: {x: 1, y: 1.7251, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25080,17 +25138,38 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -31304,17 +31383,38 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -31516,6 +31616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ThrusterAgain
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5194350929849697787, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 482
       objectReference: {fileID: 0}
     - target: {fileID: 5368094049308756862, guid: 2ab86f7175a351343994909ee1cb1677,
         type: 3}
@@ -54355,17 +54460,33 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -54601,17 +54722,38 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
