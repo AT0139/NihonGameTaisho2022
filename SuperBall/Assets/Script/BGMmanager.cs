@@ -20,10 +20,20 @@ public class BGMmanager : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
 
-            Stageselect.Play();
+            //Stageselect.Play();
 
             //シーンが切り替わった時に呼ばれるメソッドを登録
             SceneManager.activeSceneChanged += OnActiveSceneChanged;
+        }
+    }
+
+    void Update()
+    {
+        string koko = SceneManager.GetActiveScene().name;
+
+        if(koko.Contains("Select"))
+        {
+
         }
     }
 
@@ -34,8 +44,10 @@ public class BGMmanager : MonoBehaviour
         if (!nextScene.name.Contains("Select"))
         {
             // 破壊してステージBGMなどの邪魔をしないように
-            Stageselect = null; // 入れないとunityに怒られる?
-            Destroy(gameObject);
+            if(this != null)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
