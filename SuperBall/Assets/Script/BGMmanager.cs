@@ -20,23 +20,14 @@ public class BGMmanager : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
 
-            //Stageselect.Play();
+            Stageselect.Play();
 
             //シーンが切り替わった時に呼ばれるメソッドを登録
             SceneManager.activeSceneChanged += OnActiveSceneChanged;
         }
     }
 
-    void Update()
-    {
-        string koko = SceneManager.GetActiveScene().name;
-
-        if(koko.Contains("Select"))
-        {
-
-        }
-    }
-
+    
     //シーンが切り替わった時に呼ばれるメソッド　
     void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
     {
