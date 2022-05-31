@@ -12401,7 +12401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.878746, y: -0.04296446, z: -10}
+  m_LocalPosition: {x: 15.884045, y: -0.042981625, z: -10}
   m_LocalScale: {x: 1, y: 1.7251, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25561,6 +25561,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonMount (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
 --- !u!1001 &838046256
@@ -52516,6 +52527,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonMount
       objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
 --- !u!1001 &1906583879

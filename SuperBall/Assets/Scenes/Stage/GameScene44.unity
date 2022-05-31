@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3964,22 +3964,22 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -3999,12 +3999,33 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -8320,17 +8341,17 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -8361,6 +8382,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CannonMount (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -12103,22 +12145,22 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -12138,12 +12180,33 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -12227,7 +12290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.56366, y: 0.06673384, z: -10}
+  m_LocalPosition: {x: 13.559998, y: 0.06671572, z: -10}
   m_LocalScale: {x: 1, y: 1.7251, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15432,22 +15495,22 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -15467,12 +15530,33 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -30578,22 +30662,22 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -30613,12 +30697,33 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -34315,22 +34420,22 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -34350,12 +34455,33 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421173, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_Name
       value: CannonMount (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -34904,17 +35030,17 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -34945,6 +35071,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CannonMount
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -41179,17 +41326,17 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -41220,6 +41367,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CannonMount (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -51223,17 +51391,17 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -51264,6 +51432,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CannonMount (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
@@ -53977,17 +54166,17 @@ PrefabInstance:
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1754799720740421172, guid: e7a119df63f982848ae14e9413da16f0,
         type: 3}
@@ -54018,6 +54207,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CannonMount (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonBullet
+      value: 
+      objectReference: {fileID: 1904905541590125080, guid: 6b2657d3df0446e4b9a423551c193787,
+        type: 3}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: cannonMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: second
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100870324241148581, guid: e7a119df63f982848ae14e9413da16f0,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a119df63f982848ae14e9413da16f0, type: 3}
