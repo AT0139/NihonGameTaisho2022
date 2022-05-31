@@ -29713,6 +29713,16 @@ PrefabInstance:
       propertyPath: m_PointLightOuterRadius
       value: 30.91
       objectReference: {fileID: 0}
+    - target: {fileID: 8010703469203173216, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14fc382628b37404087cc49373d64ec2, type: 3}
+    - target: {fileID: 8010703469203173216, guid: 2ab86f7175a351343994909ee1cb1677,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 8211691650920891416, guid: 2ab86f7175a351343994909ee1cb1677,
         type: 3}
       propertyPath: m_LocalScale.x
