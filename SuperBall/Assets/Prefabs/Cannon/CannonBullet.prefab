@@ -100,6 +100,7 @@ MonoBehaviour:
   explosion: {fileID: 3924717693549208997, guid: 024a2bd6b5807f34f843210a7d61a7a3,
     type: 3}
   speed: 7
+  SEIZON_JIKAN: 8
 --- !u!58 &1904905541590125081
 CircleCollider2D:
   m_ObjectHideFlags: 0

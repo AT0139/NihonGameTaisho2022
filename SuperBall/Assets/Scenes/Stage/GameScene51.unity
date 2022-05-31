@@ -12984,7 +12984,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.489346, y: 1.6138079, z: -10}
+  m_LocalPosition: {x: 14.493008, y: 1.6138222, z: -10}
   m_LocalScale: {x: 1, y: 1.7251, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47587,6 +47587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkyGoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532076073245665766, guid: 7ad56db0ccae55042bf307495865641e,
+        type: 3}
+      propertyPath: m_nextScene.m_SceneName
+      value: GameScene52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ad56db0ccae55042bf307495865641e, type: 3}
